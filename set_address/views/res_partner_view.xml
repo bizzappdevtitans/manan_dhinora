@@ -1,0 +1,13 @@
+<odoo>
+    <!-- inherited view of sale.order to add the custom field 'varified_address' #T0455-->
+    <record id="res_partner_inherited_form_view" model="ir.ui.view">
+        <field name="name">res.partner.inherited.form.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group/group/field[@name='vat']" position="after">
+                        <field name="varified_address" attrs="{'invisible': [('type', '!=', 'delivery')]}"/>
+                </xpath>
+        </field>
+    </record>
+</odoo>
