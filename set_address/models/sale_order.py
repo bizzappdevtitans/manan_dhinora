@@ -1,39 +1,34 @@
-from odoo import models
+from odoo import api, models
 
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
-    def delivery_address(self):
+    @api.onchange("partner_id")
+    def onchange_partner_id(self):
         """here we are checking how many partners are there whose bool field valid
         address is true base on that assigning the proper delivery address #T00455"""
+        return_dict = super(SaleOrder, self).onchange_partner_id()
         partner = self.env["res.partner"]
-        # searching for all the companies in res.partner
-        companies = partner.search([["is_company", "=", True]])
-        # checking if the input partner is a company or an individual
-        if self.partner_id.id in companies.ids:
-            # finding the employees in input company
+        # checking if the input partner is a company
+        if partner.browse([self.partner_id.id]).is_company is True:
+            # fetching the child ids of the entered partner_id
             child_ids = partner.browse([self.partner_id.id]).child_ids
-            varified_address_employee = []
-            # searching for the employees whose boolean field is set to True
-            for employee in child_ids.ids:
-                if partner.browse([employee]).varified_address is True:
-                    varified_address_employee.append(employee)
-            # checking the number of records found if number> 0 procede
-            # else let the original flow function
-            if len(varified_address_employee) > 0:
-                # checking if there is one or multiple records
-                if len(varified_address_employee) == 1:
-                    # only one so we assign it to rtn_val
-                    rtn_val = varified_address_employee[0]
-                else:
-                    # more than one we look for records with dropshipping address
-                    dropship_partners = partner.search([("type", "=", "drop_ship")])
-                    if dropship_partners.ids:
-                        # assign 1st dropshiping record found to partner_shiping_id
-                        rtn_val = dropship_partners.ids[0]
-                    else:
-                        # no dropshiping record found assign 1st reord with bool == True
-                        rtn_val = varified_address_employee[0]
-                # writing the rtn_val in partner_shipping_id
-                self.write({"partner_shipping_id": rtn_val})
+            partners_delivery = child_ids.filtered(
+                lambda partner: partner.type == "delivery"
+            )
+            if len(partners_delivery.ids) > 0:
+                partners_delivery_varified = partners_delivery.filtered(
+                    lambda partner: partner.varified_address is True
+                )
+                if not len(partners_delivery_varified.ids) >= 1:
+                    partners_dropship = child_ids.filtered(
+                        lambda partner: partner.type == "drop_ship"
+                    )
+                    if len(partners_dropship.ids) > 0:
+                        return_value = partners_dropship.ids[0]
+                return_value = partners_delivery_varified.ids[0]
+                self.with_company(self.company_id).update(
+                    {"partner_shipping_id": return_value}
+                )
+        return return_dict

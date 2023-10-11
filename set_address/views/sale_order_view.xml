@@ -2,10 +2,14 @@
     <record id="sale_order_inherited_form_view" model="ir.ui.view">
         <field name="name">sale.order.inherited.form.view</field>
         <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
                 <xpath expr="/form/sheet/group[@name='sale_header']" position="inside">
-                        <button type="object" name="onchange_partner_id" string="test"/>
+                        <button
+                    type="object"
+                    name="onchange_partner_id"
+                    string="test"
+                />
                 </xpath>
         </field>
     </record>
