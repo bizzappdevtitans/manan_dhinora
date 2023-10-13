@@ -38,14 +38,15 @@ class MailComposeMessage(models.TransientModel):
                     ]
                 )
                 template_attachment.append(product_template_attachment.id)
-        # finding attachments in sale.order
+        # finding attachments in sale.order object
         sale_attachment = attachment.search(
             [
                 ("res_model", "=", "sale.order"),
                 ("res_id", "=", sale_order),
             ]
         )
-        # making a list of all the product that are to be attached in the email
+        # making a list of all the product that are to be attached in the
+        # action_quotation_send method
         net_attachment = (
             sale_attachment + product_product_attachment + product_template_attachment
         )
