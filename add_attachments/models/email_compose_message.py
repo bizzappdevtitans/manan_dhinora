@@ -16,7 +16,7 @@ class MailComposeMessage(models.TransientModel):
                 self.env["product.product"].browse([product_temp]).product_tmpl_id
             )
             template_products.append(template_ids.id)
-        # finding product attachments in product.product
+        # finding product attachments in the product.product object
         if len(products.ids) > 0:
             product_attachment = []
             for prod_product in products.ids:
