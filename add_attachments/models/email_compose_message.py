@@ -27,7 +27,7 @@ class MailComposeMessage(models.TransientModel):
                     ]
                 )
                 product_attachment.append(product_product_attachment)
-        # finding product attachments in product.template
+        # finding product attachments in product.template object
         if len(template_products) > 0:
             template_attachment = []
             for tmp_product in template_products:
