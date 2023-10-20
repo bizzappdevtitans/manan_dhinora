@@ -1,0 +1,24 @@
+<odoo>
+    <!-- inherited view of product.product with a new field late fee added to it -->
+    <record id="product_template_from_view_update" model="ir.ui.view">
+        <field name="name">product.template.form.view.update</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+              <xpath
+                expr="/form/sheet[@name='product_form']/div[@name='options']"
+                position="inside"
+            >
+                      <span class="d-inline-block">
+                            <field name="metal" />
+                            <label for="metal" />
+                        </span>
+                        <span class="d-inline-block">
+                            <field name="welding" />
+                            <label for="welding" />
+                        </span>
+                </xpath>
+        </field>
+    </record>
+
+</odoo>

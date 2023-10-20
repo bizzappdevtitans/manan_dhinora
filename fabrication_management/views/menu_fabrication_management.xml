@@ -1,0 +1,44 @@
+<odoo>
+    <!-- root menu item fro book shelf module -->
+    <menuitem id="fabrication_job_root_menu" name="Fabrication" />
+            <!-- main menuitem for book shelf model -->
+    <menuitem
+        id="fabrication_main_menu"
+        name="Fabrication"
+        parent="fabrication_job_root_menu"
+        action="sale.action_quotations"
+    />
+    <!-- root menu item for customers -->
+    <menuitem
+        id="res_partner_root_menu"
+        name="Customer"
+        action="contacts.action_contacts"
+        parent="fabrication_job_root_menu"
+    />
+    <!-- root menuitem for product -->
+    <menuitem
+        id="product_root_menu"
+        name="Product"
+        parent="fabrication_job_root_menu"
+    />
+    <!-- main menuitem for product.product -->
+    <menuitem
+        id="product_variants_main_menu"
+        name="Product Variants"
+        action="product.product_normal_action_sell"
+        parent="product_root_menu"
+    />
+    <!-- main menuitem for product.template -->
+    <menuitem
+        id="product_main_menu"
+        name="Product"
+        action="product.product_template_action"
+        parent="product_root_menu"
+    />
+    <menuitem
+        id="purchase_main_menu"
+        name="Purchase"
+        action="purchase.purchase_rfq"
+        parent="fabrication_job_root_menu"
+    />
+</odoo>

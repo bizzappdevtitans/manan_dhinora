@@ -1,0 +1,97 @@
+<odoo noupdate="1">
+       <record id="product_welding_1" model="product.product">
+            <field name="name">TIG welding</field>
+            <field name="standard_price">25.5</field>
+            <field name="welding">True</field>
+            <field name="list_price">38.25</field>
+            <field name="detailed_type">service</field>
+            <field name="uom_id" ref="uom.product_uom_hour" />
+            <field name="uom_po_id" ref="uom.product_uom_hour" />
+        </record>
+        <record id="product_welding_2" model="product.product">
+            <field name="name">MIG welding</field>
+            <field name="standard_price">25.5</field>
+            <field name="welding">True</field>
+            <field name="list_price">38.25</field>
+            <field name="detailed_type">service</field>
+            <field name="uom_id" ref="uom.product_uom_hour" />
+            <field name="uom_po_id" ref="uom.product_uom_hour" />
+        </record>
+        <record id="product_welding_3" model="product.product">
+            <field name="name">Arc welding</field>
+            <field name="welding">True</field>
+            <field name="standard_price">25.5</field>
+            <field name="list_price">38.25</field>
+            <field name="detailed_type">service</field>
+            <field name="uom_id" ref="uom.product_uom_hour" />
+            <field name="uom_po_id" ref="uom.product_uom_hour" />
+        </record>
+
+        <record id="product_steel_1" model="product.product">
+            <field name="name">Carbon Steel</field>
+            <field name="metal">True</field>
+            <field name="standard_price">50</field>
+            <field name="list_price">180.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+
+        <record id="product_steel_2" model="product.product">
+            <field name="name">Alloy Steel</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">220.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_steel_3" model="product.product">
+            <field name="name">Stainless Steel</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">160.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_steel_4" model="product.product">
+            <field name="name">Marging Steel</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">200.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="res_fab_partner_1" model="res.partner">
+            <field name="name">Shiv Logistics</field>
+            <field name="is_company">1</field>
+            <field name="street">317 Fairchild Dr</field>
+            <field name="city">Fairfield</field>
+            <field name="zip">94535</field>
+            <field name="country_id" ref="base.us" />
+            <field name="email">shiv.kailash@example.com</field>
+            <field name="phone">(941)-284-4875</field>
+        </record>
+        <record id="res_fab_partner_2" model="res.partner">
+            <field name="name">Mazda</field>
+            <field name="is_company">1</field>
+            <field name="street">317 Fairchild Dr</field>
+            <field name="city">Fairfield</field>
+            <field name="zip">94535</field>
+            <field name="country_id" ref="base.us" />
+            <field name="email">mazda.japani@example.com</field>
+            <field name="phone">(941)-284-4875</field>
+        </record>
+        <record id="res_fab_partner_3" model="res.partner">
+            <field name="name">Jindal Panther</field>
+            <field name="is_company">1</field>
+            <field name="street">317 Fairchild Dr</field>
+            <field name="city">Fairfield</field>
+            <field name="zip">94535</field>
+            <field name="country_id" ref="base.us" />
+            <field name="email">jindal.panther@example.com</field>
+            <field name="phone">(941)-284-4875</field>
+        </record>
+</odoo>
