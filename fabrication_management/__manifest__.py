@@ -8,14 +8,17 @@
     "depends": [
         "base",
         "sale_management",
+        "mrp",
         "purchase",
         "stock",
         "product",
         "project",
+        "contacts",
     ],
     "data": [
         "security/ir.model.access.csv",
         "views/sale_order_view.xml",
+        "views/sale_order_line_view.xml",
         "views/product_template_view.xml",
         "views/purchase_order_view.xml",
         "views/menu_fabrication_management.xml",

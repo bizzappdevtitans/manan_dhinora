@@ -1,5 +1,6 @@
 <odoo noupdate="1">
-       <record id="product_welding_1" model="product.product">
+    <!-- demo products for fabrication_management -->
+        <record id="product_template_welding_1" model="product.template">
             <field name="name">TIG welding</field>
             <field name="standard_price">25.5</field>
             <field name="welding">True</field>
@@ -8,7 +9,7 @@
             <field name="uom_id" ref="uom.product_uom_hour" />
             <field name="uom_po_id" ref="uom.product_uom_hour" />
         </record>
-        <record id="product_welding_2" model="product.product">
+        <record id="product_template_welding_2" model="product.template">
             <field name="name">MIG welding</field>
             <field name="standard_price">25.5</field>
             <field name="welding">True</field>
@@ -17,7 +18,7 @@
             <field name="uom_id" ref="uom.product_uom_hour" />
             <field name="uom_po_id" ref="uom.product_uom_hour" />
         </record>
-        <record id="product_welding_3" model="product.product">
+        <record id="product_template_welding_3" model="product.template">
             <field name="name">Arc welding</field>
             <field name="welding">True</field>
             <field name="standard_price">25.5</field>
@@ -64,6 +65,152 @@
             <field name="uom_id" ref="uom.product_uom_unit" />
             <field name="uom_po_id" ref="uom.product_uom_unit" />
         </record>
+        <!-- welding gas products for TIG/MIG/Arc welding -->
+        <record id="product_welding_gas_1" model="product.product">
+            <field name="name">Argon</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">200.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_welding_gas_2" model="product.product">
+            <field name="name">Helium</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">200.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_welding_gas_3" model="product.product">
+            <field name="name">Hydrogen</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">200.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_welding_gas_4" model="product.product">
+            <field name="name">Carbon Dioxide</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">200.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_welding_gas_5" model="product.product">
+            <field name="name">Oxygen</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">200.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <!-- electrodes used for MIG/TIG/Arc welding -->
+        <record id="product_welding_electrode_1" model="product.product">
+            <field name="name">Coated Electrode</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">200.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_welding_electrode_2" model="product.product">
+            <field name="name">Copper plated coil</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">200.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_welding_electrode_3" model="product.product">
+            <field name="name">Thorium-Tungsten Electrode</field>
+            <field name="metal">True</field>
+            <field name="standard_price">70</field>
+            <field name="list_price">200.0</field>
+            <field name="weight">12</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <!-- BOM for Arc welding -->
+        <record id="mrp_bom_arc_welding" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_template_welding_3" />
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_manufacture_line_arc_welding_1" model="mrp.bom.line">
+            <field name="product_id" ref="product_welding_gas_1" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_arc_welding" />
+        </record>
+                <record
+        id="mrp_bom_manufacture_line_arc_welding_2"
+        model="mrp.bom.line"
+    >
+            <field name="product_id" ref="product_welding_electrode_1" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_arc_welding" />
+        </record>
+        <!-- BOM for TiG welding -->
+        <record id="mrp_bom_tig_welding" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_template_welding_1" />
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_manufacture_line_tig_welding_1" model="mrp.bom.line">
+            <field name="product_id" ref="product_welding_gas_1" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_tig_welding" />
+        </record>
+                <record
+        id="mrp_bom_manufacture_line_tig_welding_2"
+        model="mrp.bom.line"
+    >
+            <field name="product_id" ref="product_welding_electrode_3" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_tig_welding" />
+        </record>
+        <record id="mrp_bom_manufacture_line_tig_welding_1" model="mrp.bom.line">
+            <field name="product_id" ref="product_welding_gas_2" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_tig_welding" />
+        </record>
+        <!-- BOM for Mig welding -->
+        <record id="mrp_bom_mig_welding" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_template_welding_2" />
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_manufacture_line_mig_welding_1" model="mrp.bom.line">
+            <field name="product_id" ref="product_welding_gas_1" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_mig_welding" />
+        </record>
+                <record
+        id="mrp_bom_manufacture_line_mig_welding_2"
+        model="mrp.bom.line"
+    >
+            <field name="product_id" ref="product_welding_electrode_2" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_mig_welding" />
+        </record>
+        <record id="mrp_bom_manufacture_line_mig_welding_1" model="mrp.bom.line">
+            <field name="product_id" ref="product_welding_gas_4" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_mig_welding" />
+        </record>
+        <!-- vendors for the products -->
         <record id="res_fab_partner_1" model="res.partner">
             <field name="name">Shiv Logistics</field>
             <field name="is_company">1</field>

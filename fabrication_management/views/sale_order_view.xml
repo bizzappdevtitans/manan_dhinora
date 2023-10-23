@@ -7,7 +7,7 @@
                 <xpath
                 expr="/form/sheet/group[@name='sale_header']/group[@name='partner_details']"
                 position="inside"
-            >
+            >           <field name="maintenance_cycle" />
                         <field name="fab_job" />
                 </xpath>
         </field>
