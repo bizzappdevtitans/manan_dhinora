@@ -1,13 +1,14 @@
 {
     "name": "fabrication_management",
-    "summary": """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+    "summary": """Industrial Fabrication management module""",
+    "author": "bizzappdev",
     "version": "15.0.0.0.0",
     "license": "LGPL-3",
     "depends": [
         "base",
+        "mail",
         "sale_management",
+        "sale_project",
         "mrp",
         "purchase",
         "stock",
@@ -17,11 +18,14 @@
     ],
     "data": [
         "security/ir.model.access.csv",
+        "data/maintenance_cycle_template.xml",
         "views/sale_order_view.xml",
         "views/sale_order_line_view.xml",
         "views/product_template_view.xml",
         "views/purchase_order_view.xml",
+        "views/account_move_view.xml",
         "views/menu_fabrication_management.xml",
+        "data/ir_cron_data.xml",
     ],
     "demo": ["data/fabrication_demo.xml"],
     "application": True,

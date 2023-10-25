@@ -1,31 +1,31 @@
 <odoo noupdate="1">
     <!-- demo products for fabrication_management -->
-        <record id="product_template_welding_1" model="product.template">
-            <field name="name">TIG welding</field>
-            <field name="standard_price">25.5</field>
-            <field name="welding">True</field>
-            <field name="list_price">38.25</field>
-            <field name="detailed_type">service</field>
-            <field name="uom_id" ref="uom.product_uom_hour" />
-            <field name="uom_po_id" ref="uom.product_uom_hour" />
-        </record>
-        <record id="product_template_welding_2" model="product.template">
-            <field name="name">MIG welding</field>
-            <field name="standard_price">25.5</field>
-            <field name="welding">True</field>
-            <field name="list_price">38.25</field>
-            <field name="detailed_type">service</field>
-            <field name="uom_id" ref="uom.product_uom_hour" />
-            <field name="uom_po_id" ref="uom.product_uom_hour" />
-        </record>
-        <record id="product_template_welding_3" model="product.template">
+        <record id="product_template_arc" model="product.template">
             <field name="name">Arc welding</field>
             <field name="welding">True</field>
-            <field name="standard_price">25.5</field>
-            <field name="list_price">38.25</field>
-            <field name="detailed_type">service</field>
-            <field name="uom_id" ref="uom.product_uom_hour" />
-            <field name="uom_po_id" ref="uom.product_uom_hour" />
+            <field name="standard_price">50</field>
+            <field name="list_price">180.0</field>
+            <field name="weight">1</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_template_mig" model="product.template">
+            <field name="name">MIG welding</field>
+            <field name="welding">True</field>
+            <field name="standard_price">50</field>
+            <field name="list_price">180.0</field>
+            <field name="weight">1</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="product_template_tig" model="product.template">
+            <field name="name">TIG welding</field>
+            <field name="welding">True</field>
+            <field name="standard_price">50</field>
+            <field name="list_price">180.0</field>
+            <field name="weight">1</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
         </record>
 
         <record id="product_steel_1" model="product.product">
@@ -140,7 +140,7 @@
         </record>
         <!-- BOM for Arc welding -->
         <record id="mrp_bom_arc_welding" model="mrp.bom">
-            <field name="product_tmpl_id" ref="product_template_welding_3" />
+            <field name="product_tmpl_id" ref="product_template_arc" />
             <field name="product_uom_id" ref="uom.product_uom_unit" />
         </record>
         <record id="mrp_bom_manufacture_line_arc_welding_1" model="mrp.bom.line">
@@ -160,7 +160,7 @@
         </record>
         <!-- BOM for TiG welding -->
         <record id="mrp_bom_tig_welding" model="mrp.bom">
-            <field name="product_tmpl_id" ref="product_template_welding_1" />
+            <field name="product_tmpl_id" ref="product_template_tig" />
             <field name="product_uom_id" ref="uom.product_uom_unit" />
         </record>
         <record id="mrp_bom_manufacture_line_tig_welding_1" model="mrp.bom.line">
@@ -186,7 +186,7 @@
         </record>
         <!-- BOM for Mig welding -->
         <record id="mrp_bom_mig_welding" model="mrp.bom">
-            <field name="product_tmpl_id" ref="product_template_welding_2" />
+            <field name="product_tmpl_id" ref="product_template_mig" />
             <field name="product_uom_id" ref="uom.product_uom_unit" />
         </record>
         <record id="mrp_bom_manufacture_line_mig_welding_1" model="mrp.bom.line">
