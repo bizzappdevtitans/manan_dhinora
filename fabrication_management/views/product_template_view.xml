@@ -17,6 +17,10 @@
                             <field name="welding" />
                             <label for="welding" />
                         </span>
+                        <span class="d-inline-block">
+                            <field name="fabrication_job" />
+                            <label for="fabrication_job" />
+                        </span>
                 </xpath>
         </field>
     </record>

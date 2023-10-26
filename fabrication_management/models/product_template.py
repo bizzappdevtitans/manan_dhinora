@@ -6,3 +6,4 @@ class ProductTemplate(models.Model):
     # TODO write comments
     metal = fields.Boolean(string="is Metal")
     welding = fields.Boolean(string="Welding Technique")
+    fabrication_job = fields.Boolean(string="Fabrication_job")

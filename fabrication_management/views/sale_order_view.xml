@@ -4,6 +4,20 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
+                <xpath expr="/form/sheet/div[@name='button_box']" position="inside">
+                    <button
+                    type="object"
+                    name="action_project_view"
+                    string="Project"
+                    icon="fa-puzzle-piece"
+                />
+                    <button
+                    type="object"
+                    name="action_task_view"
+                    string="Task"
+                    icon="fa-tasks"
+                />
+                </xpath>
                 <xpath
                 expr="/form/sheet/group[@name='sale_header']/group[@name='partner_details']"
                 position="inside"

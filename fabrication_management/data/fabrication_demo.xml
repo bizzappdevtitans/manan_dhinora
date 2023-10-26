@@ -241,4 +241,37 @@
             <field name="email">jindal.panther@example.com</field>
             <field name="phone">(941)-284-4875</field>
         </record>
+
+        <record id="res_fab_partner_4" model="res.partner">
+            <field name="name">Jindal Panther</field>
+            <field name="is_company">1</field>
+            <field name="street">317 Fairchild Dr</field>
+            <field name="city">Fairfield</field>
+            <field name="zip">94535</field>
+            <field name="country_id" ref="base.us" />
+            <field name="email">jindal.panther@example.com</field>
+            <field name="phone">(941)-284-4875</field>
+        </record>
+
+        <record id="res_fab_partner_5" model="res.partner">
+            <field name="name">Phantech Welding Rods</field>
+            <field name="is_company">1</field>
+            <field name="street">317 Fairchild Dr</field>
+            <field name="city">Fairfield</field>
+            <field name="zip">94535</field>
+            <field name="country_id" ref="base.us" />
+            <field name="email">jindal.panther@example.com</field>
+            <field name="phone">(941)-284-4875</field>
+        </record>
+
+        <record id="res_fab_partner_6" model="res.partner">
+            <field name="name">Bhopal Gas Company</field>
+            <field name="is_company">1</field>
+            <field name="street">317 Fairchild Dr</field>
+            <field name="city">Fairfield</field>
+            <field name="zip">94535</field>
+            <field name="country_id" ref="base.us" />
+            <field name="email">jindal.panther@example.com</field>
+            <field name="phone">(941)-284-4875</field>
+        </record>
 </odoo>

@@ -6,3 +6,6 @@ from . import stock_move
 from . import stock_rule
 from . import account_move
 from . import sale_advance_payment_inv
+from . import mrp_production
+from . import project_project
+from . import project_task

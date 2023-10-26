@@ -4,5 +4,5 @@ functional flow for Fabrication_management:
         - cron to send email every 2 months about miantanence(after invoice generation)
     - based on sale order we create purchase order
         - run cron to replenish stock based on avilable stock and sale orders
-    - based on sale order we create project & task
+    - based on sale order we create project & task**
     - Demo data with products and partners

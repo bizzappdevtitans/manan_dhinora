@@ -9,6 +9,9 @@ class SaleOrder(models.Model):
     # TODO write comments
     fab_job = fields.Boolean(string="fabrication")
     maintenance_cycle = fields.Boolean(string="Opt for maintenance")
+    purchase_refrence = fields.Many2one(
+        comodel_name="purchase.order", string="Purchase refrence"
+    )
 
     def _prepare_invoice(self):
         invoice_vals = super(SaleOrder, self)._prepare_invoice()
@@ -86,3 +89,71 @@ class SaleOrder(models.Model):
                     "description": "created due to replenishment",
                 }
             )
+
+    def action_mrp_po_refrence(self):
+        return {
+            "res_model": "purchase.order",
+            "view_mode": "form",
+            "type": "ir.actions.act_window",
+            "res_id": self.purchase_refrence.id,
+        }
+
+    def prepare_project_vals(self):
+        vals = {}
+        partner = self.partner_id
+        end_date = self.date_order + timedelta(
+            days=int(self.env["ir.config_parameter"].get_param("project_deadline"))
+        )
+        vals["name"] = str(partner.mapped("name")[0]) + " - " + str(self.date_order)
+        vals["partner_id"] = partner.id
+        vals["date_start"] = self.date_order
+        vals["date"] = end_date
+        vals["sale_order_ref"] = self.id
+        return vals
+
+    def prepare_task_vals(self):
+        order_line = self.order_line.ids
+        project_id = self.env["project.project"].search(
+            [("sale_order_ref", "=", self.id)]
+        )
+        vals = []
+        for job in order_line:
+            values = {}
+            product_id = self.order_line.browse([job]).mapped("product_id")
+            values["project_id"] = project_id.id
+            values["name"] = product_id.name + " - " + self.partner_id.mapped("name")[0]
+            values["partner_id"] = self.partner_id.id
+            values["kanban_state"] = "normal"
+            values["sale_ref"] = self.id
+            values["date_deadline"] = self.date_order + timedelta(
+                days=int(self.env["ir.config_parameter"].get_param("project_deadline"))
+            )
+            vals.append(values)
+        return vals
+
+    def _action_confirm(self):
+        return_vals = super(SaleOrder, self)._action_confirm()
+        self.env["project.project"].create(self.prepare_project_vals())
+        vals = self.prepare_task_vals()
+        for task in vals:
+            self.env["project.task"].create(task)
+        return return_vals
+
+    def action_project_view(self):
+        project_id = self.env["project.project"].search(
+            [("sale_order_ref", "=", self.id)]
+        )
+        return {
+            "res_model": "project.project",
+            "view_mode": "form",
+            "type": "ir.actions.act_window",
+            "res_id": project_id,
+        }
+
+    def action_task_view(self):
+        return {
+            "res_model": "project.task",
+            "view_mode": "tree,form",
+            "type": "ir.actions.act_window",
+            "domain": [("sale_ref.id", "=", self.id)],
+        }

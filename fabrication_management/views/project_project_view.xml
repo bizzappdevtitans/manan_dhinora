@@ -1,0 +1,12 @@
+<odoo>
+    <record id="project_project_addon" model="ir.ui.view">
+        <field name="name">project.project.addon</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group/group" position="inside">
+                        <field name="sale_order_ref" />
+                </xpath>
+        </field>
+    </record>
+</odoo>
