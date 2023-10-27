@@ -1,5 +1,8 @@
 <odoo noupdate="1">
     <!-- demo products for fabrication_management -->
+
+    <!-- types of welding -->
+
         <record id="product_template_arc" model="product.template">
             <field name="name">Arc welding</field>
             <field name="welding">True</field>
@@ -27,6 +30,8 @@
             <field name="uom_id" ref="uom.product_uom_unit" />
             <field name="uom_po_id" ref="uom.product_uom_unit" />
         </record>
+
+    <!-- types of steel used -->
 
         <record id="product_steel_1" model="product.product">
             <field name="name">Carbon Steel</field>
@@ -65,7 +70,9 @@
             <field name="uom_id" ref="uom.product_uom_unit" />
             <field name="uom_po_id" ref="uom.product_uom_unit" />
         </record>
-        <!-- welding gas products for TIG/MIG/Arc welding -->
+
+    <!-- welding gas products for TIG/MIG/Arc welding -->
+
         <record id="product_welding_gas_1" model="product.product">
             <field name="name">Argon</field>
             <field name="standard_price">70</field>
@@ -110,7 +117,9 @@
             <field name="uom_id" ref="uom.product_uom_unit" />
             <field name="uom_po_id" ref="uom.product_uom_unit" />
         </record>
-        <!-- electrodes used for MIG/TIG/Arc welding -->
+
+    <!-- electrodes used for MIG/TIG/Arc welding -->
+
         <record id="product_welding_electrode_1" model="product.product">
             <field name="name">Coated Electrode</field>
             <field name="metal">True</field>
@@ -138,7 +147,9 @@
             <field name="uom_id" ref="uom.product_uom_unit" />
             <field name="uom_po_id" ref="uom.product_uom_unit" />
         </record>
-        <!-- BOM for Arc welding -->
+
+    <!-- BOM for Arc welding -->
+
         <record id="mrp_bom_arc_welding" model="mrp.bom">
             <field name="product_tmpl_id" ref="product_template_arc" />
             <field name="product_uom_id" ref="uom.product_uom_unit" />
@@ -149,16 +160,15 @@
             <field name="product_uom_id" ref="uom.product_uom_unit" />
             <field name="bom_id" ref="mrp_bom_arc_welding" />
         </record>
-                <record
-        id="mrp_bom_manufacture_line_arc_welding_2"
-        model="mrp.bom.line"
-    >
+        <record id="mrp_bom_manufacture_line_arc_welding_2" model="mrp.bom.line">
             <field name="product_id" ref="product_welding_electrode_1" />
             <field name="product_qty">1</field>
             <field name="product_uom_id" ref="uom.product_uom_unit" />
             <field name="bom_id" ref="mrp_bom_arc_welding" />
         </record>
-        <!-- BOM for TiG welding -->
+
+    <!-- BOM for TiG welding -->
+
         <record id="mrp_bom_tig_welding" model="mrp.bom">
             <field name="product_tmpl_id" ref="product_template_tig" />
             <field name="product_uom_id" ref="uom.product_uom_unit" />
@@ -184,7 +194,9 @@
             <field name="product_uom_id" ref="uom.product_uom_unit" />
             <field name="bom_id" ref="mrp_bom_tig_welding" />
         </record>
-        <!-- BOM for Mig welding -->
+
+    <!-- BOM for Mig welding -->
+
         <record id="mrp_bom_mig_welding" model="mrp.bom">
             <field name="product_tmpl_id" ref="product_template_mig" />
             <field name="product_uom_id" ref="uom.product_uom_unit" />
@@ -195,10 +207,7 @@
             <field name="product_uom_id" ref="uom.product_uom_unit" />
             <field name="bom_id" ref="mrp_bom_mig_welding" />
         </record>
-                <record
-        id="mrp_bom_manufacture_line_mig_welding_2"
-        model="mrp.bom.line"
-    >
+        <record id="mrp_bom_manufacture_line_mig_welding_2" model="mrp.bom.line">
             <field name="product_id" ref="product_welding_electrode_2" />
             <field name="product_qty">1</field>
             <field name="product_uom_id" ref="uom.product_uom_unit" />
@@ -211,7 +220,7 @@
             <field name="bom_id" ref="mrp_bom_mig_welding" />
         </record>
         <!-- vendors for the products -->
-        <record id="res_fab_partner_1" model="res.partner">
+        <record id="res_partner_600" model="res.partner">
             <field name="name">Shiv Logistics</field>
             <field name="is_company">1</field>
             <field name="street">317 Fairchild Dr</field>
@@ -221,7 +230,7 @@
             <field name="email">shiv.kailash@example.com</field>
             <field name="phone">(941)-284-4875</field>
         </record>
-        <record id="res_fab_partner_2" model="res.partner">
+        <record id="res_partner_601" model="res.partner">
             <field name="name">Mazda</field>
             <field name="is_company">1</field>
             <field name="street">317 Fairchild Dr</field>
@@ -231,47 +240,275 @@
             <field name="email">mazda.japani@example.com</field>
             <field name="phone">(941)-284-4875</field>
         </record>
-        <record id="res_fab_partner_3" model="res.partner">
-            <field name="name">Jindal Panther</field>
+        <record id="res_partner_603" model="res.partner">
+            <field name="name">json steel</field>
             <field name="is_company">1</field>
             <field name="street">317 Fairchild Dr</field>
             <field name="city">Fairfield</field>
             <field name="zip">94535</field>
             <field name="country_id" ref="base.us" />
-            <field name="email">jindal.panther@example.com</field>
+            <field name="email">json.steel@example.com</field>
             <field name="phone">(941)-284-4875</field>
         </record>
-
-        <record id="res_fab_partner_4" model="res.partner">
-            <field name="name">Jindal Panther</field>
-            <field name="is_company">1</field>
-            <field name="street">317 Fairchild Dr</field>
-            <field name="city">Fairfield</field>
-            <field name="zip">94535</field>
-            <field name="country_id" ref="base.us" />
-            <field name="email">jindal.panther@example.com</field>
-            <field name="phone">(941)-284-4875</field>
-        </record>
-
-        <record id="res_fab_partner_5" model="res.partner">
+        <record id="res_partner_605" model="res.partner">
             <field name="name">Phantech Welding Rods</field>
             <field name="is_company">1</field>
             <field name="street">317 Fairchild Dr</field>
             <field name="city">Fairfield</field>
             <field name="zip">94535</field>
             <field name="country_id" ref="base.us" />
-            <field name="email">jindal.panther@example.com</field>
+            <field name="email">json.steel@example.com</field>
             <field name="phone">(941)-284-4875</field>
         </record>
-
-        <record id="res_fab_partner_6" model="res.partner">
+        <record id="res_partner_606" model="res.partner">
             <field name="name">Bhopal Gas Company</field>
             <field name="is_company">1</field>
             <field name="street">317 Fairchild Dr</field>
             <field name="city">Fairfield</field>
             <field name="zip">94535</field>
             <field name="country_id" ref="base.us" />
-            <field name="email">jindal.panther@example.com</field>
+            <field name="email">json.steel@example.com</field>
             <field name="phone">(941)-284-4875</field>
         </record>
+
+        <!-- product supplier info: -->
+
+        <!-- steel supplier -->
+        <record id="product_supplierinfo_steel_1" model="product.supplierinfo">
+            <field name="product_id" ref="product_steel_1" />
+            <field name="name" ref="fabrication_management.res_partner_605" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="product_supplierinfo_steel_2" model="product.supplierinfo">
+            <field name="product_id" ref="product_steel_2" />
+            <field name="name" ref="fabrication_management.res_partner_605" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="product_supplierinfo_steel_3" model="product.supplierinfo">
+            <field name="product_id" ref="product_steel_3" />
+            <field name="name" ref="fabrication_management.res_partner_605" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="product_supplierinfo_steel_4" model="product.supplierinfo">
+            <field name="product_id" ref="product_steel_4" />
+            <field name="name" ref="fabrication_management.res_partner_605" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+
+        <!-- gas supplier -->
+                <record id="product_supplierinfo_gas_1" model="product.supplierinfo">
+            <field name="product_id" ref="product_welding_gas_1" />
+            <field name="name" ref="fabrication_management.res_partner_606" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+                <record id="product_supplierinfo_gas_2" model="product.supplierinfo">
+            <field name="product_id" ref="product_welding_gas_2" />
+            <field name="name" ref="fabrication_management.res_partner_606" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+                <record id="product_supplierinfo_gas_3" model="product.supplierinfo">
+            <field name="product_id" ref="product_welding_gas_3" />
+            <field name="name" ref="fabrication_management.res_partner_606" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+                <record id="product_supplierinfo_gas_4" model="product.supplierinfo">
+            <field name="product_id" ref="product_welding_gas_4" />
+            <field name="name" ref="fabrication_management.res_partner_606" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+                <record id="product_supplierinfo_gas_5" model="product.supplierinfo">
+            <field name="product_id" ref="product_welding_gas_5" />
+            <field name="name" ref="fabrication_management.res_partner_606" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+
+        <!-- electrode supplier -->
+        <record id="product_supplierinfo_electrode_1" model="product.supplierinfo">
+            <field name="product_id" ref="product_welding_electrode_1" />
+            <field name="name" ref="fabrication_management.res_partner_601" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+         <record id="product_supplierinfo_electrode_2" model="product.supplierinfo">
+            <field name="product_id" ref="product_welding_electrode_2" />
+            <field name="name" ref="fabrication_management.res_partner_601" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+         <record id="product_supplierinfo_electrode_3" model="product.supplierinfo">
+            <field name="product_id" ref="product_welding_electrode_3" />
+            <field name="name" ref="fabrication_management.res_partner_601" />
+            <field name="delay">3</field>
+            <field name="min_qty">1</field>
+            <field name="price">750</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+
+<!-- final Products with BoM -->
+
+    <!-- warehouse shed -->
+        <record id="product_final_shed" model="product.template">
+            <field name="name">Industrial Shed</field>
+            <field name="welding">True</field>
+            <field name="standard_price">50</field>
+            <field name="list_price">18000.0</field>
+            <field name="weight">1</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+        </record>
+        <!-- BOM -->
+        <record id="mrp_bom_shed" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_final_shed" />
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+            <record id="mrp_bom_manufacture_line_shed_1" model="mrp.bom.line">
+            <field name="product_id" ref="product_steel_2" />
+            <field name="product_qty">3</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_shed" />
+        </record>
+        <record id="mrp_bom_manufacture_line_shed_2" model="mrp.bom.line">
+            <field name="product_id" ref="product_welding_electrode_1" />
+            <field name="product_qty">4</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_shed" />
+        </record>
+        <record id="mrp_bom_manufacture_line_shed_3" model="mrp.bom.line">
+            <field name="product_id" ref="product_welding_gas_5" />
+            <field name="product_qty">5</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="bom_id" ref="mrp_bom_shed" />
+        </record>
+
+    <!-- High Pressure Vessle -->
+        <record id="product_final_hpv" model="product.template">
+                <field name="name">High Pressure Vessle</field>
+                <field name="welding">True</field>
+                <field name="standard_price">50</field>
+                <field name="list_price">24000.0</field>
+                <field name="weight">1</field>
+                <field name="uom_id" ref="uom.product_uom_unit" />
+                <field name="uom_po_id" ref="uom.product_uom_unit" />
+            </record>
+            <!-- BOM -->
+            <record id="mrp_bom_hpv" model="mrp.bom">
+                <field name="product_tmpl_id" ref="product_final_hpv" />
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+            </record>
+                <record id="mrp_bom_manufacture_line_hpv_1" model="mrp.bom.line">
+                <field name="product_id" ref="product_steel_1" />
+                <field name="product_qty">3</field>
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+                <field name="bom_id" ref="mrp_bom_hpv" />
+            </record>
+            <record id="mrp_bom_manufacture_line_hpv_2" model="mrp.bom.line">
+                <field name="product_id" ref="product_welding_electrode_3" />
+                <field name="product_qty">4</field>
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+                <field name="bom_id" ref="mrp_bom_hpv" />
+            </record>
+            <record id="mrp_bom_manufacture_line_hpv_3" model="mrp.bom.line">
+                <field name="product_id" ref="product_welding_gas_4" />
+                <field name="product_qty">5</field>
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+                <field name="bom_id" ref="mrp_bom_hpv" />
+            </record>
+        <!-- Boiler -->
+        <record id="product_final_boiler" model="product.template">
+                <field name="name">Boiler</field>
+                <field name="welding">True</field>
+                <field name="standard_price">50</field>
+                <field name="list_price">24000.0</field>
+                <field name="weight">1</field>
+                <field name="uom_id" ref="uom.product_uom_unit" />
+                <field name="uom_po_id" ref="uom.product_uom_unit" />
+            </record>
+            <!-- BOM -->
+            <record id="mrp_bom_boiler" model="mrp.bom">
+                <field name="product_tmpl_id" ref="product_final_boiler" />
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+            </record>
+                <record id="mrp_bom_manufacture_line_boiler_1" model="mrp.bom.line">
+                <field name="product_id" ref="product_steel_3" />
+                <field name="product_qty">3</field>
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+                <field name="bom_id" ref="mrp_bom_boiler" />
+            </record>
+            <record id="mrp_bom_manufacture_line_boiler_2" model="mrp.bom.line">
+                <field name="product_id" ref="product_welding_electrode_1" />
+                <field name="product_qty">4</field>
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+                <field name="bom_id" ref="mrp_bom_boiler" />
+            </record>
+            <record id="mrp_bom_manufacture_line_boiler_3" model="mrp.bom.line">
+                <field name="product_id" ref="product_welding_gas_2" />
+                <field name="product_qty">5</field>
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+                <field name="bom_id" ref="mrp_bom_boiler" />
+            </record>
+
+        <!-- High Pressure Vessle Support -->
+        <record id="product_final_hpvs" model="product.template">
+                <field name="name">High Pressure Vessle Support</field>
+                <field name="welding">True</field>
+                <field name="standard_price">50</field>
+                <field name="list_price">24000.0</field>
+                <field name="weight">1</field>
+                <field name="uom_id" ref="uom.product_uom_unit" />
+                <field name="uom_po_id" ref="uom.product_uom_unit" />
+            </record>
+            <!-- BOM -->
+            <record id="mrp_bom_hpvs" model="mrp.bom">
+                <field name="product_tmpl_id" ref="product_final_hpvs" />
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+            </record>
+                <record id="mrp_bom_manufacture_line_hpvs_1" model="mrp.bom.line">
+                <field name="product_id" ref="product_steel_2" />
+                <field name="product_qty">3</field>
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+                <field name="bom_id" ref="mrp_bom_hpvs" />
+            </record>
+            <record id="mrp_bom_manufacture_line_hpvs_2" model="mrp.bom.line">
+                <field name="product_id" ref="product_welding_electrode_2" />
+                <field name="product_qty">4</field>
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+                <field name="bom_id" ref="mrp_bom_hpvs" />
+            </record>
+            <record id="mrp_bom_manufacture_line_hpvs_3" model="mrp.bom.line">
+                <field name="product_id" ref="product_welding_gas_1" />
+                <field name="product_qty">5</field>
+                <field name="product_uom_id" ref="uom.product_uom_unit" />
+                <field name="bom_id" ref="mrp_bom_hpvs" />
+            </record>
 </odoo>

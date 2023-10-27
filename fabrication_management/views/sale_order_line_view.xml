@@ -1,4 +1,5 @@
 <odoo>
+    <!-- inherited view of sale.order.line to add m2o for welding #T00469 -->
    <record model="ir.ui.view" id="sale_order_view_inherit">
     <field name="name">sale.order.view.inherit1</field>
     <field name="model">sale.order</field>

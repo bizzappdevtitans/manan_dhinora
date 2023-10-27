@@ -6,7 +6,8 @@ class StockRule(models.Model):
 
     def _prepare_purchase_order(self, company_id, origins, values):
         """inheriting this method to update the dict that is beeing passed to create
-        purchase order, then updating it to create the required order_line #T00469"""
+        purchase order, then updating it to pass the refrence of SO as this PO
+        is created from MO #T00469"""
         passed_vals = super(StockRule, self)._prepare_purchase_order(
             company_id, origins, values
         )
@@ -25,7 +26,7 @@ class StockRule(models.Model):
         values,
         bom,
     ):
-        """using this method to pass value to mrp.production #T00469"""
+        """using this method to pass value from SO to mrp.production #T00469"""
         return_dict_vals = super(StockRule, self)._prepare_mo_vals(
             product_id,
             product_qty,

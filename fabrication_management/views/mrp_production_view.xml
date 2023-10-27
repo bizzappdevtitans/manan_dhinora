@@ -1,4 +1,5 @@
 <odoo>
+    <!-- inherited view of mrp.production to add the partner_id field #T00469 -->
    <record model="ir.ui.view" id="mrp_production_view_inherit">
     <field name="name">mrp.production.view.inherit</field>
     <field name="model">mrp.production</field>

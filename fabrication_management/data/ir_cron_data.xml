@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo noupdate="1">
+    <!-- cron job to send an email once every 3 months for the maintenance check #T00469 -->
     <record id="ir_cron_maintenance_cycle_mail" model="ir.cron">
         <field name="name">maintenance.cycle</field>
         <field name="model_id" ref="model_account_move" />
@@ -9,6 +10,7 @@
         <field name='interval_number'>3</field>
         <field name="numbercall">-1</field>
     </record>
+    <!-- cron job to replenish meterials used in welding every 7 days by creating the required PO #T00469-->
     <record id="ir_cron_replenish_welding_materials" model="ir.cron">
         <field name="name">replenish.welding</field>
         <field name="model_id" ref="model_sale_order" />

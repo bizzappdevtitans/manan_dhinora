@@ -1,5 +1,5 @@
 <odoo>
-    <!-- inherited view of product.product with a new field late fee added to it -->
+    <!-- inherited view of product.product to add buttons #T00469-->
     <record id="product_template_from_view_update" model="ir.ui.view">
         <field name="name">product.template.form.view.update</field>
         <field name="model">product.template</field>
@@ -16,10 +16,6 @@
                         <span class="d-inline-block">
                             <field name="welding" />
                             <label for="welding" />
-                        </span>
-                        <span class="d-inline-block">
-                            <field name="fabrication_job" />
-                            <label for="fabrication_job" />
                         </span>
                 </xpath>
         </field>

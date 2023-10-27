@@ -1,4 +1,5 @@
 <odoo>
+    <!-- inherited view of project.project to add reference to SO #T00469 -->
     <record id="project_project_addon" model="ir.ui.view">
         <field name="name">project.project.addon</field>
         <field name="model">project.project</field>
