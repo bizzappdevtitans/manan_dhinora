@@ -1,0 +1,13 @@
+<odoo>
+    <!-- inherited view of project.project to add the field which is used to get the value passed from SO #T00422 -->
+    <record id="project_project_addon" model="ir.ui.view">
+        <field name="name">project.project.addon</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group/group" position="inside">
+                        <field name="project_description" />
+                </xpath>
+        </field>
+    </record>
+</odoo>

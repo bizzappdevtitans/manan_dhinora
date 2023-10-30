@@ -1,0 +1,27 @@
+<odoo>
+    <!-- inherited view of sale.order to add all the fileds used to pass the value to other models -->
+    <record id="sale_addon_form_view" model="ir.ui.view">
+        <field name="name">sale.addon.form.view</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+                <xpath
+                expr="/form/sheet/group[@name='sale_header']/group[@name='partner_details']/field[@name='partner_id']"
+                position="after"
+            >
+                        <!-- #T00379 -->
+                        <field name="customer_desc_invoice" />
+                        <!-- #T00392 -->
+                        <field name="sale_purchase_description" />
+                        <!-- #T00422 -->
+                        <field name="project_description" />
+                        <!-- #T00422 -->
+                        <field name="project_task_description" />
+                        <!-- #T00425 -->
+                        <field name="manufacturing_spec" />
+                        <!-- #T00422 -->
+                        <field name="delivery_description" />
+                </xpath>
+        </field>
+    </record>
+</odoo>
