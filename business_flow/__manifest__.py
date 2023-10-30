@@ -3,7 +3,7 @@
     "summary": "examples of certain sale to other functional flows",
     "author": "BizzAppDev",
     "website": "https://github.com/OCA/contract",
-    "version": "15.0.0.0.0",
+    "version": "15.0.0.0.1",
     "license": "LGPL-3",
     "depends": [
         "sale_management",

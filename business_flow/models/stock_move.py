@@ -22,9 +22,5 @@ class StockMove(models.Model):
         rtn_vals = super(StockMove, self)._get_new_picking_values()
         # using self.group_id.sale_id.id to get the id of the sale order and
         # then browsing it for the required value
-        rtn_vals["delivery_description"] = (
-            self.env["sale.order"]
-            .browse([self.group_id.sale_id.id])
-            .delivery_description
-        )
+        rtn_vals["delivery_description"] = self.group_id.sale_id.delivery_description
         return rtn_vals
