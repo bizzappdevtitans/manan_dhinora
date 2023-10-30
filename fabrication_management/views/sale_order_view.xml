@@ -11,7 +11,7 @@
                     name="action_project_view"
                     string="Project"
                     icon="fa-puzzle-piece"
-                    attrs="{'invisible': [('task_length', '=', '0')]}"
+                    attrs="{'invisible': [('task_length', '!=', '0')]}"
                 />
                     <button
                     type="object"
@@ -19,7 +19,7 @@
                     string="Tasks"
                     icon="fa-tasks"
                     class="oe_stat_button"
-                    attrs="{'invisible': [('task_length', '=', '0')]} "
+                    attrs="{'invisible': [('task_length', '!=', '0')]} "
                 >
                         <field name="task_length" widget="statinfo" />
                     </button>

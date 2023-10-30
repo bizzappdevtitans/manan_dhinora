@@ -83,7 +83,6 @@
         </record>
         <record id="product_welding_gas_2" model="product.product">
             <field name="name">Helium</field>
-            <field name="metal">True</field>
             <field name="standard_price">70</field>
             <field name="list_price">200.0</field>
             <field name="weight">12</field>
@@ -92,7 +91,6 @@
         </record>
         <record id="product_welding_gas_3" model="product.product">
             <field name="name">Hydrogen</field>
-            <field name="metal">True</field>
             <field name="standard_price">70</field>
             <field name="list_price">200.0</field>
             <field name="weight">12</field>
@@ -101,7 +99,6 @@
         </record>
         <record id="product_welding_gas_4" model="product.product">
             <field name="name">Carbon Dioxide</field>
-            <field name="metal">True</field>
             <field name="standard_price">70</field>
             <field name="list_price">200.0</field>
             <field name="weight">12</field>
@@ -110,7 +107,6 @@
         </record>
         <record id="product_welding_gas_5" model="product.product">
             <field name="name">Oxygen</field>
-            <field name="metal">True</field>
             <field name="standard_price">70</field>
             <field name="list_price">200.0</field>
             <field name="weight">12</field>
@@ -276,7 +272,7 @@
         <!-- steel supplier -->
         <record id="product_supplierinfo_steel_1" model="product.supplierinfo">
             <field name="product_id" ref="product_steel_1" />
-            <field name="name" ref="fabrication_management.res_partner_605" />
+            <field name="name" ref="fabrication_management.res_partner_603" />
             <field name="delay">3</field>
             <field name="min_qty">1</field>
             <field name="price">750</field>
@@ -284,7 +280,7 @@
         </record>
         <record id="product_supplierinfo_steel_2" model="product.supplierinfo">
             <field name="product_id" ref="product_steel_2" />
-            <field name="name" ref="fabrication_management.res_partner_605" />
+            <field name="name" ref="fabrication_management.res_partner_603" />
             <field name="delay">3</field>
             <field name="min_qty">1</field>
             <field name="price">750</field>
@@ -292,7 +288,7 @@
         </record>
         <record id="product_supplierinfo_steel_3" model="product.supplierinfo">
             <field name="product_id" ref="product_steel_3" />
-            <field name="name" ref="fabrication_management.res_partner_605" />
+            <field name="name" ref="fabrication_management.res_partner_603" />
             <field name="delay">3</field>
             <field name="min_qty">1</field>
             <field name="price">750</field>
@@ -300,7 +296,7 @@
         </record>
         <record id="product_supplierinfo_steel_4" model="product.supplierinfo">
             <field name="product_id" ref="product_steel_4" />
-            <field name="name" ref="fabrication_management.res_partner_605" />
+            <field name="name" ref="fabrication_management.res_partner_603" />
             <field name="delay">3</field>
             <field name="min_qty">1</field>
             <field name="price">750</field>
@@ -308,7 +304,7 @@
         </record>
 
         <!-- gas supplier -->
-                <record id="product_supplierinfo_gas_1" model="product.supplierinfo">
+        <record id="product_supplierinfo_gas_1" model="product.supplierinfo">
             <field name="product_id" ref="product_welding_gas_1" />
             <field name="name" ref="fabrication_management.res_partner_606" />
             <field name="delay">3</field>
@@ -358,7 +354,7 @@
             <field name="price">750</field>
             <field name="currency_id" ref="base.USD" />
         </record>
-         <record id="product_supplierinfo_electrode_2" model="product.supplierinfo">
+        <record id="product_supplierinfo_electrode_2" model="product.supplierinfo">
             <field name="product_id" ref="product_welding_electrode_2" />
             <field name="name" ref="fabrication_management.res_partner_601" />
             <field name="delay">3</field>
@@ -366,7 +362,7 @@
             <field name="price">750</field>
             <field name="currency_id" ref="base.USD" />
         </record>
-         <record id="product_supplierinfo_electrode_3" model="product.supplierinfo">
+        <record id="product_supplierinfo_electrode_3" model="product.supplierinfo">
             <field name="product_id" ref="product_welding_electrode_3" />
             <field name="name" ref="fabrication_management.res_partner_601" />
             <field name="delay">3</field>
@@ -380,8 +376,7 @@
     <!-- warehouse shed -->
         <record id="product_final_shed" model="product.template">
             <field name="name">Industrial Shed</field>
-            <field name="welding">True</field>
-            <field name="standard_price">50</field>
+        <field name="standard_price">50</field>
             <field name="list_price">18000.0</field>
             <field name="weight">1</field>
             <field name="uom_id" ref="uom.product_uom_unit" />
@@ -414,7 +409,6 @@
     <!-- High Pressure Vessle -->
         <record id="product_final_hpv" model="product.template">
                 <field name="name">High Pressure Vessle</field>
-                <field name="welding">True</field>
                 <field name="standard_price">50</field>
                 <field name="list_price">24000.0</field>
                 <field name="weight">1</field>
@@ -447,7 +441,6 @@
         <!-- Boiler -->
         <record id="product_final_boiler" model="product.template">
                 <field name="name">Boiler</field>
-                <field name="welding">True</field>
                 <field name="standard_price">50</field>
                 <field name="list_price">24000.0</field>
                 <field name="weight">1</field>
@@ -481,7 +474,6 @@
         <!-- High Pressure Vessle Support -->
         <record id="product_final_hpvs" model="product.template">
                 <field name="name">High Pressure Vessle Support</field>
-                <field name="welding">True</field>
                 <field name="standard_price">50</field>
                 <field name="list_price">24000.0</field>
                 <field name="weight">1</field>
