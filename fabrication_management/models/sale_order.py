@@ -37,7 +37,6 @@ class SaleOrder(models.Model):
                 )
                 order.metal_used = metal[0]
             return self.metal_used
-        return self.metal_used
 
     def _prepare_invoice(self):
         """passing the value of the maintenance_cycle field to invoice #T00469"""

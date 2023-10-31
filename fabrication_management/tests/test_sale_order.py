@@ -1,3 +1,5 @@
+from datetime import date
+
 from odoo.tests.common import TransactionCase
 
 
@@ -28,6 +30,8 @@ class TestSaleOrder(TransactionCase):
         )
 
     def test_metal_used(self):
+        """testing a compute field 'metal_used' as the input field is know we
+        can check the output using static value #T00469"""
         self.assertEqual(
             self.sale.metal_used.id,
             self.env.ref("fabrication_management.product_steel_3").id,
@@ -35,4 +39,17 @@ class TestSaleOrder(TransactionCase):
         )
 
     def test_action_confirm(self):
-        pass
+        """testing the inherited method '_action_confirm' as it is used to create
+        project & task when sale order is confirmed #T00469"""
+        self.sale._action_confirm()
+        created_project = self.env["project.project"].search(
+            [("sale_order_ref", "=", self.sale.id)]
+        )
+        created_project_name = str(created_project.mapped("name")) + str(date.today())
+        self.assertEqual(created_project_name, created_project.name, "incorrect name")
+        order_line_ids = self.sale.orderline.ids
+        self.assertEqual(
+            len(order_line_ids),
+            self.sale.task_length,
+            "Task created not equal to the expected amount",
+        )
