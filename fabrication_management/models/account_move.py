@@ -4,9 +4,10 @@ from odoo import fields, models
 class AccountMove(models.Model):
     _inherit = ["account.move"]
 
-    # this field if set to true will run the ir_cron_maintenance_cycle_mail cron job
-    maintenance_cycle = fields.Boolean(string="Opt for maintenance")
-    # as company_id and email required in sending email
+    maintenance_cycle = fields.Boolean(
+        string="Opt for maintenance",
+        help="this field if set to true will run the maintenance_cycle_mail cron job",
+    )
     company_id = fields.Many2one(
         "res.company",
         "Company",

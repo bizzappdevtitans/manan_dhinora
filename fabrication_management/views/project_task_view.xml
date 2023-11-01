@@ -9,7 +9,7 @@
                 expr="/form/sheet/group/group/field[@name='parent_id']"
                 position="after"
             >
-                    <field name="sale_ref" />
+                    <field name="sale_id" />
             </xpath>
         </field>
     </record>

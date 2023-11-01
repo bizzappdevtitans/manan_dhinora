@@ -6,7 +6,7 @@ class PurchaseOrder(models.Model):
 
     # description field will be updated as the cron to replenish is finished running
     description = fields.Text(string="Internal Description")
-    sale_refrence = fields.Many2one(comodel_name="sale.order", string="Sales refrence")
+    sale_ref_id = fields.Many2one(comodel_name="sale.order", string="Sales refrence")
 
     def action_sale_mrp_reference(self):
         """this method is an action for a smart button to sale order which created the
@@ -15,5 +15,5 @@ class PurchaseOrder(models.Model):
             "res_model": "sale.order",
             "view_mode": "form",
             "type": "ir.actions.act_window",
-            "res_id": self.sale_refrence.id,
+            "res_id": self.sale_ref_id.id,
         }

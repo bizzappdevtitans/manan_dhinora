@@ -11,7 +11,7 @@ class StockRule(models.Model):
         passed_vals = super(StockRule, self)._prepare_purchase_order(
             company_id, origins, values
         )
-        passed_vals.update({"sale_refrence": values[0].get("sale_order")})
+        passed_vals.update({"sale_ref_id": values[0].get("sale_order")})
         return passed_vals
 
     def _prepare_mo_vals(

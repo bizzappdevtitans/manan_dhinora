@@ -6,7 +6,6 @@ from odoo import api, fields, models
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
-    # TODO write comments
     maintenance_cycle = fields.Boolean(string="Opt for maintenance")
 
     metal_used = fields.Many2one(
@@ -14,7 +13,7 @@ class SaleOrder(models.Model):
     )
     # these fields are used to count total number of tasks generated for smart button
     task_length = fields.Integer(compute="_compute_task_amount")
-    task_ids = fields.One2many(comodel_name="project.task", inverse_name="sale_ref")
+    task_ids = fields.One2many(comodel_name="project.task", inverse_name="sale_id")
 
     @api.depends("order_line")
     def _compute_metals(self):
@@ -24,7 +23,7 @@ class SaleOrder(models.Model):
             # getting products_id for products in sale.order.line
             for order in self:
                 line_product = order.order_line.mapped("product_id")
-                products = products + line_product.ids
+                products.extend(line_product.ids)
             # getting the product_id of metal used from bom
             for item in products:
                 tmpl_id = self.env["product.product"].browse([item]).product_tmpl_id
@@ -37,6 +36,7 @@ class SaleOrder(models.Model):
                 )
                 order.metal_used = metal[0]
             return self.metal_used
+        return self.metal_used
 
     def _prepare_invoice(self):
         """passing the value of the maintenance_cycle field to invoice #T00469"""
@@ -114,7 +114,7 @@ class SaleOrder(models.Model):
                 final_qty = so_product_qty[index] - po_product_qty[index]
                 net_procurement_qty.append(final_qty)
 
-            vals = vals + self._prepare_po_vals(po_product.ids, net_procurement_qty)
+            vals.extend(self._prepare_po_vals(po_product.ids, net_procurement_qty))
             po_vendor = po_vendor + (po_product.mapped("seller_ids").mapped("name")).ids
         if vals:
             self.env["purchase.order"].create(
@@ -125,7 +125,7 @@ class SaleOrder(models.Model):
                 }
             )
 
-    def prepare_project_vals(self):
+    def _prepare_project_vals(self):
         """this method is called to make a dict of values needed to
         create a project.project record #T00469"""
         partner = self.partner_id
@@ -163,7 +163,7 @@ class SaleOrder(models.Model):
                 "name": product_id.name + " - " + self.partner_id.mapped("name")[0],
                 "partner_id": self.partner_id.id,
                 "kanban_state": "normal",
-                "sale_ref": self.id,
+                "sale_id": self.id,
                 "date_deadline": end_date,
             }
             vals.append(values)
@@ -173,7 +173,7 @@ class SaleOrder(models.Model):
         """inheriting this method to add the project and task creation
         method calls #T00469"""
         return_vals = super(SaleOrder, self)._action_confirm()
-        self.env["project.project"].create(self.prepare_project_vals())
+        self.env["project.project"].create(self._prepare_project_vals())
         for task in self._prepare_task_vals():
             self.env["project.task"].create(task)
         return return_vals
@@ -183,21 +183,23 @@ class SaleOrder(models.Model):
         project_id = self.env["project.project"].search(
             [("sale_order_ref", "=", self.id)]
         )
-        return {
-            "res_model": "project.project",
-            "view_mode": "form",
-            "type": "ir.actions.act_window",
-            "res_id": project_id,
-        }
+        if self.task_length > 0:
+            return {
+                "res_model": "project.project",
+                "view_mode": "form",
+                "type": "ir.actions.act_window",
+                "res_id": project_id,
+            }
 
     def action_task_view(self):
         """smart button to show the tasks created by the current SO #T00469"""
-        return {
-            "res_model": "project.task",
-            "view_mode": "tree,form",
-            "type": "ir.actions.act_window",
-            "domain": [("sale_ref.id", "=", self.id)],
-        }
+        if self.task_length > 0:
+            return {
+                "res_model": "project.task",
+                "view_mode": "tree,form",
+                "type": "ir.actions.act_window",
+                "domain": [("sale_id.id", "=", self.id)],
+            }
 
     @api.depends("task_ids")
     def _compute_task_amount(self):
