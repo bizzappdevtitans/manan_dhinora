@@ -180,8 +180,8 @@ class SaleOrder(models.Model):
 
     def action_project_view(self):
         """smart button to show the project created #T00469"""
-        project_id = self.env["project.project"].search(
-            [("sale_order_ref", "=", self.id)]
+        project_id = (
+            self.env["project.project"].search([("sale_order_ref", "=", self.id)]).id
         )
         if self.task_length > 0:
             return {

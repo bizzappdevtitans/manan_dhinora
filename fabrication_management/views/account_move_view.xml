@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
                 <xpath expr="/form/sheet/group/group" position="inside">
                         <field name="maintenance_cycle" />
-                        <field name="company_id" />
+                        <field name="company_id" invisible="1" />
                 </xpath>
         </field>
     </record>
