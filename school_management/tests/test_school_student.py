@@ -33,19 +33,36 @@ class TestSchoolStudent(TransactionCase):
         """validating weather the promo_validation method works as intended #T00476"""
         self.student_record.write({"reference_code": self.school_ref.reference_promo})
         self.student_record.promo_validation()
+        self.assertEqual(
+            self.school_ref.reference_name,
+            self.student_record.referral_name,
+            "the refrence name logic not performing as expected",
+        )
 
     def test_02_reference_validation_false(self):
+        """testing to check weather the validation works as intended #T00476"""
         with self.assertRaises(ValidationError):
             self.student_record.write({"reference_code": "hi"})
 
     def test_03_unlink(self):
+        """testing to check weather the inherited method unlink works as intended
+        #T00476"""
+        student_record_id = self.student_record.id
         with self.assertRaises(ValidationError):
             self.student_record.unlink()
         self.student_record.write({"deleteable": "Yes"})
         self.student_record.unlink()
+        self.assertFalse(
+            student_record_id in (self.env["school.student"].search([])).ids,
+            "the record was not unlinked",
+        )
 
     def test_04_compute_credit(self):
         self.student_record.write({"subject_ids": [(4, self.subject_record.id)]})
+        self.assertTrue(
+            self.student_record.total_subject_credit == 6,
+            "the calculated credit doesn't match expected reasult",
+        )
 
     def test_05_compute_grade(self):
         test_gpa = [1.0, 3.0, 5.0, 7.0, 9.0, 10.0]

@@ -19,6 +19,7 @@ class TestStudentFees(TransactionCase):
         )
 
     def test_01_fees(self):
+        """testing the deposite date compute field is working as intended #T00476"""
         self.assertEqual(
             self.student_fees_record.date_of_bank_deposite,
             date.today() + timedelta(days=2),

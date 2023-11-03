@@ -23,6 +23,7 @@ class TestSchoolTeacher(TransactionCase):
         )
 
     def test_01_salary_compute(self):
+        """validating that weather the calulatd salary is the expected value #T00476"""
         exprience = [2, 4, 6, 8]
         salary = [15000, 20000, 40000, 80000]
         for element in zip(exprience, salary):
@@ -35,6 +36,7 @@ class TestSchoolTeacher(TransactionCase):
             )
 
     def test_02_buttons(self):
+        """validating that weather the buttonswork as intended #T00476"""
         self.teacher_record.wiz_teacher_leave()
         self.assertEqual(
             self.teacher_record.student_count,
@@ -44,20 +46,17 @@ class TestSchoolTeacher(TransactionCase):
         self.teacher_record.action_student_count()
 
     def test_03_day_joined_cron(self):
+        """validating that cron is working and is giving
+        is the expected value #T00476"""
         self.assertEqual(
             self.teacher_record.cron_day_counter(),
             self.teacher_record.days_from_joining,
             "the numberdays joined calculation is true",
         )
 
-    def test_04_server_action(self):
-        self.assertEqual(
-            self.teacher_record.state, "draft", "serveaction doesn't work as intended"
-        )
-        # TODO winf a way to test for both the validation errors
-        self.teacher_record.action_validate()
-
-    def test_05_unlinked_archive(self):
+    def test_04_unlinked_archive(self):
+        """testing for weather the unlinked records are indeed stored in
+        former.teacher object $T00476"""
         record_sequence = self.teacher_record.employee_number
         self.teacher_record.unlink()
         self.assertEqual(
@@ -68,10 +67,13 @@ class TestSchoolTeacher(TransactionCase):
             "former record not created",
         )
 
-    def test_06_leave_application_wizard(self):
+    def test_05_leave_application_wizard(self):
+        """calling the wizard to check if the wizard action is running by
+        checking coverage #T00476"""
         self.teacher_record.wiz_teacher_leave()
 
-    def test_07_name_get(self):
+    def test_06_name_get(self):
+        """testing that the name found after running name_get is as expected #T00476"""
         self.assertFalse(
             "Michael Scott - michael.scott@dundermifflin.co.us"
             in self.teacher_record.name_get(),

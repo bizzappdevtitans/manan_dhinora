@@ -22,6 +22,8 @@ class TestTeacherLeave(TransactionCase):
         )
 
     def test_01_compute_total_leave(self):
+        """verifing that the caculated total_leave_days is equal to the
+        expected days #T00476"""
         self.assertEqual(
             self.teacher_leave_request_1.total_leave_days,
             7,
@@ -29,6 +31,8 @@ class TestTeacherLeave(TransactionCase):
         )
 
     def test_02_compute_deduction(self):
+        """verifing that the caculated pay_deduction is equal to
+        the expected deduction #T00476"""
         paid_leaves = int(self.env["ir.config_parameter"].get_param("paid_leaves"))
         system_pay_per_day = int(
             self.env["ir.config_parameter"].get_param("pay_per_day")

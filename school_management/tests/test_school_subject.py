@@ -10,10 +10,12 @@ class TestSchoolSubject(TransactionCase):
         )
 
     def test_01_credit_value_vaidation(self):
+        """testing for the validation error, if credit < 5 #T0476"""
         with self.assertRaises(ValidationError):
             self.subject_record.write({"subject_credit": 2})
 
     def test_02_name_get(self):
+        """testing that the name found after running name_get is as expected #T00476"""
         self.assertFalse(
             "hindi - 6" in self.subject_record.name_get(),
             "created name_get name is incorrect",
