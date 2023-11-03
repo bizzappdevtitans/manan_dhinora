@@ -26,10 +26,11 @@ class TestSchoolStudent(TransactionCase):
         )
 
     def test_01_duplicate(self):
+        """checking if the inherited copy() method is working as intended #T00476"""
         self.student_record.copy()
 
     def test_02_reference_validation(self):
-
+        """validating weather the promo_validation method works as intended #T00476"""
         self.student_record.write({"reference_code": self.school_ref.reference_promo})
         self.student_record.promo_validation()
 
@@ -45,3 +46,16 @@ class TestSchoolStudent(TransactionCase):
 
     def test_04_compute_credit(self):
         self.student_record.write({"subject_ids": [(4, self.subject_record.id)]})
+
+    def test_05_compute_grade(self):
+        test_gpa = [1.0, 3.0, 5.0, 7.0, 9.0, 10.0]
+        test_grade = ["F", "P", "B", "B+", "A", "A+"]
+
+        for final_grade in zip(test_gpa, test_grade):
+            gpa, grade = final_grade
+            self.student_record.write({"student_gpa": gpa})
+            self.assertEqual(
+                self.student_record.student_grade,
+                grade,
+                "the grade obatined does not matched the expected grade",
+            )

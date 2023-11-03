@@ -38,22 +38,23 @@ class TeacherLeaveApplicationWizard(models.TransientModel):
     def _compute_number_of_days(self):
         """computing the number of net days of leave that is applied #T00355"""
         today_date = date.today()
-        start_date = today_date
-        end_date = today_date
-        if self.date_of_leave_start_wizard:
+        if self.date_of_leave_start_wizard and self.date_of_leave_end_wizard:
             start_date = self.date_of_leave_start_wizard
-        elif self.date_of_leave_end_wizard:
             end_date = self.date_of_leave_end_wizard
+        else:
+            start_date = today_date
+            end_date = today_date
         # validating the input dates
         if start_date < today_date:
             raise ValidationError(_("invalid start date"))
         elif end_date < start_date:
             raise ValidationError(_("invalid end date"))
+        elif end_date < today_date:
+            raise ValidationError(_("invalid end date"))
         # calculating the number of days of leaves
-        leaves = end_date - start_date
+        leaves = (end_date - start_date).total_seconds() / 86400
         # converted the above datetime.timedelta to an int
-        leaves_sec = leaves.total_seconds() / 86400
-        self.total_leave_days_wizard = int(leaves_sec)
+        self.total_leave_days_wizard = int(leaves)
         return self.total_leave_days_wizard
 
     @api.depends("total_leave_days_wizard")

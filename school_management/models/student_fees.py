@@ -11,7 +11,6 @@ class StudentFees(models.Model):
     @api.model
     def default_get(self, field_list):
         """using get_default() to set a default fees amount"""
-        field_list = []
         today_date = date.today()
         system_set_fees = self.env["ir.config_parameter"].get_param(
             "school_management.student_fees"

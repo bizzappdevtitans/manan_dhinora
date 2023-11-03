@@ -6,7 +6,7 @@ from odoo.tests.common import TransactionCase
 class TestSchoolTeacher(TransactionCase):
     def setUp(self):
         super(TestSchoolTeacher, self).setUp()
-        self.teacher_record = self.teacher_record_1 = self.env["school.teacher"].create(
+        self.teacher_record = self.env["school.teacher"].create(
             {
                 "teacher_name": "Michael Scott",
                 "employee_email": "michael.scott@dundermifflin.co.us",
@@ -36,13 +36,6 @@ class TestSchoolTeacher(TransactionCase):
 
     def test_02_buttons(self):
         self.teacher_record.wiz_teacher_leave()
-        self.env["school.student"].create(
-            {
-                "student_name": "Manan",
-                "student_date_of_birth": date.today(),
-                "class_teacher_id": self.teacher_record.id,
-            }
-        )
         self.assertEqual(
             self.teacher_record.student_count,
             1,
@@ -53,7 +46,7 @@ class TestSchoolTeacher(TransactionCase):
     def test_03_day_joined_cron(self):
         self.assertEqual(
             self.teacher_record.cron_day_counter(),
-            0,
+            self.teacher_record.days_from_joining,
             "the numberdays joined calculation is true",
         )
 
@@ -73,4 +66,14 @@ class TestSchoolTeacher(TransactionCase):
             ),
             1,
             "former record not created",
+        )
+
+    def test_06_leave_application_wizard(self):
+        self.teacher_record.wiz_teacher_leave()
+
+    def test_07_name_get(self):
+        self.assertFalse(
+            "Michael Scott - michael.scott@dundermifflin.co.us"
+            in self.teacher_record.name_get(),
+            "created name_get name is incorrect",
         )

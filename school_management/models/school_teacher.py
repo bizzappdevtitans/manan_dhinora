@@ -11,9 +11,8 @@ class SchoolTeacher(models.Model):
     _rec_name = "teacher_name"
 
     @api.model
-    def default_get(self):
+    def default_get(self, field_list):
         """using system parameters to set default value for work_expreience #T00355"""
-        field_list = []
         system_work_exp = self.env["ir.config_parameter"].get_param(
             "work_exprience", ""
         )

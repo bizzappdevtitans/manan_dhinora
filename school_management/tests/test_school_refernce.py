@@ -14,6 +14,7 @@ class TestSchoolRefernce(TransactionCase):
         )
 
     def test_01_promo_generator(self):
+        """testing for is the name validation works #T00476"""
         self.assertEqual(
             len(self.school_ref.reference_promo),
             13,

@@ -33,7 +33,7 @@ class SchoolStudent(models.Model):
         string="Birthday", compute="_compute_birthday_name"
     )
     student_gpa = fields.Float(digits=(2, 2), tracking=True)
-    student_grade = fields.Char(tracking=True)
+    student_grade = fields.Char(compute="_compute_grade", tracking=True)
     class_teacher_id = fields.Many2one(
         comodel_name="school.teacher", string="Class Teacher"
     )
@@ -100,21 +100,25 @@ class SchoolStudent(models.Model):
         self.student_age = datetime.today().year - self.student_date_of_birth.year
         return self.student_age
 
-    @api.onchange("student_gpa")
-    def _onchange_gpa_calculate_grade(self):
+    @api.depends("student_gpa")
+    def _compute_grade(self):
         """using onchange to check for gradeof student based on gpa #T00336"""
-        if self.student_gpa > 9.00:
-            self.student_grade = "A+"
-        elif 9.00 >= self.student_gpa > 8.00:
-            self.student_grade = "A"
-        elif 8.00 >= self.student_gpa > 6.00:
-            self.student_grade = "B+"
-        elif 6.00 >= self.student_gpa > 4.00:
-            self.student_grade = "B"
-        elif 4.00 >= self.student_gpa > 2.00:
-            self.student_grade = "P"
-        elif 2.00 >= self.student_gpa >= 0.00:
-            self.student_grade = "F"
+        if self.student_gpa is not False:
+            if self.student_gpa > 9.00:
+                self.student_grade = "A+"
+            elif 9.00 >= self.student_gpa > 8.00:
+                self.student_grade = "A"
+            elif 8.00 >= self.student_gpa > 6.00:
+                self.student_grade = "B+"
+            elif 6.00 >= self.student_gpa > 4.00:
+                self.student_grade = "B"
+            elif 4.00 >= self.student_gpa > 2.00:
+                self.student_grade = "P"
+            elif 2.00 >= self.student_gpa >= 0.00:
+                self.student_grade = "F"
+            return self.student_gpa
+        self.student_gpa = 0.0
+        return self.student_gpa
 
     @api.depends("student_date_of_birth")
     def _compute_birth_date(self):
