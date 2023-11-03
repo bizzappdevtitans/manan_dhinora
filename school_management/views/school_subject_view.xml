@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Tree view for the school subject model-->
+    <record id="school_management_school_subject_tree_view" model="ir.ui.view">
+        <field name="name">school.subject.tree</field>
+        <field name="model">school.subject</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="subject_name" string="Subject" />
+                <field name="subject_credit" string="Credit" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for the school.subject model-->
+    <record id="school_management_school_subject_form_view" model="ir.ui.view">
+        <field name="name">school.subject.form</field>
+        <field name="model">school.subject</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                 </header>
+                <sheet>
+                    <group nolable="1">
+                       <field name="subject_name" />
+                       <field name="subject_credit" string="Credit" />
+                       <field name="subject_student_ids" />
+                    </group>
+                </sheet>
+                <div calss="oe_chatter" />
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View for the school.subject model-->
+    <record id="school_management_school_subject_search_view" model="ir.ui.view">
+        <field name="name">school.subject.search</field>
+        <field name="model">school.subject</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="subject_name" string="Subject Name" />
+                <separator />
+            </search>
+        </field>
+    </record>
+
+    <!-- decelraion of action for the school.subject model -->
+    <record id="action_school_subject" model="ir.actions.act_window">
+        <field name="name">Subject</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.subject</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new subject record
+            </p>
+        </field>
+    </record>
+</odoo>

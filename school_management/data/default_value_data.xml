@@ -1,0 +1,27 @@
+<odoo>
+    <!-- system parameter for work exp default value #T00355 -->
+    <record id="exprience_default" model="ir.config_parameter">
+        <field name="key">work_exprience</field>
+        <field name="value">5</field>
+    </record>
+    <!-- system parameter for start date default value #T00355 -->
+    <record id="start_date_offset" model="ir.config_parameter">
+        <field name="key">date_offest</field>
+        <field name="value">0</field>
+    </record>
+    <!-- system parameter for bank deposite date default value #T00355 -->
+    <record id="deposite_date" model="ir.config_parameter">
+        <field name="key">bank_deposite_date</field>
+        <field name="value">2</field>
+    </record>
+    <!-- system parameter for salary/day default value #T00355 -->
+    <record id="pay_per_day" model="ir.config_parameter">
+        <field name="key">pay_per_day</field>
+        <field name="value">111</field>
+    </record>
+    <!-- system parameter for number of paid leaves default value #T00355 -->
+    <record id="paid_leaves" model="ir.config_parameter">
+        <field name="key">paid_leaves</field>
+        <field name="value">0</field>
+    </record>
+</odoo>

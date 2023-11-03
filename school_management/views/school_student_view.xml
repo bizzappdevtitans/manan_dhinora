@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Tree view for the school student model -->
+    <record id="school_management_student_tree_view" model="ir.ui.view">
+        <field name="name">school.student.tree</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="student_name" string="First Name" />
+                <field name="student_surname" string="Last Name" />
+                <field name="calendar_birth_day" string="birth day" invisible="1" />
+                <field name="class_teacher_id" string="Class Teacher" />
+                <field name="enroll_no" readonly="1" />
+                <field name="student_age" />
+                <field name="student_gender" readonly="1" />
+                <field name="student_gpa" string="GPA" />
+            </tree>
+        </field>
+    </record>
+
+        <!-- Kanban View for the school.student model-->
+        <record id="school_management_student_kanban_view" model="ir.ui.view">
+        <field name="name">school.student.kanban</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+         <kanban>
+                <field name="student_name" />
+                <field name="enroll_no" />
+                <field name="student_gender" />
+                <field name="student_gpa" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                               <field
+                                    name="student_image"
+                                    widget="image"
+                                    class="oe_avatar"
+                                />
+                            </div>
+                            <div class="o_kanban_record_headings mt4">
+                                <strong class="o_kanban_record_title">
+                                    Name: <field name="student_name" />
+                                </strong>
+                            </div>
+                            <div>
+                                Gender:
+                                <field name="student_gender" />
+                            </div>
+                            <div>
+                                Enroll no:
+                                <field name="enroll_no" />
+                            </div>
+                            <div>
+                                GPA:
+                                <field name="student_gpa" />
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <!-- Calendar View for the school.student model-->
+    <record id="school_management_student_calendar_view" model="ir.ui.view">
+        <field name="name">school.student.calendar</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <calendar date_start="calendar_birth_day" mode="month">
+                <field name="student_name_birthday" />
+            </calendar>
+        </field>
+    </record>
+
+    <!-- Graph View for the school.student model-->
+    <record id="school_management_student_graph_view" model="ir.ui.view">
+        <field name="name">school.student.graph</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <graph string="According to GPA">
+                <field name="student_name" string="Student" />
+                <field name="student_gpa" string="GPA" type="measure" />
+            </graph>
+        </field>
+    </record>
+
+
+    <!-- Form View for the school.student model-->
+    <record id="school_management_student_form_view" model="ir.ui.view">
+        <field name="name">school.student.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                   <div class="oe_button_box" name="button_box">
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_payment_count"
+                            icon="fa-money"
+                        >
+                            <field
+                                string="Payments"
+                                name="payment_count"
+                                widget="statinfo"
+                            />
+                        </button>
+                    </div>
+                    <field name="student_image" widget="image" class="oe_avatar" />
+                    <h1><field name="enroll_no" readonly="1" /></h1>
+                        <group nolable="1">
+                            <group>
+                                <field name="student_name" string="First Name" />
+                                <field name="student_surname" string="Last Name" />
+                                <field name="student_date_of_birth" />
+                                <field name="student_age" force_save="1" />
+                                <field name="student_address" />
+                                <field name="calendar_birth_day" invisible="1" />
+                                <field name="student_gender" widget="radio" />
+                            </group>
+                            <group>
+                                <field name="class_teacher_id" string="Class Teacher" />
+                                <field name="more_than_one" widget="boolean_toggle" />
+                                <field
+                                name="subject_ids"
+                                string="Subjects"
+                                widget="many2many_tags"
+                            />
+                                <field name="total_subject_credit" readonly="1" />
+                                <field name="student_gpa" string="GPA" />
+                                <field
+                                name="student_grade"
+                                string="Grade"
+                                force_save="1"
+                            />
+                                <!-- Field with a button next to it -->
+                                <label for="reference_code" string="Referral Code" />
+                                    <div class="o_row">
+                                        <field name="reference_code" />
+                                        <!-- button to verify the referral code -->
+                                        <button
+                                    name="promo_validation"
+                                    type="object"
+                                    string="Verify"
+                                    class="btn-primary"
+                                />
+                                    </div>
+
+                                <field
+                                name="referral_name"
+                                string="Reference"
+                                readonly="1"
+                            />
+                            </group>
+                        </group>
+                        <group>
+                            <field
+                            name="deleteable"
+                            string="Deleteable"
+                            widget="radio"
+                        />
+                        </group>
+                       <group>
+                            <field name="fees_table_ids" string="Fees Paid" />
+                        </group>
+                </sheet>
+                <!-- calling chatter box here -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View for the school.student model-->
+    <record id="school_management_student_search_view" model="ir.ui.view">
+        <field name="name">school.student.search</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <search>
+                <!-- making it search in both name and surname -->
+                <field
+                    name="student_name"
+                    string="Student Name"
+                    filter_domain="['|',
+                     ('student_name', 'ilike', self),
+                     ('student_surname', 'ilike', self)
+                     ]"
+                />
+                <field name="student_surname" />
+                <field name="enroll_no" />
+                <field name="student_gender" />
+                <field name="student_gpa" />
+                <!-- filter for male only -->
+                <filter
+                    name="filter_male"
+                    string="Male"
+                    domain="[('student_gender', '=', 'male')]"
+                />
+                <!-- filter for female only -->
+                <filter
+                    name="filter_female"
+                    string="Female"
+                    domain="[('student_gender', '=', 'female')]"
+                />
+                <separator />
+                <!-- filter according to gpa higher then 9 -->
+                <filter
+                    name="filter_gpa_high"
+                    string="smart"
+                    domain="[('student_gpa', '>=', '9.00')]"
+                />
+                <!-- filter according to gpa lower then 3 -->
+                <filter
+                    name="filter_gpa_low"
+                    string="not smart"
+                    domain="[('student_gpa', '&lt;', '3.00')]"
+                />
+            </search>
+        </field>
+    </record>
+
+
+    <!-- action decelaration for the school.student model -->
+    <record id="action_school_student" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,kanban,graph,calendar,form</field>
+        <!-- using context to make female the default gender and the set the deletable
+             toggle to no by default -->
+        <field name="context">
+            {'default_student_gender':'female', 'default_deleteable':'No'}
+        </field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new student record
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Tree View for school teacher model -->
+    <record id="school_management_school_teacher_tree_view" model="ir.ui.view">
+        <field name="name">school.teacher.tree</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="teacher_name" string="Name" />
+                <field name="employee_number" string="employee ID" />
+                <field name="teacher_gender" />
+                <field name="work_exprience" />
+                <field name="student_count" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Graph View using graph view to show the number of student per teacher -->
+    <record id="school_management_school_teacher_graph_view" model="ir.ui.view">
+        <field name="name">school.teacher.graph</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <graph string="Number of students per teacher">
+                <field name="teacher_name" string="Teacher" />
+                <field name="student_count" type="measure" />
+            </graph>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="school_management_school_teacher_form_view" model="ir.ui.view">
+        <field name="name">school.teacher.form</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!-- <button type="object" name="test" string="test"/> -->
+                    <button
+                        type="action"
+                        name="%(actions_teacher_leave_wizard)d"
+                        string="Apply Leave"
+                        class="btn-primary"
+                    />
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <!--smart button: using the button the trigger the smart button action -->
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_student_count"
+                            icon="fa-male"
+                        >
+                            <field
+                                string="Students"
+                                name="student_count"
+                                widget="statinfo"
+                            />
+                        </button>
+                    </div>
+                    <field name="teacher_image" widget="image" class="oe_avatar" />
+                    <!-- here, using a automated squence -->
+                    <h1><field name="employee_number" readonly="1" /></h1>
+                    <group nolable="1">
+                        <group>
+                            <field name="teacher_name" string="Name" />
+                            <field name="employee_email" widget="email" />
+                            <field name="teacher_address" string="Address" />
+                            <field name="teacher_gender" widget="radio" />
+                            <field
+                                name="teacher_zero_complain"
+                                widget="boolean_toggle"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="date_of_birth_teacher"
+                                string="Date of Birth"
+                            />
+                            <field name="joining_date" readonly="1" />
+                            <field name="days_from_joining" readonly="1" />
+                            <field name="work_exprience" string="Exprience" />
+                            <field name="teacher_salary_currency_id" invisible="1" />
+                            <field
+                                name="teacher_salary"
+                                string="Salary"
+                                widget="monetary"
+                                readonly="1"
+                            />
+                            <field
+                                name="teacher_bonus"
+                                string="Annual Bonus"
+                                widget="monetary"
+                                readonly="1"
+                            />
+                        </group>
+                    </group>
+                        <group>
+                            <field name="student_ids" string="Pupils" />
+                        </group>
+                </sheet>
+                <div class="oe_chatter">
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="school_management_school_teacher_search_view" model="ir.ui.view">
+        <field name="name">school.teacher.search</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <search>
+                <!-- filter to make it search in both name and surname -->
+                <field name="teacher_name" string="Teacher Name" />
+                <field name="employee_number" />
+                <filter
+                    name="filter_male"
+                    string="Male"
+                    domain="[('teacher_gender', '=', 'male')]"
+                />
+                <filter
+                    name="filter_female"
+                    string="Female"
+                    domain="[('teacher_gender', '=', 'female')]"
+                />
+                <separator />
+            </search>
+        </field>
+    </record>
+
+    <!-- deceleration of action for the school.teacher model -->
+    <record id="actions_school_teacher_view" model="ir.actions.act_window">
+        <field name="name">Teachers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">tree,graph,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new student record
+            </p>
+        </field>
+    </record>
+</odoo>

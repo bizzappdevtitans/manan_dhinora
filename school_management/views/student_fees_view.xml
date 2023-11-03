@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Tree View for student.fees model -->
+    <record id="school_management_school_student_fees_tree_view" model="ir.ui.view">
+        <field name="name">student.fees.tree</field>
+        <field name="model">student.fees</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="fees_of_student_id" string="Name" />
+                <field name="date_of_deposite" />
+                <field name="currency_id" invisible="1" />
+                <field name="total_amount" sum="Total" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for student.fees model-->
+    <record id="school_management_school_student_fees_form_view" model="ir.ui.view">
+        <field name="name">student.fees.form</field>
+        <field name="model">student.fees</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group nolable="1">
+                        <field name="fees_of_student_id" />
+                        <field name="date_of_deposite" />
+                        <field name="date_of_bank_deposite" readonly="1" />
+                        <field name="currency_id" invisible="1" />
+                        <field name="total_amount" />
+                    </group>
+                </sheet>
+                <div calss="oe_chatter" />
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View for student.fees model-->
+    <record id="school_management_student_fees_search_view" model="ir.ui.view">
+        <field name="name">student.fees.search</field>
+        <field name="model">student.fees</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="date_of_deposite" />
+                <field name="fees_of_student_id" />
+            </search>
+        </field>
+    </record>
+
+    <!-- deceleration of action for the student.fees model -->
+    <record id="action_school_student_fees" model="ir.actions.act_window">
+        <field name="name">Student Fees</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">student.fees</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+</odoo>

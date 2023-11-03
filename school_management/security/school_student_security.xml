@@ -1,0 +1,29 @@
+<odoo>
+    <!-- making a category named School Managemnet for the access right #T00439-->
+    <record id="school_management_user_access" model="ir.module.category">
+        <field name="name">School Management</field>
+        <field name="description">user access to school_student model</field>
+        <field name="sequence">20</field>
+    </record>
+    <!-- making a security group named student #T00439-->
+    <record id="school_management_student" model="res.groups">
+        <field name="name">student</field>
+        <field name="category_id" ref="school_management_user_access" />
+    </record>
+    <!-- making a security group named admin #T00439-->
+    <record id="school_management_admin" model="res.groups">
+        <field name="name">admin</field>
+        <field name="category_id" ref="school_management_user_access" />
+    </record>
+    <!-- declaring a record rule on school_teacher model where if a teacher has < 1 students their record wont be visible to the student user #T00439 -->
+    <record id="record_visiable_to_student" model="ir.rule">
+       <field name="name">only visiable if teacher has a student</field>
+       <field name="model_id" ref="school_management.model_school_teacher" />
+       <field name="groups" eval="[(4, ref ('school_management_student'))]" />
+       <field name="perm_read" eval="True" />
+       <field name="perm_write" eval="False" />
+       <field name="perm_create" eval="False" />
+       <field name="perm_unlink" eval="False" />
+       <field name="domain_force">[('student_count', '&gt;', 0)]</field>
+    </record>
+</odoo>
