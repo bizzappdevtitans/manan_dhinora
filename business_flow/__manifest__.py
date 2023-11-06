@@ -6,9 +6,7 @@
     "version": "15.0.0.0.1",
     "license": "LGPL-3",
     "depends": [
-        "sale_management",
         "mrp",
-        "project",
         "sale_project",
         "purchase",
     ],
