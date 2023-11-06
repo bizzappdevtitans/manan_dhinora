@@ -21,7 +21,7 @@ class TestLeaveWizard(TransactionCase):
         self.assertEqual(
             self.leave_wiz_record.total_leave_days_wizard,
             7,
-            "the computed leave days is false",
+            "the computed leave days is not equal to the expected value",
         )
 
     def test_02_compute_pay_deduction(self):

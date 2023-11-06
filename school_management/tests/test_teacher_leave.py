@@ -27,7 +27,7 @@ class TestTeacherLeave(TransactionCase):
         self.assertEqual(
             self.teacher_leave_request_1.total_leave_days,
             7,
-            "the total days compute is incorrect",
+            "the computed total days is not the same as the expected value: 7",
         )
 
     def test_02_compute_deduction(self):
@@ -43,5 +43,5 @@ class TestTeacherLeave(TransactionCase):
         self.assertEqual(
             self.teacher_leave_request_1.pay_deduction,
             deducted_pay,
-            "the total deducted pay is incorrect",
+            "the computed deducted pay is not the same as the expected value ",
         )

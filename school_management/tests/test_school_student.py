@@ -36,7 +36,7 @@ class TestSchoolStudent(TransactionCase):
         self.assertEqual(
             self.school_ref.reference_name,
             self.student_record.referral_name,
-            "the refrence name logic not performing as expected",
+            "the refrence name is not equal to the expected string",
         )
 
     def test_02_reference_validation_false(self):

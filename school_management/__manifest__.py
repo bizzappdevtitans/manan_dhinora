@@ -5,7 +5,7 @@
     "version": "15.0.0.0.1",
     "author": "Manan[MAD]",
     "license": "LGPL-3",
-    "depends": ["mail", "base"],
+    "depends": ["mail"],
     "data": [
         "security/school_student_security.xml",
         "security/ir.model.access.csv",

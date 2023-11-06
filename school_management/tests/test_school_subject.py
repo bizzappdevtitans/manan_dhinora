@@ -18,5 +18,5 @@ class TestSchoolSubject(TransactionCase):
         """testing that the name found after running name_get is as expected #T00476"""
         self.assertFalse(
             "hindi - 6" in self.subject_record.name_get(),
-            "created name_get name is incorrect",
+            "name_get return value does not match the expected value",
         )

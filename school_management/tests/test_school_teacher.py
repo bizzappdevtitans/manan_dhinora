@@ -32,7 +32,7 @@ class TestSchoolTeacher(TransactionCase):
             self.assertEqual(
                 self.teacher_record.teacher_salary,
                 salary,
-                "the salary logic is incorrect",
+                "the computed salary does not match the expected value ",
             )
 
     def test_02_buttons(self):
@@ -64,7 +64,7 @@ class TestSchoolTeacher(TransactionCase):
                 [("former_employee_number", "=", record_sequence)]
             ),
             1,
-            "former record not created",
+            "former was record not created",
         )
 
     def test_05_leave_application_wizard(self):
@@ -77,5 +77,5 @@ class TestSchoolTeacher(TransactionCase):
         self.assertFalse(
             "Michael Scott - michael.scott@dundermifflin.co.us"
             in self.teacher_record.name_get(),
-            "created name_get name is incorrect",
+            "created name_get name is different from the expected value ",
         )

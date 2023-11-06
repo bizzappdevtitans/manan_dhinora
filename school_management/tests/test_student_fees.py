@@ -23,5 +23,5 @@ class TestStudentFees(TransactionCase):
         self.assertEqual(
             self.student_fees_record.date_of_bank_deposite,
             date.today() + timedelta(days=2),
-            "bank deposite date is not as expected",
+            "bank deposite date is different from the required date",
         )
