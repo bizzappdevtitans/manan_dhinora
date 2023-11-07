@@ -1,0 +1,13 @@
+<odoo>
+    <!-- inherited view of account move to add the field used to get the passed value from SO #T00379 -->
+    <record id="invoice_addon_form_view" model="ir.ui.view">
+        <field name="name">invoice.addon.form.view</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group/group" position="inside">
+                        <field name="customer_desc_invoice" />
+                </xpath>
+        </field>
+    </record>
+</odoo>

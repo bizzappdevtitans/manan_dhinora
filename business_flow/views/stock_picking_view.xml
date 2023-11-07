@@ -1,0 +1,16 @@
+<odoo>
+    <!-- inherited view of stock.picking to add the custom field 'delivery_description' #T00437-->
+    <record id="stock_picking_inherited_form_view" model="ir.ui.view">
+        <field name="name">stock.picking.inherited.form.view</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+                <xpath
+                expr="/form/sheet/group/group/field[@name='partner_id']"
+                position="after"
+            >
+                        <field name="delivery_description" />
+                </xpath>
+        </field>
+    </record>
+</odoo>
