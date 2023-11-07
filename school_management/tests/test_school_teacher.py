@@ -51,7 +51,7 @@ class TestSchoolTeacher(TransactionCase):
         self.assertEqual(
             self.teacher_record.cron_day_counter(),
             self.teacher_record.days_from_joining,
-            "the numberdays joined calculation is true",
+            "the cron_day_counter() method is not returning expected value",
         )
 
     def test_04_unlinked_archive(self):

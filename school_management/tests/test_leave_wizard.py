@@ -15,7 +15,7 @@ class TestLeaveWizard(TransactionCase):
             }
         )
 
-    def test_01_compute_total_leave_days(self):
+    def test_01_check_total_leave_days(self):
         """verifing that the caculated total_leave_days is equal to the
         expected days #T00476"""
         self.assertEqual(

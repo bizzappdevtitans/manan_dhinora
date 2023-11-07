@@ -27,7 +27,10 @@ class TestSchoolStudent(TransactionCase):
 
     def test_01_duplicate(self):
         """checking if the inherited copy() method is working as intended #T00476"""
-        self.student_record.copy()
+        self.assertTrue(
+            "S-C" in self.student_record.copy().enroll_no,
+            "the duplicated record was not created",
+        )
 
     def test_02_reference_validation(self):
         """validating weather the promo_validation method works as intended #T00476"""
