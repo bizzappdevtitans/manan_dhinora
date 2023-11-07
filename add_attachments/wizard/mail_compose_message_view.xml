@@ -1,0 +1,13 @@
+<odoo>
+    <!-- inherited view of the email compose message view to add a test button in it #T00464 -->
+    <record id="email_compose_message_inherited_form_view" model="ir.ui.view">
+        <field name="name">email.compose.message.inherited.form.view</field>
+        <field name="model">mail.compose.message</field>
+        <field name="inherit_id" ref="mail.email_compose_message_wizard_form" />
+        <field name="arch" type="xml">
+                <xpath expr="//field[@name='subject']" position="after">
+                        <field name="all_attachments" />
+                </xpath>
+        </field>
+    </record>
+</odoo>
