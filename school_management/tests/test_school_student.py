@@ -26,7 +26,8 @@ class TestSchoolStudent(TransactionCase):
         )
 
     def test_01_duplicate(self):
-        """checking if the inherited copy() method is working as intended #T00476"""
+        """checking if the inherited copy() method is createing reocrds with
+        the sequence 'S-C' as intended #T00476"""
         self.assertTrue(
             "S-C" in self.student_record.copy().enroll_no,
             "the duplicated record was not created",
