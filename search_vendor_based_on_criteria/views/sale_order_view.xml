@@ -9,7 +9,7 @@
                 expr="/form/sheet/notebook/page/field[@name='order_line']/tree/field[@name='name']"
                 position="after"
             >
-                    <field name="supplier" />
+                    <field name="supplier_id" />
                 </xpath>
         </field>
     </record>

@@ -5,7 +5,7 @@
         <field name="inherit_id" ref="product.product_supplierinfo_tree_view" />
         <field name="arch" type="xml">
                 <xpath expr="/tree/field[@name='product_id']" position="after">
-                    <field name="supplier_sequence" readonly="1" />
+                    <field name="supplier_sequence" />
                 </xpath>
         </field>
     </record>
@@ -19,7 +19,7 @@
                 expr="//group[@name='vendor']/field[@name='product_code']"
                 position="after"
             >
-                    <field name="supplier_sequence" readonly="1" />
+                    <field name="supplier_sequence" />
                 </xpath>
         </field>
     </record>

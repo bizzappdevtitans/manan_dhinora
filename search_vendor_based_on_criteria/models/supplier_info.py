@@ -4,7 +4,9 @@ from odoo import api, fields, models
 class SupplierInfo(models.Model):
     _inherit = "product.supplierinfo"
 
+    # declaring required field
     supplier_sequence = fields.Integer(string="Supplier ID")
+
     _sql_constraints = [
         (
             "unique_supplier_sequence",
