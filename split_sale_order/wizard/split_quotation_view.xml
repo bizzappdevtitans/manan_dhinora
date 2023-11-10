@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+        <!-- form view for the split quotation application wizard -->
+        <record id="split_quotation_form_view" model="ir.ui.view">
+            <field name="name">split.quotation.form.view</field>
+            <field name="model">split.quotation</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group nolable="1">
+                            <field name="split_order" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button
+                        string="Split"
+                        type="object"
+                        name="action_split_quotation"
+                        class="btn-primary"
+                    />
+                        <button
+                        string="Cancel"
+                        special="cancel"
+                        class="btn-secondary"
+                    />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action decleration for split Quotation wizard -->
+        <record id="action_split_quotation_wizard" model="ir.actions.act_window">
+            <field name="name">Split Quotation</field>
+            <field name="res_model">split.quotation</field>
+            <field name="view_mode">form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="target">new</field>
+        </record>
+</odoo>
