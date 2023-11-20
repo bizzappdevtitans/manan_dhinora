@@ -1,4 +1,4 @@
-from odoo import _, fields, models
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -9,6 +9,13 @@ class SaleOrder(models.Model):
     source_sale_order_id = fields.Many2one(
         comodel_name="sale.order", string="Split Refrence"
     )
+    order_line_length = fields.Integer(compute="_compute_order_line_length")
+
+    @api.depends("order_line")
+    def _compute_order_line_length(self):
+        for record in self:
+            record.order_line_length = len(record.order_line)
+            return record.order_line_length
 
     def action_split_quotation_wiz(self):
         """this method will return a wizard thich can be used to split the sale
