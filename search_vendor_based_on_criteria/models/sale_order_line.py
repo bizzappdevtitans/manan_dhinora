@@ -21,10 +21,10 @@ class SaleOrderLine(models.Model):
             if not supplier.supplier_sequence:
                 supplier.write({"supplier_sequence": supplier.id})
 
-    def _fetch_supplier_id(self, product_id, self_id):
+    def _fetch_supplier_id(self, product_id, sale_line):
         """this method will be called every time we need to find the supplier_id based
         on the required criteria, to assign to the compute field #T00479"""
-        self_record = self.search([("id", "=", self_id)])
+        order_line = self.search([("id", "=", sale_line)])
         product_id = self.env["product.product"].search([("id", "=", product_id)])
         supplier_ids = (
             self.env["product.supplierinfo"].browse(product_id.mapped("seller_ids")).ids
@@ -41,8 +41,8 @@ class SaleOrderLine(models.Model):
         }
         # if number of sellers is 1 or less, we just assign them directly
         if len(supplier_criteria_info) == 1:
-            if self_id:
-                return self_record.write(
+            if sale_line:
+                return order_line.write(
                     {"supplier_id": product_id.mapped("seller_ids").id}
                 )
             self.supplier_id = supplier_ids[0]
@@ -62,8 +62,8 @@ class SaleOrderLine(models.Model):
                 )
             ]
             if len(required_vendor) == 1:
-                if self_id:
-                    return self_record.write(
+                if sale_line:
+                    return order_line.write(
                         {
                             "supplier_id": supplier_criteria_info.get(
                                 required_vendor[0]
@@ -87,5 +87,5 @@ class SaleOrderLine(models.Model):
             # multiple product_id, so we dont need self_id
             return self._fetch_supplier_id(self.product_id.id, False)
         for record in zip(self.product_id.ids, self.ids):
-            (product_id, self_id) = record
-            self._fetch_supplier_id(product_id, self_id)
+            (product_id, sale_line) = record
+            self._fetch_supplier_id(product_id, sale_line)

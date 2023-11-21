@@ -19,13 +19,12 @@ class SupplierInfo(models.Model):
     def name_get(self):
         """using name_get to get the required name - price in the
         m2o in order_line #T00479"""
-        final_name = []
-        for supplier in self:
-            final_name.append(
-                (
-                    supplier.id,
-                    "%s - %s %s"
-                    % (supplier.name.name, supplier.currency_id.symbol, supplier.price),
-                )
+        final_name = [
+            (
+                supplier.id,
+                "%s - %s %s"
+                % (supplier.name.name, supplier.currency_id.symbol, supplier.price),
             )
+            for supplier in self
+        ]
         return final_name
