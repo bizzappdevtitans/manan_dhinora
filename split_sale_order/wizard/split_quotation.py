@@ -7,39 +7,39 @@ class SplitQuotation(models.TransientModel):
 
     split_order = fields.Selection(
         [
-            ("category", "Category"),
-            ("selected_line", "Selected Line"),
+            ("category", "Per Category"),
+            ("selected_line", "Per Selected Line"),
             ("per_order_line", "Per Line"),
         ],
-        string="Split Based on",
-    )
-    # TODO create a proper m2m
-    sale_order_id = fields.Many2one(
-        comodel_name="sale.order",
-        string="active sale order",
-        default=lambda sale_order: sale_order.env.context.get("active_id"),
-        store=True,
+        string="Split Order as",
     )
     sale_order_line_ids = fields.Many2many(
         comodel_name="sale.order.line",
         relation="order_line_ids_rel",
-        default=lambda sale_order: sale_order.env["sale.order"]
-        .browse([sale_order.env.context.get("active_id")])
-        .order_line,
+        column1="sale_order_line_ids",
+        column2="order_id",
+        domain=lambda self: self._get_order_line(),
         string="Selected Lines",
     )
 
+    def _get_order_line(self):
+        """this method will be called every time the slection is set to selected_line
+        and will return a domain based on the active_id #T00480"""
+        if self.env.context.get("active_id"):
+            return [("order_id", "=", (self.env.context.get("active_id")))]
+
     def _category_split(self, sale_order_id):
-        """we split the order_line according to category #T00480"""
+        """this method will split the order_line according to their category when
+        selection is set to category #T00480"""
         order_lines = sale_order_id.mapped("order_line")
         # preparing a dict of order_line according to their product category
         line_ids_category = {}
         for line_category in order_lines.mapped("product_id").mapped("categ_id"):
-            order_line_ls = []
-            for line in order_lines:
-                if line.mapped("product_id").mapped("categ_id") == line_category:
-                    order_line_ls.append(line.id)
-            line_ids_category[line_category.name] = order_line_ls
+            line_ids_category[line_category.name] = [
+                line
+                for line in order_lines
+                if line.mapped("product_id").mapped("categ_id") == line_category
+            ]
         # creating new sale order according to the dict
         for category in line_ids_category:
             self.env["sale.order"].create(
@@ -120,9 +120,7 @@ class SplitQuotation(models.TransientModel):
         """this action will be called when the split button is clicked and will split
         the sale_order based on the option selected in split_order field #T00480"""
         for record in self:
-            sale_order_id = record.env["sale.order"].browse(
-                [record.env.context.get("active_id")]
-            )
+            sale_order_id = self.env.context.get("active_id")
             if record.split_order == "category":
                 record._category_split(sale_order_id)
             elif record.split_order == "per_order_line":

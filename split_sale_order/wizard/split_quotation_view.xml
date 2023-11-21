@@ -6,15 +6,15 @@
             <field name="model">split.quotation</field>
             <field name="arch" type="xml">
                 <form>
-                    <group>
-                        <group nolable="1">
-                            <field name="split_order" />
+                        <group>
+                            <field name="split_order" widget="radio" />
                         </group>
-                        <field
-                        name="sale_order_line_ids"
-                        attrs="{'invisible': [('split_order', '!=', 'selected_line')]}"
-                    />
-                    </group>
+                          <br />
+                          <br />
+                            <field
+                    name="sale_order_line_ids"
+                    attrs="{'invisible': [('split_order', '!=', 'selected_line')]}"
+                />
                     <footer>
                         <button
                         string="Split"
