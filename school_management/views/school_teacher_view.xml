@@ -35,7 +35,6 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <!-- <button type="object" name="test" string="test"/> -->
                     <button
                         type="action"
                         name="%(actions_teacher_leave_wizard)d"

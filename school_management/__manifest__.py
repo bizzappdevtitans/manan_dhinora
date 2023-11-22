@@ -1,4 +1,3 @@
-# hrs worked on: 211.5
 {
     "name": "School Management",
     "summary": "management system, with options for students, teachers,refernce",
@@ -14,6 +13,8 @@
         "data/subject_data.xml",
         "data/teacher_data.xml",
         "wizard/teacher_leave_application_wizard_view.xml",
+        "report/student_report_template.xml",
+        "report/student_report.xml",
         "views/school_teacher_view.xml",
         "views/former_teachers_view.xml",
         "views/school_subject_view.xml",

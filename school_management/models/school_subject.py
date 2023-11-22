@@ -46,6 +46,9 @@ class SchoolSubject(models.Model):
 
         for subject in self:
             resultent_string.append(
-                (subject.id, "%s - %s" % (subject.subject_name, subject.subject_credit))
+                (
+                    subject.id,
+                    "%s - credit: %s" % (subject.subject_name, subject.subject_credit),
+                )
             )
         return resultent_string

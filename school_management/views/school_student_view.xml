@@ -94,7 +94,7 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                   <div class="oe_button_box" name="button_box">
+                    <div class="oe_button_box" name="button_box">
                         <button
                             class="oe_stat_button"
                             type="object"
