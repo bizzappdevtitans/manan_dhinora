@@ -1,0 +1,7 @@
+<odoo>
+   <!-- system parameter to check for the excluded subject. #T00355 -->
+   <record id="subject_exclusion" model="ir.config_parameter">
+        <field name="key">subject_name</field>
+        <field name="value">english</field>
+    </record>
+</odoo>

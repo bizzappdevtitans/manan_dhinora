@@ -1,0 +1,100 @@
+<odoo>
+        <!-- tree view for the former teacher model-->
+        <record id="school_management_former_teachers_tree_view" model="ir.ui.view">
+        <field name="name">former.teachers.tree</field>
+        <field name="model">former.teachers</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="former_teacher_name" string="Name" />
+            </tree>
+        </field>
+    </record>
+<!-- formview for the former teacher model -->
+    <record id="school_management_former_teacher_form_view" model="ir.ui.view">
+        <field name="name">former.teachers.form</field>
+        <field name="model">former.teachers</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field
+                        name="former_teacher_image"
+                        widget="image"
+                        class="oe_avatar"
+                    />
+                    <!-- here, using a automated squence -->
+                    <h1><field name="former_employee_number" readonly="1" /></h1>
+                    <group nolable="1">
+                        <group>
+                            <field
+                                name="former_teacher_name"
+                                string="Name"
+                                readonly="1"
+                            />
+                            <field
+                                name="former_employee_email"
+                                widget="email"
+                                readonly="1"
+                            />
+                            <field
+                                name="former_teacher_address"
+                                string="Address"
+                                readonly="1"
+                            />
+                            <field
+                                name="former_teacher_gender"
+                                widget="radio"
+                                readonly="1"
+                            />
+                            <field
+                                name="former_teacher_zero_complain"
+                                widget="boolean_toggle"
+                                readonly="1"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="date_of_birth_former_teacher"
+                                string="Date of Birth"
+                                readonly="1"
+                            />
+                            <field
+                                name="former_teacher_work_exprience"
+                                string="Exprience"
+                                readonly="1"
+                            />
+                            <field
+                                name="former_teacher_salary_currency_id"
+                                invisible="1"
+                            />
+                            <field
+                                name="former_teacher_salary"
+                                string="Salary"
+                                widget="monetary"
+                                readonly="1"
+                            />
+                            <field
+                                name="former_teacher_bonus"
+                                string="Annual Bonus"
+                                widget="monetary"
+                                readonly="1"
+                            />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+<!-- action decleration for the former teacher model -->
+    <record id="action_former_teachers" model="ir.actions.act_window">
+        <field name="name">Former Teachers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">former.teachers</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Deleted records from Teachers are stored here
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,1500 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* school_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-22 10:13+0000\n"
+"PO-Revision-Date: 2023-11-22 10:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: school_management
+#: model:ir.actions.report,print_report_name:school_management.action_report_student
+msgid "'student - %s' % (object.enroll_no)"
+msgstr "'student - %s' % (object.enroll_no)"
+
+#. module: school_management
+#: model:ir.actions.report,print_report_name:school_management.action_report_student_fees
+msgid "'student fee - %s' % (object.enroll_no)"
+msgstr "'studiegeld - %s' % (object.enroll_no)"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student
+msgid ""
+"<br/>\n"
+"                        Subjects:"
+msgstr ""
+"<br/>\n"
+"                        Onderwerpen:"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
+msgid "<br/><u>Address</u>:"
+msgstr "<br/><u>Adres</u>:"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
+msgid "<br/><u>Date of Birth</u>:"
+msgstr "<br/><u>Geboortedatum</u>:"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
+msgid "<br/><u>Subjects</u>:"
+msgstr "<br/><u>Onderwerpen</u>:"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
+msgid "<u>GPA</u>:"
+msgstr "<u>GPA</u>:"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
+msgid "<u>Gender</u>:"
+msgstr "<u>Geslacht</u>:"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
+msgid "<u>Name</u>:"
+msgstr "<u>Naam</u>:"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__unsplash_access_key
+msgid "Access Key"
+msgstr "Toegangssleutel"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_graph_view
+msgid "According to GPA"
+msgstr "Volgens GPA"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_needaction
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_needaction
+msgid "Action Needed"
+msgstr "Actie nodig"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__activity_ids
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_ids
+msgid "Activities"
+msgstr "Werkzaamheden"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__activity_exception_decoration
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activiteit Uitzondering Decoratie"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__activity_state
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_state
+msgid "Activity State"
+msgstr "Activiteitsstatus"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__activity_type_icon
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Pictogram voor activiteitstype"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_address
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_address
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
+msgid "Address"
+msgstr "Adres"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__group_sale_pricelist
+msgid "Advanced Pricelists"
+msgstr "Geavanceerde prijslijsten"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_age
+msgid "Age"
+msgstr "Leeftijd"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__alias_domain
+msgid "Alias Domain"
+msgstr "Aliasdomein"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_mail_plugin
+msgid "Allow integration with the mail plugins"
+msgstr "Sta integratie met de e-mailplug-ins toe"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_google_calendar
+msgid "Allow the users to synchronize their calendar  with Google Calendar"
+msgstr "Sta de gebruikers toe hun agenda te synchroniseren met Google Agenda"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_microsoft_calendar
+msgid "Allow the users to synchronize their calendar with Outlook Calendar"
+msgstr "Sta de gebruikers toe hun agenda te synchroniseren met Outlook Agenda"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_base_import
+msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
+msgstr "Sta gebruikers toe gegevens te importeren uit CSV/XLS/XLSX/ODS-bestanden"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_subject__group_sale_pricelist
+msgid ""
+"Allows to manage different prices based on rules per category of customers.\n"
+"                Example: 10% for retailers, promotion of 5 EUR on this product, etc."
+msgstr ""
+"Maakt het mogelijk om verschillende prijzen te beheren op basis van regels per categorie klanten.\n"
+"               Voorbeeld: 10% voor detailhandelaren, promotie van 5 EUR op dit product, enz."
+
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_subject__group_multi_currency
+msgid "Allows to work in a multi currency environment"
+msgstr "Maakt het mogelijk om in een omgeving met meerdere valuta te werken"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_student_fees__total_amount
+#: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
+msgid "Amount"
+msgstr "Hoeveelheid"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__group_analytic_accounting
+msgid "Analytic Accounting"
+msgstr "Analytische boekhouding"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
+msgid "Annual Bonus"
+msgstr "Jaarlijkse bonus"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
+msgid "Apply Leave"
+msgstr "Verlof toepassen"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
+msgid "Apply for Leave"
+msgstr "Verlof aanvragen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_voip
+msgid "Asterisk (VoIP)"
+msgstr "Sterretje (VoIP)"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_google_drive
+msgid "Attach Google documents to any record"
+msgstr "Voeg Google-documenten toe aan elk record"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_attachment_count
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_attachment_count
+msgid "Attachment Count"
+msgstr "Aantal bijlagen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_student_fees__date_of_bank_deposite
+msgid "Bank deposite date"
+msgstr "Datum bankstorting"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_name_birthday
+msgid "Birthday"
+msgstr "Verjaardag"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__calendar_birth_day
+msgid "Calendar Birth Day"
+msgstr "Kalender geboortedag"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__class_teacher_id
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
+msgid "Class Teacher"
+msgstr "Klassen leraar"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_pad
+msgid "Collaborative Pads"
+msgstr "Collaboratieve pads"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__company_id
+msgid "Company"
+msgstr "Bedrijf"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__company_informations
+msgid "Company Informations"
+msgstr "bedrijfsinformatie"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__company_name
+msgid "Company Name"
+msgstr "Bedrijfsnaam"
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__school_teacher__state__confirm
+msgid "Confirm"
+msgstr "Bevestigen"
+
+#. module: school_management
+#: model_terms:ir.actions.act_window,help:school_management.action_school_reference
+msgid "Create a new reference record"
+msgstr "Maak een nieuw referentierecord aan"
+
+#. module: school_management
+#: model_terms:ir.actions.act_window,help:school_management.action_school_student
+#: model_terms:ir.actions.act_window,help:school_management.actions_school_teacher_view
+#: model_terms:ir.actions.act_window,help:school_management.actions_teacher_leave_model
+msgid "Create a new student record"
+msgstr "Maak een nieuw leerlingrecord aan"
+
+#. module: school_management
+#: model_terms:ir.actions.act_window,help:school_management.action_school_subject
+msgid "Create a new subject record"
+msgstr "Maak een nieuw onderwerprecord"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__create_uid
+#: model:ir.model.fields,field_description:school_management.field_school_reference__create_uid
+#: model:ir.model.fields,field_description:school_management.field_school_student__create_uid
+#: model:ir.model.fields,field_description:school_management.field_school_subject__create_uid
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__create_uid
+#: model:ir.model.fields,field_description:school_management.field_student_fees__create_uid
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__create_uid
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__create_uid
+msgid "Created by"
+msgstr "Gemaakt door"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__create_date
+#: model:ir.model.fields,field_description:school_management.field_school_reference__create_date
+#: model:ir.model.fields,field_description:school_management.field_school_student__create_date
+#: model:ir.model.fields,field_description:school_management.field_school_subject__create_date
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__create_date
+#: model:ir.model.fields,field_description:school_management.field_student_fees__create_date
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__create_date
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__create_date
+msgid "Created on"
+msgstr "Gemaakt op"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_tree_view
+msgid "Credit"
+msgstr "Credit"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_student_fees__currency_id
+msgid "Currency"
+msgstr "Munteenheid"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__currency_id_teacher_pay
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__currency_id_teacher_pay
+msgid "Currency Id Teacher Pay"
+msgstr "Valuta-ID Leraarbetaling"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__external_email_server_default
+msgid "Custom Email Servers"
+msgstr "Aangepaste e-mailservers"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__report_footer
+msgid "Custom Report Footer"
+msgstr "Aangepaste rapportvoettekst"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__auth_signup_uninvited
+msgid "Customer Account"
+msgstr "Klantenrekening"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_student_fees__date_of_deposite
+#: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
+msgid "Date"
+msgstr "Datum"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_date_of_birth
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__date_of_birth_teacher
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
+msgid "Date of Birth"
+msgstr "Geboortedatum"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student
+msgid "Date of Birth:"
+msgstr "Geboortedatum:"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__joining_date
+msgid "Date of Joining"
+msgstr "Datum van toetreding"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__days_from_joining
+msgid "Days from joining"
+msgstr "Dagen vanaf deelname"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_form_view
+msgid "Deducted pay"
+msgstr "Ingehouden loon"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__pay_deduction
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__pay_deduction_wizard
+msgid "Deduction"
+msgstr "Aftrek"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__user_default_rights
+msgid "Default Access Rights"
+msgstr "Standaardtoegangsrechten"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__deleteable
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+msgid "Deleteable"
+msgstr "Verwijderbaar"
+
+#. module: school_management
+#: model_terms:ir.actions.act_window,help:school_management.action_former_teachers
+msgid "Deleted records from Teachers are stored here"
+msgstr "Hier worden verwijderde records van Leraren opgeslagen"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
+msgid "Discard"
+msgstr "Weggooien"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_reference__discount_amount
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_search_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_tree_view
+msgid "Discount"
+msgstr "Korting"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__group_discount_per_so_line
+msgid "Discounts"
+msgstr "Kortingen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__display_name
+#: model:ir.model.fields,field_description:school_management.field_school_reference__display_name
+#: model:ir.model.fields,field_description:school_management.field_school_student__display_name
+#: model:ir.model.fields,field_description:school_management.field_school_subject__display_name
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__display_name
+#: model:ir.model.fields,field_description:school_management.field_student_fees__display_name
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__display_name
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__external_report_layout_id
+msgid "Document Template"
+msgstr "Documentsjabloon"
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__school_teacher__state__draft
+msgid "Draft"
+msgstr "Diepgang"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__employee_number
+msgid "Employee ID"
+msgstr "Medewerker-ID"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__auth_signup_reset_password
+msgid "Enable password reset from Login page"
+msgstr "Schakel het opnieuw instellen van het wachtwoord in vanaf de inlogpagina"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__date_of_leave_end
+msgid "End Date"
+msgstr "Einddatum"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
+msgid "End date"
+msgstr "Einddatum"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_kanban_view
+msgid "Enroll no:"
+msgstr "Inschrijfnr"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_work_exprience
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
+msgid "Exprience"
+msgstr "Ervaring"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__fail_counter
+msgid "Fail Mail"
+msgstr "Mislukte mail"
+
+#. module: school_management
+#: model:ir.actions.report,name:school_management.action_report_student_fees
+msgid "Fee / Invoice"
+msgstr "Kosten / Factuur"
+
+#. module: school_management
+#: model:ir.ui.menu,name:school_management.root_fees_menu
+msgid "Fees"
+msgstr "Kosten"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+msgid "Fees Paid"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__fees_table_ids
+msgid "Fees Table"
+msgstr "Tarieventabel"
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__former_teachers__former_teacher_gender__female
+#: model:ir.model.fields.selection,name:school_management.selection__school_student__student_gender__female
+#: model:ir.model.fields.selection,name:school_management.selection__school_teacher__teacher_gender__female
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_search_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
+msgid "Female"
+msgstr "Vrouwelijk"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
+msgid "First Name"
+msgstr "Voornaam"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_follower_ids
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_follower_ids
+msgid "Followers"
+msgstr "Volgers"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_partner_ids
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Volgers (partners)"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_student__activity_type_icon
+#: model:ir.model.fields,help:school_management.field_school_teacher__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Lettertype geweldig pictogram, b.v. fa-taken"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_subject__report_footer
+msgid "Footer text displayed at the bottom of all reports."
+msgstr "Voettekst die onderaan alle rapporten wordt weergegeven."
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_bonus
+msgid "Former Teacher Bonus"
+msgstr "Bonus voor voormalige leraren"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_salary
+msgid "Former Teacher Salary"
+msgstr "Salaris voormalig leraar"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_salary_currency_id
+msgid "Former Teacher Salary Currency"
+msgstr "Salarisvaluta van voormalig leraar"
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.action_former_teachers
+#: model:ir.ui.menu,name:school_management.root_former_teacher
+msgid "Former Teachers"
+msgstr "Voormalige docenten"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_graph_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
+msgid "GPA"
+msgstr "GPA"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_kanban_view
+msgid "GPA:"
+msgstr "GPA:"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_gender
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_gender
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_gender
+msgid "Gender"
+msgstr "Geslacht:"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_kanban_view
+msgid "Gender:"
+msgstr "Geslacht:"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_base_geolocalize
+msgid "GeoLocalize"
+msgstr "GeoLocaliseren"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_product_images
+msgid "Get product pictures using barcode"
+msgstr "Ontvang productfoto's met behulp van streepjescode"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_google_spreadsheet
+msgid "Google Spreadsheet"
+msgstr "Google spreadsheet"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+msgid "Grade"
+msgstr "Cijfer"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__has_message
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__has_message
+msgid "Has Message"
+msgstr "Heeft bericht"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__id
+#: model:ir.model.fields,field_description:school_management.field_school_reference__id
+#: model:ir.model.fields,field_description:school_management.field_school_student__id
+#: model:ir.model.fields,field_description:school_management.field_school_subject__id
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__id
+#: model:ir.model.fields,field_description:school_management.field_student_fees__id
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__id
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__activity_exception_icon
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_exception_icon
+msgid "Icon"
+msgstr "Icoon"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_student__activity_exception_icon
+#: model:ir.model.fields,help:school_management.field_school_teacher__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Pictogram om een uitzonderingsactiviteit aan te geven."
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_student__message_needaction
+#: model:ir.model.fields,help:school_management.field_school_student__message_unread
+#: model:ir.model.fields,help:school_management.field_school_teacher__message_needaction
+#: model:ir.model.fields,help:school_management.field_school_teacher__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Indien aangevinkt, vereisen nieuwe berichten uw aandacht."
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_student__message_has_error
+#: model:ir.model.fields,help:school_management.field_school_teacher__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Indien aangevinkt, hebben sommige berichten een bezorgfout."
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_subject__alias_domain
+msgid ""
+"If you have setup a catch-all email domain redirected to the Odoo server, "
+"enter the domain name here."
+msgstr ""
+"Als u een allesomvattend e-maildomein hebt ingesteld dat is omgeleid naar de Odoo-server, "
+"vul hier de domeinnaam in."
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_subject__use_twilio_rtc_servers
+msgid "If you want to use twilio as TURN/STUN server provider"
+msgstr "Als u twilio als TURN/STUN-serverprovider wilt gebruiken"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_image
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_image
+msgid "Image"
+msgstr "Afbeelding"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_is_follower
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_is_follower
+msgid "Is Follower"
+msgstr "Is volger"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_auth_ldap
+msgid "LDAP Authentication"
+msgstr "LDAP-authenticatie"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers____last_update
+#: model:ir.model.fields,field_description:school_management.field_school_reference____last_update
+#: model:ir.model.fields,field_description:school_management.field_school_student____last_update
+#: model:ir.model.fields,field_description:school_management.field_school_subject____last_update
+#: model:ir.model.fields,field_description:school_management.field_school_teacher____last_update
+#: model:ir.model.fields,field_description:school_management.field_student_fees____last_update
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave____last_update
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
+msgid "Last Name"
+msgstr "Achternaam"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__write_uid
+#: model:ir.model.fields,field_description:school_management.field_school_reference__write_uid
+#: model:ir.model.fields,field_description:school_management.field_school_student__write_uid
+#: model:ir.model.fields,field_description:school_management.field_school_subject__write_uid
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__write_uid
+#: model:ir.model.fields,field_description:school_management.field_student_fees__write_uid
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__write_uid
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__write_date
+#: model:ir.model.fields,field_description:school_management.field_school_reference__write_date
+#: model:ir.model.fields,field_description:school_management.field_school_student__write_date
+#: model:ir.model.fields,field_description:school_management.field_school_subject__write_date
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__write_date
+#: model:ir.model.fields,field_description:school_management.field_student_fees__write_date
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__write_date
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__write_date
+msgid "Last Updated on"
+msgstr "Laatst geupdate op"
+
+#. module: school_management
+#: model:ir.ui.menu,name:school_management.root_leave_application_model_menu
+msgid "Leave Applications"
+msgstr "Applicatie verlaten"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_main_attachment_id
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Hoofdbijlage"
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__former_teachers__former_teacher_gender__male
+#: model:ir.model.fields.selection,name:school_management.selection__school_student__student_gender__male
+#: model:ir.model.fields.selection,name:school_management.selection__school_teacher__teacher_gender__male
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_search_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
+msgid "Male"
+msgstr "Mannelijk"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_account_inter_company_rules
+msgid "Manage Inter Company"
+msgstr "Beheer InterCompany"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_has_error
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_has_error
+msgid "Message Delivery error"
+msgstr "Berichtbezorgingsfout"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_ids
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_ids
+msgid "Messages"
+msgstr "Berichten"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__group_multi_currency
+msgid "Multi-Currencies"
+msgstr "Meerdere valuta's"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_subject__product_pricelist_setting
+msgid ""
+"Multiple prices: Pricelists with fixed price rules by product,\n"
+"Advanced rules: enables advanced price rules for pricelists."
+msgstr ""
+"Meerdere prijzen: Prijslijsten met vaste prijsregels per product,\n"
+"Geavanceerde regels: maakt geavanceerde prijsregels voor prijslijsten mogelijk."
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__my_activity_date_deadline
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Mijn activiteitsdeadline"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_name
+#: model:ir.model.fields,field_description:school_management.field_school_subject__subject_name
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_name
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__teacher_name
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teachers_tree_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_tree_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_student_fees_tree_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_tree_view
+msgid "Name"
+msgstr "Naam:"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_student_fees__fees_of_student_id
+msgid "Name Of Student"
+msgstr "Naam van student"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_kanban_view
+msgid "Name:"
+msgstr "Naam:"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__activity_date_deadline
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Deadline volgende activiteit"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__activity_summary
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_summary
+msgid "Next Activity Summary"
+msgstr "Samenvatting van volgende activiteit"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__activity_type_id
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_type_id
+msgid "Next Activity Type"
+msgstr "Volgende activiteitstype"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_needaction_counter
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aantal acties"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__active_user_count
+msgid "Number of Active Users"
+msgstr "Aantal actieve gebruikers"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__company_count
+msgid "Number of Companies"
+msgstr "Aantal bedrijven"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__language_count
+msgid "Number of Languages"
+msgstr "Aantal talen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_has_error_counter
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_has_error_counter
+msgid "Number of errors"
+msgstr "Aantal fouten"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_student__message_needaction_counter
+#: model:ir.model.fields,help:school_management.field_school_teacher__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Aantal berichten waarvoor een actie vereist is"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_student__message_has_error_counter
+#: model:ir.model.fields,help:school_management.field_school_teacher__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Aantal berichten met bezorgfout"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_graph_view
+msgid "Number of students per teacher"
+msgstr "Aantal studenten per docent"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_student__message_unread_counter
+#: model:ir.model.fields,help:school_management.field_school_teacher__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Aantal ongelezen berichten"
+
+#. module: school_management
+#: code:addons/school_management/models/school_reference.py:0
+#: code:addons/school_management/models/school_student.py:0
+#, python-format
+msgid "Numbers not allowed in name"
+msgstr "Getallen zijn niet toegestaan in naam"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_partner_autocomplete
+msgid "Partner Autocomplete"
+msgstr "Partner automatisch aanvullen"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
+msgid "Pay deduction"
+msgstr "loonaftrek"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__payment_count
+msgid "Payment Count"
+msgstr "Betalingen tellen"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+msgid "Payments"
+msgstr "Betalingen"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_tree_view
+msgid "Phone"
+msgstr "Telefoon"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_search_view
+msgid "Phone Number"
+msgstr "Telefoonnummer"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__group_product_pricelist
+msgid "Pricelists"
+msgstr "Prijslijst"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__product_pricelist_setting
+msgid "Pricelists Method"
+msgstr "Prijslijsten Werkwijze"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_sale_product_configurator
+msgid "Product Configurator"
+msgstr "Productconfigurator"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__group_stock_packaging
+msgid "Product Packagings"
+msgstr "Productverpakkingen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__work_exprience
+msgid "Professional Exprience"
+msgstr "Professionele ervaring"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__profiling_enabled_until
+msgid "Profiling enabled until"
+msgstr "Profilering ingeschakeld tot"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_reference__reference_promo
+#: model:ir.model.fields,field_description:school_management.field_school_student__reference_code
+msgid "Promo Code"
+msgstr "Promotiecode"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_tree_view
+msgid "Promo code"
+msgstr "Promotiecode"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
+msgid "Pupils"
+msgstr "Leerlingen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__reason_for_leave
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__reason_for_leave_wizard
+#: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
+msgid "Reason"
+msgstr "Reden"
+
+#. module: school_management
+#: code:addons/school_management/models/school_teacher.py:0
+#, python-format
+msgid "Record is already confirmed"
+msgstr "Record is al bevestigd"
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.action_school_reference
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+msgid "Reference"
+msgstr "Referentie"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_search_view
+msgid "Reference Name"
+msgstr "Referentienaam"
+
+#. module: school_management
+#: model:ir.ui.menu,name:school_management.root_refrence_menu
+msgid "References"
+msgstr "Referenties"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+msgid "Referral Code"
+msgstr "Verwijzingscode"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_reference__reference_name
+#: model:ir.model.fields,field_description:school_management.field_school_student__referral_name
+msgid "Referral Name"
+msgstr "Verwijzingsnaam"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_reference__reference_phone
+msgid "Referral Phone"
+msgstr "Verwijzing telefoonnummer"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__activity_user_id
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwoordelijke gebruiker"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__restrict_template_rendering
+msgid "Restrict Template Rendering"
+msgstr "Beperk sjabloonweergave"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
+msgid "Salary"
+msgstr "Salaris"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_sale_product_matrix
+msgid "Sales Grid Entry"
+msgstr "Verkooprasterinvoer"
+
+#. module: school_management
+#: model:ir.ui.menu,name:school_management.school_root_menu
+msgid "School"
+msgstr "School"
+
+#. module: school_management
+#: model:ir.actions.report,name:school_management.action_report_student
+msgid "School / Student"
+msgstr "School / Student"
+
+#. module: school_management
+#: model:ir.module.category,name:school_management.school_management_user_access
+msgid "School Management"
+msgstr "Schoolmanagement"
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_school_student
+msgid "School Student"
+msgstr "Student"
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_school_subject
+msgid "School Subject"
+msgstr "schoolvak"
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_school_teacher
+msgid "School Tacher"
+msgstr "schoolleraar"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__show_effect
+msgid "Show Effect"
+msgstr "Effect tonen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__date_of_leave_start
+msgid "Start Date"
+msgstr "Begin datum"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
+msgid "Start date"
+msgstr "Begin datum"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__state
+msgid "State"
+msgstr "Staat"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_student__activity_state
+#: model:ir.model.fields,help:school_management.field_school_teacher__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status op basis van activiteiten\n"
+"Te laat: de vervaldatum is al verstreken\n"
+"Vandaag: activiteitsdatum is vandaag\n"
+"Gepland: toekomstige activiteiten."
+
+#. module: school_management
+#: model:ir.ui.menu,name:school_management.root_student_data_menu
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_graph_view
+msgid "Student"
+msgstr "Student"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__student_count
+msgid "Student Count"
+msgstr "Aantal studenten"
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.action_school_student_fees
+msgid "Student Fees"
+msgstr "Studentenkosten"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_gpa
+msgid "Student Gpa"
+msgstr "Student GPA"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_grade
+msgid "Student Grade"
+msgstr "Studentencijfer"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
+msgid "Student Name"
+msgstr "Studenten Naam"
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.action_school_student
+#: model:ir.ui.menu,name:school_management.root_student_menu
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
+msgid "Students"
+msgstr "Studenten"
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.action_school_subject
+#: model:ir.model.fields,field_description:school_management.field_school_student__subject_ids
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_tree_view
+msgid "Subject"
+msgstr "Onderwerp"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__subject_credit
+msgid "Subject Credit"
+msgstr "Onderwerpen krediet"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_search_view
+msgid "Subject Name"
+msgstr "Naam van onderwerp"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__subject_student_ids
+msgid "Subject Student"
+msgstr "Onderwerpen student"
+
+#. module: school_management
+#: model:ir.ui.menu,name:school_management.root_subject_menu
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+msgid "Subjects"
+msgstr "Onderwerpen"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_graph_view
+msgid "Teacher"
+msgstr "Leraren"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_address
+msgid "Teacher Address"
+msgstr "Adres van de leraar"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__date_of_birth_former_teacher
+msgid "Teacher Birth Date"
+msgstr "Geboortedatum van de leraar"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_bonus
+msgid "Teacher Bonus"
+msgstr "Lerarenbonus"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_employee_email
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__employee_email
+msgid "Teacher Email"
+msgstr "E-mailadres van de docent"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_image
+msgid "Teacher Image"
+msgstr "Leraar Afbeelding"
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.actions_teacher_leave_model
+#: model:ir.actions.act_window,name:school_management.actions_teacher_leave_wizard
+msgid "Teacher Leave"
+msgstr "Leraar Vertrekken"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_name
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_search_view
+msgid "Teacher Name"
+msgstr "Leraar Naam"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_salary
+msgid "Teacher Salary"
+msgstr "Leraar Salaris"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_salary_currency_id
+msgid "Teacher Salary Currency"
+msgstr "Valuta van het lerarensalaris"
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.actions_school_teacher_view
+#: model:ir.ui.menu,name:school_management.root_teacher_data_menu
+#: model:ir.ui.menu,name:school_management.root_teacher_menu
+msgid "Teachers"
+msgstr "Leraren"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__auth_signup_template_user_id
+msgid "Template user for new users created through signup"
+msgstr "Sjabloongebruiker voor nieuwe gebruikers die zijn aangemaakt via aanmelding"
+
+#. module: school_management
+#: model:ir.model.constraint,message:school_management.constraint_school_teacher_unique_email
+msgid "This email is already used"
+msgstr "deze email is al in gebruik"
+
+#. module: school_management
+#: model:ir.actions.server,name:school_management.days_spent_cron_ir_actions_server
+#: model:ir.cron,cron_name:school_management.days_spent_cron
+#: model:ir.cron,name:school_management.days_spent_cron
+msgid "Time spent here"
+msgstr "Tijd hier doorgebracht"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_student_fees_tree_view
+msgid "Total"
+msgstr "Totaal"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
+msgid "Total Days Away"
+msgstr "Totaal aantal dagen weg"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave__total_leave_days
+msgid "Total Leave Days"
+msgstr "Totaal aantal verlofdagen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__total_leave_days_wizard
+msgid "Total Leave Days Wizard"
+msgstr "Wizard Totaal aantal verlofdagen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__total_subject_credit
+msgid "Total Subject Credit"
+msgstr "Totaal onderwerpkrediet"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_base_gengo
+msgid "Translate Your Website with Gengo"
+msgstr "Vertaal uw website met Gengo"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__twilio_account_token
+msgid "Twilio Account Auth Token"
+msgstr "Twilio-accountverificatietoken"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__twilio_account_sid
+msgid "Twilio Account SID"
+msgstr "Twilio-account-SID"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_student__activity_exception_decoration
+#: model:ir.model.fields,help:school_management.field_school_teacher__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type van de geregistreerde uitzonderingsactiviteit."
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__group_uom
+msgid "Units of Measure"
+msgstr "Maateenheden"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_unread
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_unread
+msgid "Unread Messages"
+msgstr "ongelezen berichten"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__message_unread_counter
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Teller ongelezen berichten"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_web_unsplash
+msgid "Unsplash Image Library"
+msgstr "Unsplash-afbeeldingsbibliotheek"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__use_twilio_rtc_servers
+msgid "Use Twilio ICE servers"
+msgstr "Gebruik Twilio ICE-servers"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_auth_oauth
+msgid "Use external authentication providers (OAuth)"
+msgstr "Gebruik externe authenticatieproviders (OAuth)"
+
+#. module: school_management
+#: model:ir.model.fields,help:school_management.field_school_subject__restrict_template_rendering
+msgid ""
+"Users will still be able to render templates.\n"
+"However only Mail Template Editors will be able to create new dynamic templates or modify existing ones."
+msgstr ""
+"Gebruikers kunnen nog steeds sjablonen weergeven.\n"
+"Maar alleen Mail Template Editors kunnen nieuwe dynamische sjablonen maken of bestaande aanpassen."
+
+#. module: school_management
+#: model:ir.actions.server,name:school_management.test_button
+msgid "Validate"
+msgstr "Valideer"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__group_product_variant
+msgid "Variants"
+msgstr "Varianten"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
+msgid "Verify"
+msgstr "Verifiëren"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__product_volume_volume_in_cubic_feet
+msgid "Volume unit of measure"
+msgstr "Maateenheid voor volume"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__product_weight_in_lbs
+msgid "Weight unit of measure"
+msgstr "Gewicht maateenheid"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_zero_complain
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_zero_complain
+msgid "Zero Complaint"
+msgstr "Geen klacht"
+
+#. module: school_management
+#: model:res.groups,name:school_management.school_management_admin
+msgid "admin"
+msgstr "admin"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
+msgid "birth day"
+msgstr "verjaardag"
+
+#. module: school_management
+#: code:addons/school_management/models/school_student.py:0
+#, python-format
+msgid "can't delete as 'delete ?' is set to No"
+msgstr "kan niet verwijderen als 'verwijderen?' is ingesteld op Nee"
+
+#. module: school_management
+#: code:addons/school_management/models/school_subject.py:0
+#, python-format
+msgid "credit value cannot be more than 30 or less than 5 per subject"
+msgstr "creditwaarde kan niet meer dan 30 of minder dan 5 per onderwerpzijn"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_tree_view
+msgid "employee ID"
+msgstr "medewerker-ID"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__date_of_leave_end_wizard
+msgid "end date"
+msgstr "einddatum"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__enroll_no
+msgid "enroll"
+msgstr "inschrijvingsnr"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_former_teachers__former_employee_number
+msgid "former employee_number"
+msgstr "voormalige werknemer_nummer"
+
+#. module: school_management
+#: code:addons/school_management/models/school_student.py:0
+#, python-format
+msgid "invalid code"
+msgstr "ongeldige code"
+
+#. module: school_management
+#: code:addons/school_management/models/teacher_leave.py:0
+#: code:addons/school_management/models/teacher_leave.py:0
+#: code:addons/school_management/wizard/teacher_leave_application_wizard.py:0
+#: code:addons/school_management/wizard/teacher_leave_application_wizard.py:0
+#, python-format
+msgid "invalid end date"
+msgstr "ongeldige einddatum"
+
+#. module: school_management
+#: code:addons/school_management/models/teacher_leave.py:0
+#: code:addons/school_management/wizard/teacher_leave_application_wizard.py:0
+#, python-format
+msgid "invalid start date"
+msgstr "ongeldige startdatum"
+
+#. module: school_management
+#: code:addons/school_management/models/school_subject.py:0
+#, python-format
+msgid "invalid subject according to system parameters"
+msgstr "ongeldig onderwerp volgens systeemparameters"
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__school_student__deleteable__no
+msgid "no"
+msgstr "Nee"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
+msgid "not smart"
+msgstr "niet slim"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__more_than_one
+msgid "only one subject"
+msgstr "slechts één onderwerp"
+
+#. module: school_management
+#: code:addons/school_management/models/school_student.py:0
+#, python-format
+msgid "please enter a name to continue"
+msgstr "Voer een naam in om door te gaan"
+
+#. module: school_management
+#: code:addons/school_management/models/school_teacher.py:0
+#, python-format
+msgid "please fill up all the details"
+msgstr "Vul alstublieft alle details in"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_google_recaptcha
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.report_student
+msgid ""
+"s\n"
+"                        Address:"
+msgstr ""
+"s\n"
+"                        Adres:"
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_school_reference
+msgid "school reference contacts"
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
+msgid "smart"
+msgstr "slim"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__date_of_leave_start_wizard
+msgid "start date"
+msgstr "begin datum"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_teacher__student_ids
+msgid "studens"
+msgstr "studenten"
+
+#. module: school_management
+#: model:res.groups,name:school_management.school_management_student
+msgid "student"
+msgstr "student"
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_student_fees
+msgid "student fees"
+msgstr "studiegelden"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_student__student_surname
+msgid "surname"
+msgstr "achternaam"
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_teacher_leave
+msgid "teacher leave wiz"
+msgstr "leraar verlof wiz"
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_former_teachers
+msgid "teachers that are no longer with the school"
+msgstr "leraren die niet meer bij de school zijn
+
+#. module: school_management
+#: model:ir.module.category,description:school_management.school_management_user_access
+msgid "user access to school_student model"
+msgstr "gebruikerstoegang tot het school_student-model"
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_teacher_leave_application_wizard
+msgid "wizard for teacher leave"
+msgstr "wizard voor lerarenverlof"
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__school_student__deleteable__yes
+msgid "yes"
+msgstr "Ja"

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Automated sequence for student enroll_no #T00336-->
+    <record id="seq_school_student" model="ir.sequence">
+        <field name="name">Student Sequence</field>
+        <field name="code">school.student</field>
+        <field name="prefix">S</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <!-- Automated sequence for teacher employee_number #T00336-->
+    <record id="seq_school_teacher" model="ir.sequence">
+        <field name="name">Teacher Sequence</field>
+        <field name="code">school.teacher</field>
+        <field name="prefix">T</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <!-- Automated sequence for copied student enroll_no #T00336-->
+    <record id="seq_copy_school_student" model="ir.sequence">
+        <field name="name">Copied Student Sequence</field>
+        <field name="code">copy.school.student</field>
+        <field name="prefix">S-C</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False" />
+    </record>
+</odoo>

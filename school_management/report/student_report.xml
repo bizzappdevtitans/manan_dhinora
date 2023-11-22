@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <record id="action_report_student" model="ir.actions.report">
+            <field name="name">School / Student</field>
+            <field name="model">school.student</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">school_management.report_student</field>
+            <field name="report_file">school_management.report_student</field>
+            <field name="print_report_name">'student - %s' % (object.enroll_no)</field>
+            <field name="binding_model_id" ref="model_school_student" />
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_student_fees" model="ir.actions.report">
+            <field name="name">Fee / Invoice</field>
+            <field name="model">school.student</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">school_management.report_student_fees</field>
+            <field name="report_file">school_management.report_student_fees</field>
+            <field
+            name="print_report_name"
+        >'student fee - %s' % (object.enroll_no)</field>
+            <field name="binding_model_id" ref="model_school_student" />
+            <field name="binding_type">report</field>
+        </record>
+</odoo>

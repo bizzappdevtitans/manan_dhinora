@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Tree view for teacher.leave model-->
+    <record id="teacher_leave_tree_view" model="ir.ui.view">
+        <field name="name">teacher.leave.tree</field>
+        <field name="model">teacher.leave</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="teacher_name" />
+                <field name="date_of_leave_start" />
+                <field name="date_of_leave_end" />
+                <field name="reason_for_leave" />
+                <field name="currency_id_teacher_pay" invisible="1" />
+                <field name="pay_deduction" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for teacher.leave model-->
+    <record id="teacher_leave_form_view" model="ir.ui.view">
+        <field name="name">teacher.leave.form</field>
+        <field name="model">teacher.leave</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group nolable="1">
+                        <field name="teacher_name" />
+                        <field name="date_of_leave_start" />
+                        <field name="date_of_leave_end" />
+                        <field name="total_leave_days" readonly="1" />
+                        <field name="reason_for_leave" />
+                        <field name="currency_id_teacher_pay" invisible="1" />
+                        <field name="pay_deduction" string="Deducted pay" />
+                    </group>
+                </sheet>
+                <div calss="oe_chatter" />
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View for teacher.leave model-->
+     <record id="teacher_leave_search_view" model="ir.ui.view">
+        <field name="name">teacher.leave.search</field>
+        <field name="model">teacher.leave</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="teacher_name" />
+                <field name="reason_for_leave" />
+            </search>
+        </field>
+    </record>
+
+    <!-- deceleration of action for the teacher.leave model -->
+    <record id="actions_teacher_leave_model" model="ir.actions.act_window">
+        <field name="name">Teacher Leave</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">teacher.leave</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new student record
+            </p>
+        </field>
+    </record>
+</odoo>

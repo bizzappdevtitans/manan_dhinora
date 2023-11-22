@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Tree view for the school.reference model-->
+    <record id="school_management_school_reference_tree_view" model="ir.ui.view">
+        <field name="name">school.reference.tree</field>
+        <field name="model">school.reference</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="reference_name" string="Name" />
+                <field name="reference_phone" string="Phone" widget="phone" />
+                <field name="discount_amount" string="Discount" />
+                <field name="reference_promo" string="Promo code" readonly="1" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for the school.reference model-->
+    <record id="school_management_school_reference_form_view" model="ir.ui.view">
+        <field name="name">school.reference.form</field>
+        <field name="model">school.reference</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group nolable="1">
+                       <field name="reference_name" string="Name" />
+                        <field name="reference_phone" string="Phone" widget="phone" />
+                        <field name="discount_amount" string="Discount" />
+                        <field
+                            name="reference_promo"
+                            string="Promo code"
+                            widget="CopyClipboardChar"
+                            readonly="1"
+                        />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View for the school.reference model-->
+     <record id="school_management_school_reference_search_view" model="ir.ui.view">
+        <field name="name">school.reference.search</field>
+        <field name="model">school.reference</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="reference_name" string="Reference Name" />
+                <field name="reference_phone" string="Phone Number" />
+                <field name="discount_amount" string="Discount" />
+                <separator />
+            </search>
+        </field>
+    </record>
+
+    <!-- action decelaration for the reference model view -->
+    <record id="action_school_reference" model="ir.actions.act_window">
+        <field name="name">Reference</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.reference</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new reference record
+            </p>
+        </field>
+    </record>
+</odoo>

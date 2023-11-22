@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- main menu that will be shown in the left button -->
+        <menuitem id="school_root_menu" name="School" />
+        <!-- student tab -->
+        <menuitem
+        id="root_student_menu"
+        name="Students"
+        parent="school_root_menu"
+        sequence="0"
+    />
+        <!-- sub menu to student menu containing student data -->
+        <menuitem
+        id="root_student_data_menu"
+        name="Student"
+        parent="root_student_menu"
+        action="action_school_student"
+        sequence="0"
+    />
+        <!-- sub menu to students menu containing info on fees paid -->
+        <menuitem
+        id="root_fees_menu"
+        name="Fees"
+        parent="root_student_menu"
+        action="action_school_student_fees"
+        sequence="1"
+    />
+        <!-- teacher menu -->
+        <menuitem
+        id="root_teacher_menu"
+        name="Teachers"
+        parent="school_root_menu"
+        sequence="1"
+    />
+        <!-- sub menu to students menu, has info on subjects studied by students -->
+        <menuitem
+        id="root_subject_menu"
+        name="Subjects"
+        parent="root_student_menu"
+        action="action_school_subject"
+        sequence="2"
+    />
+        <!-- menu item for referral contacts menu -->
+        <menuitem
+        id="root_refrence_menu"
+        name="References"
+        parent="school_root_menu"
+        action="action_school_reference"
+    />
+        <!-- menu item to open the model of the leave application wizard -->
+        <menuitem
+        id="root_leave_application_model_menu"
+        name="Leave Applications"
+        parent="root_teacher_menu"
+        action="actions_teacher_leave_model"
+        sequence="2"
+    />
+        <!-- sub menu to open the teachers' data -->
+        <menuitem
+        id="root_teacher_data_menu"
+        name="Teachers"
+        parent="root_teacher_menu"
+        action="actions_school_teacher_view"
+        sequence="0"
+    />
+        <!-- usb menu to teachers contains tree and from view of formemr teachers -->
+        <menuitem
+        id="root_former_teacher"
+        name="Former Teachers"
+        parent="root_teacher_menu"
+        action="action_former_teachers"
+        sequence="4"
+    />
+</odoo>
