@@ -1,0 +1,400 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fabrication_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-23 06:42+0000\n"
+"PO-Revision-Date: 2023-11-23 06:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fabrication_management
+#: model:mail.template,body_html:fabrication_management.maintenance_cycle_mail_template
+msgid ""
+"<p>\n"
+"                <t>\n"
+"                Dear <t t-out=\"object.partner_id.name\"/>,\n"
+"                <br/>\n"
+"                It is time for your quarterly maintenance check, of invoice: <t t-out=\"object.name\"/>,\n"
+"                <br/>\n"
+"                please do contact our customer care to schedule a maintenance session\n"
+"                <br/><br/>\n"
+"                Regards,\n"
+"                <t t-out=\"object.company_id.name\"/>,\n"
+"                <br/>\n"
+"                </t>\n"
+"            </p>\n"
+"        "
+msgstr ""
+"<p>\n"
+"                <t>\n"
+"                Cher <t t-out=\"object.partner_id.name\"/>,\n"
+"                <br/>\n"
+"                C'est l'heure de votre contrôle d'entretien trimestriel, de facture : <t t-out=\"object.name\"/>,\n"
+"                <br/>\n"
+"                veuillez contacter notre service client pour planifier une session de maintenance\n"
+"                <br/><br/>\n"
+"                Salutations,\n"
+"                <t t-out=\"object.company_id.name\"/>,\n"
+"                <br/>\n"
+"                </t>\n"
+"            </p>"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_steel_2
+#: model:product.template,name:fabrication_management.product_steel_2_product_template
+msgid "Alloy Steel"
+msgstr "Acier allié"
+
+#. module: fabrication_management
+#: model:product.template,name:fabrication_management.product_template_arc
+msgid "Arc welding"
+msgstr "Soudage à l'arc"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_welding_gas_1
+#: model:product.template,name:fabrication_management.product_welding_gas_1_product_template
+msgid "Argon"
+msgstr "Argon"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.bom_main_menu
+msgid "Bill Of Materials"
+msgstr "Nomenclature"
+
+#. module: fabrication_management
+#: model:product.template,name:fabrication_management.product_final_boiler
+msgid "Boiler"
+msgstr "Chaudière"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_welding_gas_4
+#: model:product.template,name:fabrication_management.product_welding_gas_4_product_template
+msgid "Carbon Dioxide"
+msgstr "Gaz carbonique"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_steel_1
+#: model:product.template,name:fabrication_management.product_steel_1_product_template
+msgid "Carbon Steel"
+msgstr "Acier Carbone"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_welding_electrode_1
+#: model:product.template,name:fabrication_management.product_welding_electrode_1_product_template
+msgid "Coated Electrode"
+msgstr "Électrode enduite"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_account_bank_statement_line__company_id
+#: model:ir.model.fields,field_description:fabrication_management.field_account_move__company_id
+#: model:ir.model.fields,field_description:fabrication_management.field_account_payment__company_id
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_welding_electrode_2
+#: model:product.template,name:fabrication_management.product_welding_electrode_2_product_template
+msgid "Copper plated coil"
+msgstr "Bobine cuivrée"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_mrp_production__partner_id
+#: model:ir.ui.menu,name:fabrication_management.res_partner_root_menu
+msgid "Customer"
+msgstr "Client"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.fabrication_job_root_menu
+msgid "Fabrication"
+msgstr "Fabrication"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_welding_gas_2
+#: model:product.template,name:fabrication_management.product_welding_gas_2_product_template
+msgid "Helium"
+msgstr "Hélium"
+
+#. module: fabrication_management
+#: model:product.template,name:fabrication_management.product_final_hpv
+msgid "High Pressure Vessle"
+msgstr "Cuve haute pression"
+
+#. module: fabrication_management
+#: model:product.template,name:fabrication_management.product_final_hpvs
+msgid "High Pressure Vessle Support"
+msgstr "Support pour cuve haute pression"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_welding_gas_3
+#: model:product.template,name:fabrication_management.product_welding_gas_3_product_template
+msgid "Hydrogen"
+msgstr "Hydrogène"
+
+#. module: fabrication_management
+#: model:product.template,name:fabrication_management.product_final_shed
+msgid "Industrial Shed"
+msgstr "Hangar industriel"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_purchase_order__description
+msgid "Internal Description"
+msgstr "Description interne"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.invoice_main_menu
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_account_move
+msgid "Journal Entry"
+msgstr "Entrée de journal"
+
+#. module: fabrication_management
+#: model:product.template,name:fabrication_management.product_template_mig
+msgid "MIG welding"
+msgstr "Soudage MIG"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.manufacturing_root
+msgid "Manufacturing"
+msgstr "Fabrication"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_steel_4
+#: model:product.template,name:fabrication_management.product_steel_4_product_template
+msgid "Marging Steel"
+msgstr "Marge en acier"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_sale_order__metal_used
+msgid "Metals Used"
+msgstr "Métaux utilisés"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_account_bank_statement_line__maintenance_cycle
+#: model:ir.model.fields,field_description:fabrication_management.field_account_move__maintenance_cycle
+#: model:ir.model.fields,field_description:fabrication_management.field_account_payment__maintenance_cycle
+#: model:ir.model.fields,field_description:fabrication_management.field_sale_order__maintenance_cycle
+msgid "Opt for maintenance"
+msgstr "Optez pour l'entretien"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_welding_gas_5
+#: model:product.template,name:fabrication_management.product_welding_gas_5_product_template
+msgid "Oxygen"
+msgstr "Oxygène"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_sale_order_line__welding_type
+msgid "Preferd Welding"
+msgstr "Soudage préféré"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.product_main_menu
+#: model:ir.ui.menu,name:fabrication_management.product_root_menu
+msgid "Product"
+msgstr "Produit"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_product_template
+msgid "Product Template"
+msgstr "Modèle de produit"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.product_variants_main_menu
+msgid "Product Variants"
+msgstr "Variantes de produits"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_mrp_production
+msgid "Production Order"
+msgstr "Ordre de production"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_project_project
+#: model_terms:ir.ui.view,arch_db:fabrication_management.sale_order_inherited_form_view
+msgid "Project"
+msgstr "Projet"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.project_root_menu
+msgid "Projects"
+msgstr "Projets"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.purchase_main_menu
+msgid "Purchase"
+msgstr "Achat"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_purchase_order
+msgid "Purchase Order"
+msgstr "Bon de commande"
+
+#. module: fabrication_management
+#: model:mail.template,subject:fabrication_management.maintenance_cycle_mail_template
+msgid "Reminder for quaterly check"
+msgstr "Rappel pour contrôle trimestriel"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.sale_main_menu
+#: model_terms:ir.ui.view,arch_db:fabrication_management.purchase_order_inherited_form_view
+msgid "Sale"
+msgstr "Vente"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_project_task__sale_id
+msgid "Sale Reference"
+msgstr "Référence de vente"
+
+#. module: fabrication_management
+#: model:ir.ui.menu,name:fabrication_management.sale_root_menu
+msgid "Sales"
+msgstr "Ventes"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Facture d'acompte sur ventes"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_sale_order
+msgid "Sales Order"
+msgstr "Commande client"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Ligne de commande client"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_purchase_order__sale_ref_id
+msgid "Sales refrence"
+msgstr "Référence commerciale"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_project_project__sale_order_ref
+msgid "Source Document"
+msgstr "Document source"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_steel_3
+#: model:product.template,name:fabrication_management.product_steel_3_product_template
+msgid "Stainless Steel"
+msgstr "Acier inoxydable"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_stock_move
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_stock_rule
+msgid "Stock Rule"
+msgstr "Règle de stock"
+
+#. module: fabrication_management
+#: model:product.template,name:fabrication_management.product_template_tig
+msgid "TIG welding"
+msgstr "Soudage TIG"
+
+#. module: fabrication_management
+#: model:ir.model,name:fabrication_management.model_project_task
+#: model:ir.model.fields,field_description:fabrication_management.field_sale_order__task_ids
+msgid "Task"
+msgstr "Tâche"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_sale_order__task_length
+msgid "Task Length"
+msgstr "Durée de la tâche"
+
+#. module: fabrication_management
+#: model_terms:ir.ui.view,arch_db:fabrication_management.sale_order_inherited_form_view
+msgid "Tasks"
+msgstr "Tâches"
+
+#. module: fabrication_management
+#: model:product.product,name:fabrication_management.product_welding_electrode_3
+#: model:product.template,name:fabrication_management.product_welding_electrode_3_product_template
+msgid "Thorium-Tungsten Electrode"
+msgstr "Électrode thorium-tungstène"
+
+#. module: fabrication_management
+#: model:product.product,uom_name:fabrication_management.product_steel_1
+#: model:product.product,uom_name:fabrication_management.product_steel_2
+#: model:product.product,uom_name:fabrication_management.product_steel_3
+#: model:product.product,uom_name:fabrication_management.product_steel_4
+#: model:product.product,uom_name:fabrication_management.product_welding_electrode_1
+#: model:product.product,uom_name:fabrication_management.product_welding_electrode_2
+#: model:product.product,uom_name:fabrication_management.product_welding_electrode_3
+#: model:product.product,uom_name:fabrication_management.product_welding_gas_1
+#: model:product.product,uom_name:fabrication_management.product_welding_gas_2
+#: model:product.product,uom_name:fabrication_management.product_welding_gas_3
+#: model:product.product,uom_name:fabrication_management.product_welding_gas_4
+#: model:product.product,uom_name:fabrication_management.product_welding_gas_5
+#: model:product.template,uom_name:fabrication_management.product_final_boiler
+#: model:product.template,uom_name:fabrication_management.product_final_hpv
+#: model:product.template,uom_name:fabrication_management.product_final_hpvs
+#: model:product.template,uom_name:fabrication_management.product_final_shed
+#: model:product.template,uom_name:fabrication_management.product_steel_1_product_template
+#: model:product.template,uom_name:fabrication_management.product_steel_2_product_template
+#: model:product.template,uom_name:fabrication_management.product_steel_3_product_template
+#: model:product.template,uom_name:fabrication_management.product_steel_4_product_template
+#: model:product.template,uom_name:fabrication_management.product_template_arc
+#: model:product.template,uom_name:fabrication_management.product_template_mig
+#: model:product.template,uom_name:fabrication_management.product_template_tig
+#: model:product.template,uom_name:fabrication_management.product_welding_electrode_1_product_template
+#: model:product.template,uom_name:fabrication_management.product_welding_electrode_2_product_template
+#: model:product.template,uom_name:fabrication_management.product_welding_electrode_3_product_template
+#: model:product.template,uom_name:fabrication_management.product_welding_gas_1_product_template
+#: model:product.template,uom_name:fabrication_management.product_welding_gas_2_product_template
+#: model:product.template,uom_name:fabrication_management.product_welding_gas_3_product_template
+#: model:product.template,uom_name:fabrication_management.product_welding_gas_4_product_template
+#: model:product.template,uom_name:fabrication_management.product_welding_gas_5_product_template
+msgid "Units"
+msgstr "Unités"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_product_product__welding
+#: model:ir.model.fields,field_description:fabrication_management.field_product_template__welding
+msgid "Welding Technique"
+msgstr "Technique de soudage"
+
+#. module: fabrication_management
+#: model:ir.model.fields,field_description:fabrication_management.field_product_product__metal
+#: model:ir.model.fields,field_description:fabrication_management.field_product_template__metal
+msgid "is Metal"
+msgstr "est du métal"
+
+#. module: fabrication_management
+#: model:ir.actions.server,name:fabrication_management.ir_cron_maintenance_cycle_mail_ir_actions_server
+#: model:ir.cron,cron_name:fabrication_management.ir_cron_maintenance_cycle_mail
+#: model:ir.cron,name:fabrication_management.ir_cron_maintenance_cycle_mail
+msgid "maintenance.cycle"
+msgstr "cycle.de maintenance"
+
+#. module: fabrication_management
+#: model:ir.actions.server,name:fabrication_management.ir_cron_replenish_welding_materials_ir_actions_server
+#: model:ir.cron,cron_name:fabrication_management.ir_cron_replenish_welding_materials
+#: model:ir.cron,name:fabrication_management.ir_cron_replenish_welding_materials
+msgid "replenish.welding"
+msgstr "reconstituer.soudage"
+
+#. module: fabrication_management
+#: model:ir.model.fields,help:fabrication_management.field_account_bank_statement_line__maintenance_cycle
+#: model:ir.model.fields,help:fabrication_management.field_account_move__maintenance_cycle
+#: model:ir.model.fields,help:fabrication_management.field_account_payment__maintenance_cycle
+msgid "this field if set to true will run the maintenance_cycle_mail cron job"
+msgstr ""
+"ce champ, s'il est défini sur true, exécutera la tâche cron "
+"maintenance_cycle_mail"
