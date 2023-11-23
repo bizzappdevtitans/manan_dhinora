@@ -6,14 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-22 10:13+0000\n"
-"PO-Revision-Date: 2023-11-22 10:13+0000\n"
+"POT-Creation-Date: 2023-11-23 10:32+0000\n"
+"PO-Revision-Date: 2023-11-23 10:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_email_amount
+msgid "# emails to send"
+msgstr "# E-Mails zum Senden"
 
 #. module: school_management
 #: model:ir.actions.report,print_report_name:school_management.action_report_student
@@ -113,6 +118,11 @@ msgid "Address"
 msgstr "Adres"
 
 #. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_hr_presence
+msgid "Advanced Presence Control"
+msgstr "Erweiterte Anwesenheitskontrolle"
+
+#. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__group_sale_pricelist
 msgid "Advanced Pricelists"
 msgstr "Geavanceerde prijslijsten"
@@ -145,7 +155,8 @@ msgstr "Sta de gebruikers toe hun agenda te synchroniseren met Outlook Agenda"
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_base_import
 msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
-msgstr "Sta gebruikers toe gegevens te importeren uit CSV/XLS/XLSX/ODS-bestanden"
+msgstr ""
+"Sta gebruikers toe gegevens te importeren uit CSV/XLS/XLSX/ODS-bestanden"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__group_sale_pricelist
@@ -155,7 +166,6 @@ msgid ""
 msgstr ""
 "Maakt het mogelijk om verschillende prijzen te beheren op basis van regels per categorie klanten.\n"
 "               Voorbeeld: 10% voor detailhandelaren, promotie van 5 EUR op dit product, enz."
-
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__group_multi_currency
@@ -211,6 +221,26 @@ msgid "Bank deposite date"
 msgstr "Datum bankstorting"
 
 #. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_ip
+msgid "Based on IP Address"
+msgstr "Basierend auf der IP-Adresse"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_hr_attendance
+msgid "Based on attendances"
+msgstr "Basierend auf den Besucherzahlen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_email
+msgid "Based on number of emails sent"
+msgstr "Basierend auf der Anzahl der gesendeten E-Mails"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_login
+msgid "Based on user status in system"
+msgstr "Basierend auf dem Benutzerstatus im System"
+
+#. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_name_birthday
 msgid "Birthday"
 msgstr "Verjaardag"
@@ -246,6 +276,11 @@ msgstr "bedrijfsinformatie"
 #: model:ir.model.fields,field_description:school_management.field_school_subject__company_name
 msgid "Company Name"
 msgstr "Bedrijfsnaam"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__resource_calendar_id
+msgid "Company Working Hours"
+msgstr "Arbeitszeiten des Unternehmens"
 
 #. module: school_management
 #: model:ir.model.fields.selection,name:school_management.selection__school_teacher__state__confirm
@@ -297,7 +332,7 @@ msgstr "Gemaakt op"
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_tree_view
 msgid "Credit"
-msgstr "Credit"
+msgstr "Kredit"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_student_fees__currency_id
@@ -422,6 +457,11 @@ msgid "Draft"
 msgstr "Diepgang"
 
 #. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__hr_employee_self_edit
+msgid "Employee Editing"
+msgstr "Mitarbeiterbearbeitung"
+
+#. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__employee_number
 msgid "Employee ID"
 msgstr "Medewerker-ID"
@@ -429,7 +469,8 @@ msgstr "Medewerker-ID"
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__auth_signup_reset_password
 msgid "Enable password reset from Login page"
-msgstr "Schakel het opnieuw instellen van het wachtwoord in vanaf de inlogpagina"
+msgstr ""
+"Schakel het opnieuw instellen van het wachtwoord in vanaf de inlogpagina"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__date_of_leave_end
@@ -471,7 +512,7 @@ msgstr "Kosten"
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 msgid "Fees Paid"
-msgstr ""
+msgstr "Gebühren bezahlt"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__fees_table_ids
@@ -542,13 +583,13 @@ msgstr "Voormalige docenten"
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_graph_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
 msgid "GPA"
-msgstr "GPA"
+msgstr "Notendurchschnitt"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_kanban_view
 msgid "GPA:"
-msgstr "GPA:"
+msgstr "Notendurchschnitt:"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_gender
@@ -599,7 +640,7 @@ msgstr "Heeft bericht"
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__id
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__id
 msgid "ID"
-msgstr "ID"
+msgstr "AUSWEIS"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_exception_icon
@@ -633,8 +674,8 @@ msgid ""
 "If you have setup a catch-all email domain redirected to the Odoo server, "
 "enter the domain name here."
 msgstr ""
-"Als u een allesomvattend e-maildomein hebt ingesteld dat is omgeleid naar de Odoo-server, "
-"vul hier de domeinnaam in."
+"Als u een allesomvattend e-maildomein hebt ingesteld dat is omgeleid naar de"
+" Odoo-server, vul hier de domeinnaam in."
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__use_twilio_rtc_servers
@@ -944,6 +985,11 @@ msgid "Reason"
 msgstr "Reden"
 
 #. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_reference__relation
+msgid "Reason of reference"
+msgstr "Grund der Referenz"
+
+#. module: school_management
 #: code:addons/school_management/models/school_teacher.py:0
 #, python-format
 msgid "Record is already confirmed"
@@ -1006,12 +1052,12 @@ msgstr "Verkooprasterinvoer"
 #. module: school_management
 #: model:ir.ui.menu,name:school_management.school_root_menu
 msgid "School"
-msgstr "School"
+msgstr "Schule"
 
 #. module: school_management
 #: model:ir.actions.report,name:school_management.action_report_student
 msgid "School / Student"
-msgstr "School / Student"
+msgstr "Schüler"
 
 #. module: school_management
 #: model:ir.module.category,name:school_management.school_management_user_access
@@ -1037,6 +1083,11 @@ msgstr "schoolleraar"
 #: model:ir.model.fields,field_description:school_management.field_school_subject__show_effect
 msgid "Show Effect"
 msgstr "Effect tonen"
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__module_hr_skills
+msgid "Skills Management"
+msgstr "Kompetenzmanagement"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__date_of_leave_start
@@ -1196,7 +1247,8 @@ msgstr "Leraren"
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__auth_signup_template_user_id
 msgid "Template user for new users created through signup"
-msgstr "Sjabloongebruiker voor nieuwe gebruikers die zijn aangemaakt via aanmelding"
+msgstr ""
+"Sjabloongebruiker voor nieuwe gebruikers die zijn aangemaakt via aanmelding"
 
 #. module: school_management
 #: model:ir.model.constraint,message:school_management.constraint_school_teacher_unique_email
@@ -1298,6 +1350,11 @@ msgstr ""
 "Maar alleen Mail Template Editors kunnen nieuwe dynamische sjablonen maken of bestaande aanpassen."
 
 #. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_ip_list
+msgid "Valid IP addresses"
+msgstr "Gültige IP-Adressen"
+
+#. module: school_management
 #: model:ir.actions.server,name:school_management.test_button
 msgid "Validate"
 msgstr "Valideer"
@@ -1331,7 +1388,7 @@ msgstr "Geen klacht"
 #. module: school_management
 #: model:res.groups,name:school_management.school_management_admin
 msgid "admin"
-msgstr "admin"
+msgstr "Administrator"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
@@ -1428,7 +1485,7 @@ msgstr "Vul alstublieft alle details in"
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_google_recaptcha
 msgid "reCAPTCHA"
-msgstr "reCAPTCHA"
+msgstr "reCaptcha"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student
@@ -1442,7 +1499,7 @@ msgstr ""
 #. module: school_management
 #: model:ir.model,name:school_management.model_school_reference
 msgid "school reference contacts"
-msgstr ""
+msgstr "Referenzkontakte der Schule"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
@@ -1462,7 +1519,7 @@ msgstr "studenten"
 #. module: school_management
 #: model:res.groups,name:school_management.school_management_student
 msgid "student"
-msgstr "student"
+msgstr "Student"
 
 #. module: school_management
 #: model:ir.model,name:school_management.model_student_fees
@@ -1482,7 +1539,7 @@ msgstr "leraar verlof wiz"
 #. module: school_management
 #: model:ir.model,name:school_management.model_former_teachers
 msgid "teachers that are no longer with the school"
-msgstr "leraren die niet meer bij de school zijn
+msgstr "leraren die niet meer bij de school zij"
 
 #. module: school_management
 #: model:ir.module.category,description:school_management.school_management_user_access

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-23 10:43+0000\n"
-"PO-Revision-Date: 2023-11-23 10:43+0000\n"
+"POT-Creation-Date: 2023-11-23 10:31+0000\n"
+"PO-Revision-Date: 2023-11-23 10:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,17 +18,17 @@ msgstr ""
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_email_amount
 msgid "# emails to send"
-msgstr "# e-mails à envoyer"
+msgstr "મોકલવા માટે # ઇમેઇલ"
 
 #. module: school_management
 #: model:ir.actions.report,print_report_name:school_management.action_report_student
 msgid "'student - %s' % (object.enroll_no)"
-msgstr "'étudiant - %s' % (object.enroll_no)"
+msgstr "'વિદ્યાર્થી - %s' % (object.enroll_no)"
 
 #. module: school_management
 #: model:ir.actions.report,print_report_name:school_management.action_report_student_fees
 msgid "'student fee - %s' % (object.enroll_no)"
-msgstr "'frais étudiants - %s' % (object.enroll_no)"
+msgstr "'વિદ્યાર્થી ફી - %s' % (object.enroll_no)"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student
@@ -37,77 +37,77 @@ msgid ""
 "                        Subjects:"
 msgstr ""
 "<br/>\n"
-"                        Sujets:"
+"                        વિષયો:"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
 msgid "<br/><u>Address</u>:"
-msgstr "<br/><u>Adresse</u>:"
+msgstr "<br/><u>સરનામું</u>:"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
 msgid "<br/><u>Date of Birth</u>:"
-msgstr "<br/><u>Date de naissance</u>:"
+msgstr "<br/><u>જન્મ તારીખ</u>:"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
 msgid "<br/><u>Subjects</u>:"
-msgstr "<br/><u>Sujets</u>:"
+msgstr "<br/><u>વિષયો</u>:"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
 msgid "<u>GPA</u>:"
-msgstr "<u>GPA</u> :"
+msgstr "<u>GPA</u>:"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
 msgid "<u>Gender</u>:"
-msgstr "<u>Genre</u>:"
+msgstr "<u>લિંગ</u>:"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
 msgid "<u>Name</u>:"
-msgstr "<u>Nom</u>:"
+msgstr "<u>નામ</u>:"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__unsplash_access_key
 msgid "Access Key"
-msgstr "Clef d'accès"
+msgstr "ઍક્સેસ કી"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_graph_view
 msgid "According to GPA"
-msgstr "Selon GPA"
+msgstr "GPA મુજબ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_needaction
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_needaction
 msgid "Action Needed"
-msgstr "Action nécessaire"
+msgstr "ક્રિયા જરૂરી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_ids
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_ids
 msgid "Activities"
-msgstr "Activités"
+msgstr "પ્રવૃત્તિઓ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_exception_decoration
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "Activité Exception Décoration"
+msgstr "પ્રવૃત્તિ અપવાદ શણગાર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_state
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_state
 msgid "Activity State"
-msgstr "État d'activité"
+msgstr "પ્રવૃત્તિ સ્થિતિ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_type_icon
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_type_icon
 msgid "Activity Type Icon"
-msgstr "Icône de type d'activité"
+msgstr "પ્રવૃત્તિ પ્રકાર આયકન"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_address
@@ -115,52 +115,51 @@ msgstr "Icône de type d'activité"
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
 msgid "Address"
-msgstr "Adresse"
+msgstr "સરનામું"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_hr_presence
 msgid "Advanced Presence Control"
-msgstr "Contrôle de présence avancé"
+msgstr "અદ્યતન હાજરી નિયંત્રણ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__group_sale_pricelist
 msgid "Advanced Pricelists"
-msgstr "Listes de prix avancées"
+msgstr "અદ્યતન ભાવો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_age
 msgid "Age"
-msgstr "Âge"
+msgstr "ઉંમર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__alias_domain
 msgid "Alias Domain"
-msgstr "Domaine d'alias"
+msgstr "ઉપનામ ડોમેન"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_mail_plugin
 msgid "Allow integration with the mail plugins"
-msgstr "Autoriser l'intégration avec les plugins de messagerie"
+msgstr "મેઇલ પ્લગઇન્સ સાથે એકીકરણની મંજૂરી આપો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_google_calendar
 msgid "Allow the users to synchronize their calendar  with Google Calendar"
 msgstr ""
-"Autoriser les utilisateurs à synchroniser leur calendrier avec Google Agenda"
+"વપરાશકર્તાઓને તેમના કૅલેન્ડરને Google કૅલેન્ડર સાથે સિંક્રનાઇઝ કરવાની મંજૂરી"
+" આપો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_microsoft_calendar
 msgid "Allow the users to synchronize their calendar with Outlook Calendar"
 msgstr ""
-"Autoriser les utilisateurs à synchroniser leur calendrier avec le calendrier"
-" Outlook"
+"વપરાશકર્તાઓને તેમના કૅલેન્ડરને આઉટલુક કૅલેન્ડર સાથે સિંક્રનાઇઝ કરવાની મંજૂરી"
+" આપો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_base_import
 msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
-msgstr ""
-"Autoriser les utilisateurs à importer des données à partir de fichiers "
-"CSV/XLS/XLSX/ODS"
+msgstr "વપરાશકર્તાઓને CSV/XLS/XLSX/ODS ફાઇલોમાંથી ડેટા આયાત કરવાની મંજૂરી આપો"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__group_sale_pricelist
@@ -168,145 +167,145 @@ msgid ""
 "Allows to manage different prices based on rules per category of customers.\n"
 "                Example: 10% for retailers, promotion of 5 EUR on this product, etc."
 msgstr ""
-"Permet de gérer différents prix en fonction de règles par catégorie de clients.\n"
-"                Exemple : 10% pour les détaillants, promotion de 5 EUR sur ce produit, etc."
+"ગ્રાહકોની શ્રેણી દીઠ નિયમોના આધારે અલગ-અલગ કિંમતોનું સંચાલન કરવાની મંજૂરી આપે છે.\n"
+"                ઉદાહરણ: રિટેલર્સ માટે 10%, આ પ્રોડક્ટ પર 5 EURનો પ્રચાર વગેરે."
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__group_multi_currency
 msgid "Allows to work in a multi currency environment"
-msgstr "Permet de travailler dans un environnement multi-devises"
+msgstr "બહુ ચલણ વાતાવરણમાં કામ કરવાની મંજૂરી આપે છે"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_student_fees__total_amount
 #: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
 msgid "Amount"
-msgstr "Montant"
+msgstr "રકમ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__group_analytic_accounting
 msgid "Analytic Accounting"
-msgstr "Comptabilité analytique"
+msgstr "વિશ્લેષણાત્મક એકાઉન્ટિંગ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
 msgid "Annual Bonus"
-msgstr "Prime annuelle"
+msgstr "વાર્ષિક બોનસ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
 msgid "Apply Leave"
-msgstr "Demander un congé"
+msgstr "રજા લાગુ કરો"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
 msgid "Apply for Leave"
-msgstr "Demander un congé"
+msgstr "રજા માટે અરજી કરો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_voip
 msgid "Asterisk (VoIP)"
-msgstr "Astérisque (VoIP)"
+msgstr "ફૂદડી (VoIP)"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_google_drive
 msgid "Attach Google documents to any record"
-msgstr "Joindre des documents Google à n'importe quel enregistrement"
+msgstr "કોઈપણ રેકોર્ડ સાથે Google દસ્તાવેજો જોડો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_attachment_count
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_attachment_count
 msgid "Attachment Count"
-msgstr "Nombre de pièces jointes"
+msgstr "જોડાણ ગણતરી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_student_fees__date_of_bank_deposite
 msgid "Bank deposite date"
-msgstr "Date du dépôt bancaire"
+msgstr "બેંક ડિપોઝિટ તારીખ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_ip
 msgid "Based on IP Address"
-msgstr "Basé sur l'adresse IP"
+msgstr "IP એડ્રેસ પર આધારિત"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_hr_attendance
 msgid "Based on attendances"
-msgstr "Basé sur la fréquentation"
+msgstr "હાજરીના આધારે"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_email
 msgid "Based on number of emails sent"
-msgstr "Basé sur le nombre d'e-mails envoyés"
+msgstr "મોકલેલ ઈમેલની સંખ્યાના આધારે"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_login
 msgid "Based on user status in system"
-msgstr "Basé sur le statut de l'utilisateur dans le système"
+msgstr "સિસ્ટમમાં વપરાશકર્તાની સ્થિતિના આધારે"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_name_birthday
 msgid "Birthday"
-msgstr "Anniversaire"
+msgstr "જન્મદિવસ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__calendar_birth_day
 msgid "Calendar Birth Day"
-msgstr "Jour de naissance du calendrier"
+msgstr "કેલેન્ડરનો જન્મ દિવસ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__class_teacher_id
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
 msgid "Class Teacher"
-msgstr "Professeur de classe"
+msgstr "વર્ગ શિક્ષક"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_pad
 msgid "Collaborative Pads"
-msgstr "Blocs collaboratifs"
+msgstr "સહયોગી પેડ્સ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__company_id
 msgid "Company"
-msgstr "Entreprise"
+msgstr "કંપની"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__company_informations
 msgid "Company Informations"
-msgstr "Informations sur l'entreprise"
+msgstr "કંપની માહિતી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__company_name
 msgid "Company Name"
-msgstr "Nom de l'entreprise"
+msgstr "કંપની નું નામ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__resource_calendar_id
 msgid "Company Working Hours"
-msgstr "Horaires de travail de l'entreprise"
+msgstr "કંપનીના કામના કલાકો"
 
 #. module: school_management
 #: model:ir.model.fields.selection,name:school_management.selection__school_teacher__state__confirm
 msgid "Confirm"
-msgstr "Confirmer"
+msgstr "પુષ્ટિ કરો"
 
 #. module: school_management
 #: model_terms:ir.actions.act_window,help:school_management.action_school_reference
 msgid "Create a new reference record"
-msgstr "Créer un nouvel enregistrement de référence"
+msgstr "નવો સંદર્ભ રેકોર્ડ બનાવો"
 
 #. module: school_management
 #: model_terms:ir.actions.act_window,help:school_management.action_school_student
 #: model_terms:ir.actions.act_window,help:school_management.actions_school_teacher_view
 #: model_terms:ir.actions.act_window,help:school_management.actions_teacher_leave_model
 msgid "Create a new student record"
-msgstr "Créer un nouveau dossier étudiant"
+msgstr "નવો વિદ્યાર્થી રેકોર્ડ બનાવો"
 
 #. module: school_management
 #: model_terms:ir.actions.act_window,help:school_management.action_school_subject
 msgid "Create a new subject record"
-msgstr "Créer un nouvel enregistrement de sujet"
+msgstr "નવો વિષય રેકોર્ડ બનાવો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__create_uid
@@ -318,7 +317,7 @@ msgstr "Créer un nouvel enregistrement de sujet"
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__create_uid
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__create_uid
 msgid "Created by"
-msgstr "Créé par"
+msgstr "દ્વારા બનાવવામાં"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__create_date
@@ -330,45 +329,45 @@ msgstr "Créé par"
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__create_date
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__create_date
 msgid "Created on"
-msgstr "Créé sur"
+msgstr "ના રોજ બનાવ્યું"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_tree_view
 msgid "Credit"
-msgstr "Crédit"
+msgstr "જમા"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_student_fees__currency_id
 msgid "Currency"
-msgstr "Devise"
+msgstr "ચલણ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__currency_id_teacher_pay
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__currency_id_teacher_pay
 msgid "Currency Id Teacher Pay"
-msgstr "Devise Identifiant Salaire de l'enseignant"
+msgstr "ચલણ આઈડી શિક્ષક પગાર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__external_email_server_default
 msgid "Custom Email Servers"
-msgstr "Serveurs de messagerie personnalisés"
+msgstr "કસ્ટમ ઇમેઇલ સર્વર્સ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__report_footer
 msgid "Custom Report Footer"
-msgstr "Pied de page du rapport personnalisé"
+msgstr "કસ્ટમ રિપોર્ટ ફૂટર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__auth_signup_uninvited
 msgid "Customer Account"
-msgstr "Compte client"
+msgstr "ગ્રાહક ખાતું"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_student_fees__date_of_deposite
 #: model_terms:ir.ui.view,arch_db:school_management.report_student_fees
 msgid "Date"
-msgstr "Date"
+msgstr "તારીખ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_date_of_birth
@@ -376,54 +375,54 @@ msgstr "Date"
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
 msgid "Date of Birth"
-msgstr "Date de naissance"
+msgstr "જન્મ તારીખ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student
 msgid "Date of Birth:"
-msgstr "Date de naissance:"
+msgstr "જન્મ તારીખ:"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__joining_date
 msgid "Date of Joining"
-msgstr "Date d'adhésion"
+msgstr "જોડાવાની તારીખ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__days_from_joining
 msgid "Days from joining"
-msgstr "Jours après l'adhésion"
+msgstr "જોડાવાના દિવસો"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_form_view
 msgid "Deducted pay"
-msgstr "Salaire déduit"
+msgstr "કપાત કરેલ પગાર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__pay_deduction
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__pay_deduction_wizard
 msgid "Deduction"
-msgstr "Déduction"
+msgstr "કપાત"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__user_default_rights
 msgid "Default Access Rights"
-msgstr "Droits d'accès par défaut"
+msgstr "ડિફૉલ્ટ ઍક્સેસ અધિકારો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__deleteable
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 msgid "Deleteable"
-msgstr "Supprimable"
+msgstr "કાઢી નાખવા યોગ્ય"
 
 #. module: school_management
 #: model_terms:ir.actions.act_window,help:school_management.action_former_teachers
 msgid "Deleted records from Teachers are stored here"
-msgstr "Les enregistrements supprimés des enseignants sont stockés ici"
+msgstr "શિક્ષકો તરફથી કાઢી નાખેલ રેકોર્ડ અહીં સંગ્રહિત છે"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
 msgid "Discard"
-msgstr "Jeter"
+msgstr "કાઢી નાખો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_reference__discount_amount
@@ -431,12 +430,12 @@ msgstr "Jeter"
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_search_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_tree_view
 msgid "Discount"
-msgstr "Rabais"
+msgstr "ડિસ્કાઉન્ટ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__group_discount_per_so_line
 msgid "Discounts"
-msgstr "Réductions"
+msgstr "ડિસ્કાઉન્ટ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__display_name
@@ -448,80 +447,79 @@ msgstr "Réductions"
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__display_name
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__display_name
 msgid "Display Name"
-msgstr "Afficher un nom"
+msgstr "ડિસ્પ્લે નામ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__external_report_layout_id
 msgid "Document Template"
-msgstr "Modèle de document"
+msgstr "દસ્તાવેજ નમૂનો"
 
 #. module: school_management
 #: model:ir.model.fields.selection,name:school_management.selection__school_teacher__state__draft
 msgid "Draft"
-msgstr "Brouillon"
+msgstr "ડ્રાફ્ટ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__hr_employee_self_edit
 msgid "Employee Editing"
-msgstr "Modification des employés"
+msgstr "કર્મચારી સંપાદન"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__employee_number
 msgid "Employee ID"
-msgstr "ID d'employé"
+msgstr "કર્મચારી ID"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__auth_signup_reset_password
 msgid "Enable password reset from Login page"
-msgstr ""
-"Activer la réinitialisation du mot de passe depuis la page de connexion"
+msgstr "લોગિન પૃષ્ઠથી પાસવર્ડ રીસેટ સક્ષમ કરો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__date_of_leave_end
 msgid "End Date"
-msgstr "Date de fin"
+msgstr "અંતિમ તારીખ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
 msgid "End date"
-msgstr "Date de fin"
+msgstr "અંતિમ તારીખ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_kanban_view
 msgid "Enroll no:"
-msgstr "Numéro d'inscription:"
+msgstr "નોંધણી નંબર:"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_work_exprience
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
 msgid "Exprience"
-msgstr "Expérience"
+msgstr "અનુભવ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__fail_counter
 msgid "Fail Mail"
-msgstr "Échec du courrier"
+msgstr "ફેલ મેઇલ"
 
 #. module: school_management
 #: model:ir.actions.report,name:school_management.action_report_student_fees
 msgid "Fee / Invoice"
-msgstr "Frais / Facture"
+msgstr "ફી / ઇન્વોઇસ"
 
 #. module: school_management
 #: model:ir.ui.menu,name:school_management.root_fees_menu
 msgid "Fees"
-msgstr "Frais"
+msgstr "ફી"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 msgid "Fees Paid"
-msgstr "Frais payés"
+msgstr "ફી ચૂકવી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__fees_table_ids
 msgid "Fees Table"
-msgstr "Tableau des frais"
+msgstr "ફી ટેબલ"
 
 #. module: school_management
 #: model:ir.model.fields.selection,name:school_management.selection__former_teachers__former_teacher_gender__female
@@ -530,57 +528,57 @@ msgstr "Tableau des frais"
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_search_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
 msgid "Female"
-msgstr "Femelle"
+msgstr "સ્ત્રી"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
 msgid "First Name"
-msgstr "Prénom"
+msgstr "પ્રથમ નામ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_follower_ids
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_follower_ids
 msgid "Followers"
-msgstr "Suiveurs"
+msgstr "અનુયાયીઓ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_partner_ids
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_partner_ids
 msgid "Followers (Partners)"
-msgstr "Abonnés (partenaires)"
+msgstr "અનુયાયીઓ (ભાગીદારો)"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_student__activity_type_icon
 #: model:ir.model.fields,help:school_management.field_school_teacher__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "Icône géniale de police, par exemple. tâches fat"
+msgstr "ફોન્ટ અદ્ભુત આયકન દા.ત. એફએ-ટાસ્ક"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__report_footer
 msgid "Footer text displayed at the bottom of all reports."
-msgstr "Texte de pied de page affiché au bas de tous les rapports."
+msgstr "ફૂટર ટેક્સ્ટ તમામ રિપોર્ટના તળિયે પ્રદર્શિત થાય છે."
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_bonus
 msgid "Former Teacher Bonus"
-msgstr "Prime pour ancien enseignant"
+msgstr "ભૂતપૂર્વ શિક્ષક બોનસ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_salary
 msgid "Former Teacher Salary"
-msgstr "Salaire d’un ancien enseignant"
+msgstr "ભૂતપૂર્વ શિક્ષક પગાર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_salary_currency_id
 msgid "Former Teacher Salary Currency"
-msgstr "Devise du salaire d’un ancien enseignant"
+msgstr "ભૂતપૂર્વ શિક્ષક પગાર ચલણ"
 
 #. module: school_management
 #: model:ir.actions.act_window,name:school_management.action_former_teachers
 #: model:ir.ui.menu,name:school_management.root_former_teacher
 msgid "Former Teachers"
-msgstr "Anciens enseignants"
+msgstr "ભૂતપૂર્વ શિક્ષકો"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
@@ -593,46 +591,46 @@ msgstr "GPA"
 #: model_terms:ir.ui.view,arch_db:school_management.report_student
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_kanban_view
 msgid "GPA:"
-msgstr "GPA :"
+msgstr "GPA:"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_gender
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_gender
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_gender
 msgid "Gender"
-msgstr "Genre"
+msgstr "જાતિ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_kanban_view
 msgid "Gender:"
-msgstr "Genre:"
+msgstr "લિંગ:"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_base_geolocalize
 msgid "GeoLocalize"
-msgstr "Géolocaliser"
+msgstr "જિયોલોકલાઇઝ કરો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_product_images
 msgid "Get product pictures using barcode"
-msgstr "Obtenez des photos de produits à l'aide d'un code-barres"
+msgstr "બારકોડનો ઉપયોગ કરીને ઉત્પાદનના ચિત્રો મેળવો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_google_spreadsheet
 msgid "Google Spreadsheet"
-msgstr "Feuille de calcul Google"
+msgstr "Google સ્પ્રેડશીટ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 msgid "Grade"
-msgstr "Grade"
+msgstr "ગ્રેડ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__has_message
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__has_message
 msgid "Has Message"
-msgstr "A un message"
+msgstr "સંદેશ છે"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__id
@@ -644,19 +642,19 @@ msgstr "A un message"
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__id
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__id
 msgid "ID"
-msgstr "IDENTIFIANT"
+msgstr "ID"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_exception_icon
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_exception_icon
 msgid "Icon"
-msgstr "Icône"
+msgstr "ચિહ્ન"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_student__activity_exception_icon
 #: model:ir.model.fields,help:school_management.field_school_teacher__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr "Icône pour indiquer une activité d'exception."
+msgstr "અપવાદ પ્રવૃત્તિ સૂચવવા માટેનું ચિહ્ન."
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_student__message_needaction
@@ -664,14 +662,13 @@ msgstr "Icône pour indiquer une activité d'exception."
 #: model:ir.model.fields,help:school_management.field_school_teacher__message_needaction
 #: model:ir.model.fields,help:school_management.field_school_teacher__message_unread
 msgid "If checked, new messages require your attention."
-msgstr ""
-"Si cette case est cochée, les nouveaux messages nécessitent votre attention."
+msgstr "જો ચકાસાયેલ હોય, તો નવા સંદેશાઓ માટે તમારું ધ્યાન જરૂરી છે."
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_student__message_has_error
 #: model:ir.model.fields,help:school_management.field_school_teacher__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Si coché, certains messages ont une erreur de livraison."
+msgstr "જો ચેક કરેલ હોય, તો કેટલાક સંદેશાઓમાં ડિલિવરી ભૂલ છે."
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__alias_domain
@@ -679,31 +676,30 @@ msgid ""
 "If you have setup a catch-all email domain redirected to the Odoo server, "
 "enter the domain name here."
 msgstr ""
-"Si vous avez configuré un domaine de messagerie fourre-tout redirigé vers le"
-" serveur Odoo, entrez le nom de domaine ici."
+"જો તમે Odoo સર્વર પર રીડાયરેક્ટ કરેલ કૅચ-ઑલ ઇમેઇલ ડોમેન સેટઅપ કર્યું હોય, તો"
+" અહીં ડોમેન નામ દાખલ કરો."
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__use_twilio_rtc_servers
 msgid "If you want to use twilio as TURN/STUN server provider"
-msgstr ""
-"Si vous souhaitez utiliser twilio comme fournisseur de serveur TURN/STUN"
+msgstr "જો તમે ટ્વિલિયોનો ઉપયોગ ટર્ન/STUN સર્વર પ્રદાતા તરીકે કરવા માંગતા હો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_image
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_image
 msgid "Image"
-msgstr "Image"
+msgstr "છબી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_is_follower
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_is_follower
 msgid "Is Follower"
-msgstr "Est un suiveur"
+msgstr "અનુયાયી છે"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_auth_ldap
 msgid "LDAP Authentication"
-msgstr "Authentification LDAP"
+msgstr "LDAP પ્રમાણીકરણ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers____last_update
@@ -715,13 +711,13 @@ msgstr "Authentification LDAP"
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave____last_update
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard____last_update
 msgid "Last Modified on"
-msgstr "Dernière modification le"
+msgstr "છેલ્લે સંશોધિત"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
 msgid "Last Name"
-msgstr "Nom de famille"
+msgstr "છેલ્લું નામ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__write_uid
@@ -733,7 +729,7 @@ msgstr "Nom de famille"
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__write_uid
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__write_uid
 msgid "Last Updated by"
-msgstr "Dernière mise à jour par"
+msgstr "દ્વારા છેલ્લે અપડેટ કરવામાં આવ્યું હતું"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__write_date
@@ -745,18 +741,18 @@ msgstr "Dernière mise à jour par"
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__write_date
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__write_date
 msgid "Last Updated on"
-msgstr "Dernière mise à jour le"
+msgstr "છેલ્લે અપડેટ થયેલ"
 
 #. module: school_management
 #: model:ir.ui.menu,name:school_management.root_leave_application_model_menu
 msgid "Leave Applications"
-msgstr "Demandes de congé"
+msgstr "અરજીઓ છોડો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_main_attachment_id
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_main_attachment_id
 msgid "Main Attachment"
-msgstr "Pièce jointe principale"
+msgstr "મુખ્ય જોડાણ"
 
 #. module: school_management
 #: model:ir.model.fields.selection,name:school_management.selection__former_teachers__former_teacher_gender__male
@@ -765,29 +761,29 @@ msgstr "Pièce jointe principale"
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_search_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
 msgid "Male"
-msgstr "Mâle"
+msgstr "પુરુષ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_account_inter_company_rules
 msgid "Manage Inter Company"
-msgstr "Gérer Inter Entreprises"
+msgstr "ઇન્ટર કંપનીનું સંચાલન કરો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_has_error
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_has_error
 msgid "Message Delivery error"
-msgstr "Erreur de livraison du message"
+msgstr "સંદેશ વિતરણ ભૂલ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_ids
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_ids
 msgid "Messages"
-msgstr "messages"
+msgstr "સંદેશાઓ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__group_multi_currency
 msgid "Multi-Currencies"
-msgstr "Multi-devises"
+msgstr "મલ્ટી-કરન્સી"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__product_pricelist_setting
@@ -795,14 +791,14 @@ msgid ""
 "Multiple prices: Pricelists with fixed price rules by product,\n"
 "Advanced rules: enables advanced price rules for pricelists."
 msgstr ""
-"Tarifs multiples : Tarifs avec règles de prix fixes par produit,\n"
-"Règles avancées: active les règles de prix avancées pour les listes de prix."
+"બહુવિધ કિંમતો: ઉત્પાદન દ્વારા નિશ્ચિત કિંમતના નિયમો સાથેની કિંમતો,\n"
+"અદ્યતન નિયમો: કિંમતસૂચિઓ માટે અદ્યતન ભાવ નિયમોને સક્ષમ કરે છે."
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__my_activity_date_deadline
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr "Date limite de mon activité"
+msgstr "મારી પ્રવૃત્તિની અંતિમ તારીખ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_name
@@ -817,298 +813,298 @@ msgstr "Date limite de mon activité"
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_tree_view
 msgid "Name"
-msgstr "Nom"
+msgstr "નામ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_student_fees__fees_of_student_id
 msgid "Name Of Student"
-msgstr "Nom de l'étudiant"
+msgstr "વિદ્યાર્થીનું નામ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.report_student
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_kanban_view
 msgid "Name:"
-msgstr "Nom:"
+msgstr "નામ:"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_date_deadline
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "Date limite de la prochaine activité"
+msgstr "આગલી પ્રવૃત્તિની અંતિમ તારીખ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_summary
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_summary
 msgid "Next Activity Summary"
-msgstr "Résumé de l'activité suivante"
+msgstr "આગામી પ્રવૃત્તિ સારાંશ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_type_id
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_type_id
 msgid "Next Activity Type"
-msgstr "Type d'activité suivant"
+msgstr "આગામી પ્રવૃત્તિ પ્રકાર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_needaction_counter
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_needaction_counter
 msgid "Number of Actions"
-msgstr "Nombre d'actions"
+msgstr "ક્રિયાઓની સંખ્યા"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__active_user_count
 msgid "Number of Active Users"
-msgstr "Nombre d'utilisateurs actifs"
+msgstr "સક્રિય વપરાશકર્તાઓની સંખ્યા"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__company_count
 msgid "Number of Companies"
-msgstr "Nombre d'entreprises"
+msgstr "કંપનીઓની સંખ્યા"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__language_count
 msgid "Number of Languages"
-msgstr "Nombre de langues"
+msgstr "ભાષાઓની સંખ્યા"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_has_error_counter
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_has_error_counter
 msgid "Number of errors"
-msgstr "Nombre d'erreurs"
+msgstr "ભૂલોની સંખ્યા"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_student__message_needaction_counter
 #: model:ir.model.fields,help:school_management.field_school_teacher__message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr "Nombre de messages nécessitant une action"
+msgstr "સંદેશાઓની સંખ્યા જેને ક્રિયાની જરૂર છે"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_student__message_has_error_counter
 #: model:ir.model.fields,help:school_management.field_school_teacher__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr "Nombre de messages avec erreur de livraison"
+msgstr "વિતરણ ભૂલ સાથે સંદેશાઓની સંખ્યા"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_graph_view
 msgid "Number of students per teacher"
-msgstr "Nombre d'élèves par professeur"
+msgstr "શિક્ષક દીઠ વિદ્યાર્થીઓની સંખ્યા"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_student__message_unread_counter
 #: model:ir.model.fields,help:school_management.field_school_teacher__message_unread_counter
 msgid "Number of unread messages"
-msgstr "Nombre de messages non lus"
+msgstr "ન વાંચેલા સંદેશાઓની સંખ્યા"
 
 #. module: school_management
 #: code:addons/school_management/models/school_reference.py:0
 #: code:addons/school_management/models/school_student.py:0
 #, python-format
 msgid "Numbers not allowed in name"
-msgstr "Numéros non autorisés dans le nom"
+msgstr "નામમાં નંબરોની મંજૂરી નથી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_partner_autocomplete
 msgid "Partner Autocomplete"
-msgstr "Remplissage automatique du partenaire"
+msgstr "ભાગીદાર સ્વતઃપૂર્ણ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
 msgid "Pay deduction"
-msgstr "Déduction salariale"
+msgstr "કપાત ચૂકવો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__payment_count
 msgid "Payment Count"
-msgstr "Nombre de paiements"
+msgstr "ચુકવણીની ગણતરી"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 msgid "Payments"
-msgstr "Paiements"
+msgstr "ચુકવણીઓ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_tree_view
 msgid "Phone"
-msgstr "Téléphone"
+msgstr "ફોન"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_search_view
 msgid "Phone Number"
-msgstr "Numéro de téléphone"
+msgstr "ફોન નંબર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__group_product_pricelist
 msgid "Pricelists"
-msgstr "Listes de prix"
+msgstr "ભાવવાદીઓ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__product_pricelist_setting
 msgid "Pricelists Method"
-msgstr "Méthode des listes de prix"
+msgstr "પ્રાઇસલિસ્ટ પદ્ધતિ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_sale_product_configurator
 msgid "Product Configurator"
-msgstr "Configurateur de produit"
+msgstr "ઉત્પાદન રૂપરેખાકાર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__group_stock_packaging
 msgid "Product Packagings"
-msgstr "Emballages de produits"
+msgstr "ઉત્પાદન પેકેજીંગ્સ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__work_exprience
 msgid "Professional Exprience"
-msgstr "Expérience professionnelle"
+msgstr "વ્યવસાયિક અનુભવ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__profiling_enabled_until
 msgid "Profiling enabled until"
-msgstr "Profilage activé jusqu'à"
+msgstr "સુધી પ્રોફાઇલિંગ સક્ષમ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_reference__reference_promo
 #: model:ir.model.fields,field_description:school_management.field_school_student__reference_code
 msgid "Promo Code"
-msgstr "Code promo"
+msgstr "પ્રોમો કોડ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_tree_view
 msgid "Promo code"
-msgstr "Code promo"
+msgstr "પ્રોમો કોડ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
 msgid "Pupils"
-msgstr "Élèves"
+msgstr "વિદ્યાર્થીઓ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__reason_for_leave
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__reason_for_leave_wizard
 #: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
 msgid "Reason"
-msgstr "Raison"
+msgstr "કારણ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_reference__relation
 msgid "Reason of reference"
-msgstr "Raison de référence"
+msgstr "સંદર્ભનું કારણ"
 
 #. module: school_management
 #: code:addons/school_management/models/school_teacher.py:0
 #, python-format
 msgid "Record is already confirmed"
-msgstr "L'enregistrement est déjà confirmé"
+msgstr "રેકોર્ડ પહેલેથી જ પુષ્ટિ થયેલ છે"
 
 #. module: school_management
 #: model:ir.actions.act_window,name:school_management.action_school_reference
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 msgid "Reference"
-msgstr "Référence"
+msgstr "સંદર્ભ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_reference_search_view
 msgid "Reference Name"
-msgstr "Nom de référence"
+msgstr "સંદર્ભ નામ"
 
 #. module: school_management
 #: model:ir.ui.menu,name:school_management.root_refrence_menu
 msgid "References"
-msgstr "Les références"
+msgstr "સંદર્ભ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 msgid "Referral Code"
-msgstr "Code de Parrainage"
+msgstr "રેફરલ કોડ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_reference__reference_name
 #: model:ir.model.fields,field_description:school_management.field_school_student__referral_name
 msgid "Referral Name"
-msgstr "Nom de la référence"
+msgstr "રેફરલ નામ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_reference__reference_phone
 msgid "Referral Phone"
-msgstr "Téléphone de référence"
+msgstr "રેફરલ ફોન"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__activity_user_id
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__activity_user_id
 msgid "Responsible User"
-msgstr "Utilisateur responsable"
+msgstr "જવાબદાર વપરાશકર્તા"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__restrict_template_rendering
 msgid "Restrict Template Rendering"
-msgstr "Restreindre le rendu du modèle"
+msgstr "ટેમ્પલેટ રેન્ડરિંગને પ્રતિબંધિત કરો"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_former_teacher_form_view
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
 msgid "Salary"
-msgstr "Salaire"
+msgstr "પગાર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_sale_product_matrix
 msgid "Sales Grid Entry"
-msgstr "Entrée dans la grille de vente"
+msgstr "સેલ્સ ગ્રીડ એન્ટ્રી"
 
 #. module: school_management
 #: model:ir.ui.menu,name:school_management.school_root_menu
 msgid "School"
-msgstr "École"
+msgstr "શાળા"
 
 #. module: school_management
 #: model:ir.actions.report,name:school_management.action_report_student
 msgid "School / Student"
-msgstr "Étudiant"
+msgstr "શાળા / વિદ્યાર્થી"
 
 #. module: school_management
 #: model:ir.module.category,name:school_management.school_management_user_access
 msgid "School Management"
-msgstr "Gestion scolaire"
+msgstr "શાળા સંચાલન"
 
 #. module: school_management
 #: model:ir.model,name:school_management.model_school_student
 msgid "School Student"
-msgstr "Étudiant"
+msgstr "શાળાનો વિદ્યાર્થી"
 
 #. module: school_management
 #: model:ir.model,name:school_management.model_school_subject
 msgid "School Subject"
-msgstr "Matière scolaire"
+msgstr "શાળા નો વિષય"
 
 #. module: school_management
 #: model:ir.model,name:school_management.model_school_teacher
 msgid "School Tacher"
-msgstr "Tacher d'école"
+msgstr "શાળા ટેચર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__show_effect
 msgid "Show Effect"
-msgstr "Afficher l'effet"
+msgstr "અસર બતાવો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_hr_skills
 msgid "Skills Management"
-msgstr "Gestion des compétences"
+msgstr "કૌશલ્ય વ્યવસ્થાપન"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__date_of_leave_start
 msgid "Start Date"
-msgstr "Date de début"
+msgstr "પ્રારંભ તારીખ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
 msgid "Start date"
-msgstr "Date de début"
+msgstr "પ્રારંભ તારીખ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__state
 msgid "State"
-msgstr "État"
+msgstr "રાજ્ય"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_student__activity_state
@@ -1119,232 +1115,231 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-"Statut basé sur les activités\n"
-"En retard: la date d'échéance est déjà dépassée\n"
-"Aujourd'hui: la date de l'activité est aujourd'hui\n"
-"Prévu : Activités futures."
+"પ્રવૃત્તિઓ પર આધારિત સ્થિતિ\n"
+"ઓવરડ્યુ: નિયત તારીખ પહેલેથી જ પસાર થઈ ગઈ છે\n"
+"આજે: પ્રવૃત્તિની તારીખ આજે છે\n"
+"આયોજિત: ભાવિ પ્રવૃત્તિઓ."
 
 #. module: school_management
 #: model:ir.ui.menu,name:school_management.root_student_data_menu
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_graph_view
 msgid "Student"
-msgstr "Étudiant"
+msgstr "વિદ્યાર્થી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__student_count
 msgid "Student Count"
-msgstr "Nombre d'étudiants"
+msgstr "વિદ્યાર્થી સંખ્યા"
 
 #. module: school_management
 #: model:ir.actions.act_window,name:school_management.action_school_student_fees
 msgid "Student Fees"
-msgstr "Frais étudiants"
+msgstr "વિદ્યાર્થી ફી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_gpa
 msgid "Student Gpa"
-msgstr "Étudiant Gpa"
+msgstr "વિદ્યાર્થી Gpa"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_grade
 msgid "Student Grade"
-msgstr "Note de l'étudiant"
+msgstr "વિદ્યાર્થી ગ્રેડ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
 msgid "Student Name"
-msgstr "Nom d'étudiant"
+msgstr "વિદ્યાર્થીનું નામ"
 
 #. module: school_management
 #: model:ir.actions.act_window,name:school_management.action_school_student
 #: model:ir.ui.menu,name:school_management.root_student_menu
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_form_view
 msgid "Students"
-msgstr "Étudiants"
+msgstr "વિદ્યાર્થીઓ"
 
 #. module: school_management
 #: model:ir.actions.act_window,name:school_management.action_school_subject
 #: model:ir.model.fields,field_description:school_management.field_school_student__subject_ids
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_tree_view
 msgid "Subject"
-msgstr "Sujet"
+msgstr "વિષય"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__subject_credit
 msgid "Subject Credit"
-msgstr "Crédit sujet"
+msgstr "વિષય ક્રેડિટ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_subject_search_view
 msgid "Subject Name"
-msgstr "Nom du sujet"
+msgstr "વિષયનું નામ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__subject_student_ids
 msgid "Subject Student"
-msgstr "Sujet Étudiant"
+msgstr "વિષય વિદ્યાર્થી"
 
 #. module: school_management
 #: model:ir.ui.menu,name:school_management.root_subject_menu
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 msgid "Subjects"
-msgstr "Sujets"
+msgstr "વિષયો"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_graph_view
 msgid "Teacher"
-msgstr "Professeur"
+msgstr "શિક્ષક"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_address
 msgid "Teacher Address"
-msgstr "Adresse de l'enseignant"
+msgstr "શિક્ષકનું સરનામું"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__date_of_birth_former_teacher
 msgid "Teacher Birth Date"
-msgstr "Date de naissance de l'enseignant"
+msgstr "શિક્ષકની જન્મ તારીખ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_bonus
 msgid "Teacher Bonus"
-msgstr "Bonus enseignant"
+msgstr "શિક્ષક બોનસ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_employee_email
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__employee_email
 msgid "Teacher Email"
-msgstr "Courriel de l'enseignant"
+msgstr "શિક્ષક ઈમેઈલ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_image
 msgid "Teacher Image"
-msgstr "Image de l'enseignant"
+msgstr "શિક્ષકની છબી"
 
 #. module: school_management
 #: model:ir.actions.act_window,name:school_management.actions_teacher_leave_model
 #: model:ir.actions.act_window,name:school_management.actions_teacher_leave_wizard
 msgid "Teacher Leave"
-msgstr "Congé des enseignants"
+msgstr "શિક્ષક રજા"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_name
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_search_view
 msgid "Teacher Name"
-msgstr "Nom de l'enseignant"
+msgstr "શિક્ષકનું નામ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_salary
 msgid "Teacher Salary"
-msgstr "Salaire de l'enseignant"
+msgstr "શિક્ષકનો પગાર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_salary_currency_id
 msgid "Teacher Salary Currency"
-msgstr "Devise du salaire des enseignants"
+msgstr "શિક્ષક પગાર ચલણ"
 
 #. module: school_management
 #: model:ir.actions.act_window,name:school_management.actions_school_teacher_view
 #: model:ir.ui.menu,name:school_management.root_teacher_data_menu
 #: model:ir.ui.menu,name:school_management.root_teacher_menu
 msgid "Teachers"
-msgstr "Enseignants"
+msgstr "શિક્ષકો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__auth_signup_template_user_id
 msgid "Template user for new users created through signup"
-msgstr ""
-"Utilisateur modèle pour les nouveaux utilisateurs créés via l'inscription"
+msgstr "સાઇનઅપ દ્વારા બનાવેલ નવા વપરાશકર્તાઓ માટે ટેમ્પલેટ વપરાશકર્તા"
 
 #. module: school_management
 #: model:ir.model.constraint,message:school_management.constraint_school_teacher_unique_email
 msgid "This email is already used"
-msgstr "Cet e-mail est déjà pris"
+msgstr "આ ઈમેલ પહેલાથી જ વપરાયેલ છે"
 
 #. module: school_management
 #: model:ir.actions.server,name:school_management.days_spent_cron_ir_actions_server
 #: model:ir.cron,cron_name:school_management.days_spent_cron
 #: model:ir.cron,name:school_management.days_spent_cron
 msgid "Time spent here"
-msgstr "Temps passé ici"
+msgstr "અહીં સમય વિતાવ્યો"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_student_fees_tree_view
 msgid "Total"
-msgstr "Total"
+msgstr "કુલ"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.teacher_leave_application_wizard
 msgid "Total Days Away"
-msgstr "Nombre total de jours d'absence"
+msgstr "કુલ દિવસો દૂર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave__total_leave_days
 msgid "Total Leave Days"
-msgstr "Nombre total de jours de congé"
+msgstr "રજાના કુલ દિવસો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__total_leave_days_wizard
 msgid "Total Leave Days Wizard"
-msgstr "Assistant Total des jours de congé"
+msgstr "કુલ રજાના દિવસો વિઝાર્ડ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__total_subject_credit
 msgid "Total Subject Credit"
-msgstr "Crédit total par sujet"
+msgstr "કુલ વિષય ક્રેડિટ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_base_gengo
 msgid "Translate Your Website with Gengo"
-msgstr "Traduisez votre site Web avec Gengo"
+msgstr "Gengo સાથે તમારી વેબસાઇટનો અનુવાદ કરો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__twilio_account_token
 msgid "Twilio Account Auth Token"
-msgstr "Jeton d'authentification de compte Twilio"
+msgstr "Twilio એકાઉન્ટ ઓથ ટોકન"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__twilio_account_sid
 msgid "Twilio Account SID"
-msgstr "SID du compte Twilio"
+msgstr "Twilio એકાઉન્ટ SID"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_student__activity_exception_decoration
 #: model:ir.model.fields,help:school_management.field_school_teacher__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "Type d’activité exceptionnelle enregistrée."
+msgstr "રેકોર્ડ પર અપવાદ પ્રવૃત્તિનો પ્રકાર."
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__group_uom
 msgid "Units of Measure"
-msgstr "Unités de mesure"
+msgstr "માપના એકમો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_unread
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_unread
 msgid "Unread Messages"
-msgstr "Messages non lus"
+msgstr "ન વાંચેલા સંદેશાઓ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__message_unread_counter
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__message_unread_counter
 msgid "Unread Messages Counter"
-msgstr "Compteur de messages non lus"
+msgstr "ન વાંચેલા સંદેશાઓનું કાઉન્ટર"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_web_unsplash
 msgid "Unsplash Image Library"
-msgstr "Bibliothèque d'images Unsplash"
+msgstr "અનસ્પ્લેશ ઇમેજ લાઇબ્રેરી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__use_twilio_rtc_servers
 msgid "Use Twilio ICE servers"
-msgstr "Utiliser les serveurs Twilio ICE"
+msgstr "Twilio ICE સર્વર્સનો ઉપયોગ કરો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_auth_oauth
 msgid "Use external authentication providers (OAuth)"
-msgstr "Utiliser des fournisseurs d'authentification externes (OAuth)"
+msgstr "બાહ્ય પ્રમાણીકરણ પ્રદાતાઓનો ઉપયોગ કરો (OAuth)"
 
 #. module: school_management
 #: model:ir.model.fields,help:school_management.field_school_subject__restrict_template_rendering
@@ -1352,94 +1347,92 @@ msgid ""
 "Users will still be able to render templates.\n"
 "However only Mail Template Editors will be able to create new dynamic templates or modify existing ones."
 msgstr ""
-"Les utilisateurs pourront toujours afficher des modèles.\n"
-"Cependant, seuls les éditeurs de modèles de courrier pourront créer de nouveaux modèles dynamiques ou modifier ceux existants."
+"વપરાશકર્તાઓ હજુ પણ નમૂનાઓ રેન્ડર કરવામાં સક્ષમ હશે.\n"
+"જો કે માત્ર મેઇલ ટેમ્પલેટ એડિટર્સ જ નવા ડાયનેમિક ટેમ્પલેટ્સ બનાવવા અથવા હાલના ટેમ્પલેટ્સને સંશોધિત કરવામાં સક્ષમ હશે."
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__hr_presence_control_ip_list
 msgid "Valid IP addresses"
-msgstr "Adresses IP valides"
+msgstr "માન્ય IP સરનામાં"
 
 #. module: school_management
 #: model:ir.actions.server,name:school_management.test_button
 msgid "Validate"
-msgstr "Valider"
+msgstr "માન્ય"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__group_product_variant
 msgid "Variants"
-msgstr "Variantes"
+msgstr "ચલો"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_form_view
 msgid "Verify"
-msgstr "Vérifier"
+msgstr "ચકાસો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__product_volume_volume_in_cubic_feet
 msgid "Volume unit of measure"
-msgstr "Unité de mesure du volume"
+msgstr "માપનું વોલ્યુમ એકમ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__product_weight_in_lbs
 msgid "Weight unit of measure"
-msgstr "Unité de mesure du poids"
+msgstr "માપનું વજન એકમ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_teacher_zero_complain
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__teacher_zero_complain
 msgid "Zero Complaint"
-msgstr "Zéro plainte"
+msgstr "શૂન્ય ફરિયાદ"
 
 #. module: school_management
 #: model:res.groups,name:school_management.school_management_admin
 msgid "admin"
-msgstr "administrateur"
+msgstr "એડમિન"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_tree_view
 msgid "birth day"
-msgstr "anniversaire"
+msgstr "જન્મ દિવસ"
 
 #. module: school_management
 #: code:addons/school_management/models/school_student.py:0
 #, python-format
 msgid "can't delete as 'delete ?' is set to No"
-msgstr "ne peut pas supprimer en tant que supprimer? est défini sur Non"
+msgstr "'delete' તરીકે કાઢી શકતા નથી? નંબર પર સેટ છે"
 
 #. module: school_management
 #: code:addons/school_management/models/school_subject.py:0
 #, python-format
 msgid "credit value cannot be more than 30 or less than 5 per subject"
-msgstr ""
-"la valeur du crédit ne peut pas être supérieure à 30 ou inférieure à 5 par "
-"sujet"
+msgstr "ક્રેડિટ મૂલ્ય 30 થી વધુ અથવા વિષય દીઠ 5 કરતા ઓછું ન હોઈ શકે"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_school_teacher_tree_view
 msgid "employee ID"
-msgstr "identifiant d'employé"
+msgstr "કર્મચારી ID"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__date_of_leave_end_wizard
 msgid "end date"
-msgstr "date de fin"
+msgstr "અંતિમ તારીખ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__enroll_no
 msgid "enroll"
-msgstr "inscrire"
+msgstr "નોંધણી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_former_teachers__former_employee_number
 msgid "former employee_number"
-msgstr "ancien numéro_d'employé"
+msgstr "ભૂતપૂર્વ કર્મચારી_નંબર"
 
 #. module: school_management
 #: code:addons/school_management/models/school_student.py:0
 #, python-format
 msgid "invalid code"
-msgstr "code invalide"
+msgstr "અમાન્ય કોડ"
 
 #. module: school_management
 #: code:addons/school_management/models/teacher_leave.py:0
@@ -1448,47 +1441,47 @@ msgstr "code invalide"
 #: code:addons/school_management/wizard/teacher_leave_application_wizard.py:0
 #, python-format
 msgid "invalid end date"
-msgstr "date de fin invalide"
+msgstr "અમાન્ય સમાપ્તિ તારીખ"
 
 #. module: school_management
 #: code:addons/school_management/models/teacher_leave.py:0
 #: code:addons/school_management/wizard/teacher_leave_application_wizard.py:0
 #, python-format
 msgid "invalid start date"
-msgstr "date de début invalide"
+msgstr "અમાન્ય પ્રારંભ તારીખ"
 
 #. module: school_management
 #: code:addons/school_management/models/school_subject.py:0
 #, python-format
 msgid "invalid subject according to system parameters"
-msgstr "sujet invalide selon les paramètres du système"
+msgstr "સિસ્ટમ પરિમાણો અનુસાર અમાન્ય વિષય"
 
 #. module: school_management
 #: model:ir.model.fields.selection,name:school_management.selection__school_student__deleteable__no
 msgid "no"
-msgstr "Non"
+msgstr "ના"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
 msgid "not smart"
-msgstr "pas intélligent"
+msgstr "સ્માર્ટ નથી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__more_than_one
 msgid "only one subject"
-msgstr "un seul sujet"
+msgstr "માત્ર એક વિષય"
 
 #. module: school_management
 #: code:addons/school_management/models/school_student.py:0
 #, python-format
 msgid "please enter a name to continue"
-msgstr "veuillez entrer un nom pour continuer"
+msgstr "ચાલુ રાખવા માટે કૃપા કરીને નામ દાખલ કરો"
 
 #. module: school_management
 #: code:addons/school_management/models/school_teacher.py:0
 #, python-format
 msgid "please fill up all the details"
-msgstr "veuillez remplir tous les détails"
+msgstr "કૃપા કરીને બધી વિગતો ભરો"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_subject__module_google_recaptcha
@@ -1502,64 +1495,64 @@ msgid ""
 "                        Address:"
 msgstr ""
 "s\n"
-"                        Adresse:"
+"                        સરનામું:"
 
 #. module: school_management
 #: model:ir.model,name:school_management.model_school_reference
 msgid "school reference contacts"
-msgstr "contacts de référence de l'école"
+msgstr "શાળા સંદર્ભ સંપર્કો"
 
 #. module: school_management
 #: model_terms:ir.ui.view,arch_db:school_management.school_management_student_search_view
 msgid "smart"
-msgstr "intelligent"
+msgstr "સ્માર્ટ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_teacher_leave_application_wizard__date_of_leave_start_wizard
 msgid "start date"
-msgstr "date de début"
+msgstr "પ્રારંભ તારીખ"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_teacher__student_ids
 msgid "studens"
-msgstr "étudiants"
+msgstr "વિદ્યાર્થીઓ"
 
 #. module: school_management
 #: model:res.groups,name:school_management.school_management_student
 msgid "student"
-msgstr "étudiant"
+msgstr "વિદ્યાર્થી"
 
 #. module: school_management
 #: model:ir.model,name:school_management.model_student_fees
 msgid "student fees"
-msgstr "frais d'étudiant"
+msgstr "વિદ્યાર્થી ફી"
 
 #. module: school_management
 #: model:ir.model.fields,field_description:school_management.field_school_student__student_surname
 msgid "surname"
-msgstr "nom de famille"
+msgstr "અટક"
 
 #. module: school_management
 #: model:ir.model,name:school_management.model_teacher_leave
 msgid "teacher leave wiz"
-msgstr "le professeur quitte le magicien"
+msgstr "શિક્ષક રજા વિઝ"
 
 #. module: school_management
 #: model:ir.model,name:school_management.model_former_teachers
 msgid "teachers that are no longer with the school"
-msgstr "les enseignants qui ne sont plus à l'école"
+msgstr "શિક્ષકો કે જેઓ હવે શાળામાં નથી"
 
 #. module: school_management
 #: model:ir.module.category,description:school_management.school_management_user_access
 msgid "user access to school_student model"
-msgstr "accès utilisateur au modèle school_student"
+msgstr "સ્કૂલ_સ્ટુડન્ટ મોડલની વપરાશકર્તા ઍક્સેસ"
 
 #. module: school_management
 #: model:ir.model,name:school_management.model_teacher_leave_application_wizard
 msgid "wizard for teacher leave"
-msgstr "assistant pour les congés des enseignants"
+msgstr "શિક્ષક રજા માટે વિઝાર્ડ"
 
 #. module: school_management
 #: model:ir.model.fields.selection,name:school_management.selection__school_student__deleteable__yes
 msgid "yes"
-msgstr "Oui"
+msgstr "હા"

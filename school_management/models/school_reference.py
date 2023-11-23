@@ -14,6 +14,7 @@ class SchoolReference(models.Model):
     reference_phone = fields.Char(string="Referral Phone", required=True)
     discount_amount = fields.Char(string="Discount", required=True)
     reference_promo = fields.Char(string="Promo Code", store=True)
+    relation = fields.Char(string="Reason of reference")
 
     @api.constrains("reference_name")
     def validate_reference_name(self):

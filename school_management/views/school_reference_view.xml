@@ -31,6 +31,7 @@
                             widget="CopyClipboardChar"
                             readonly="1"
                         />
+                        <field name="relation" />
                     </group>
                 </sheet>
                 <div class="oe_chatter">
