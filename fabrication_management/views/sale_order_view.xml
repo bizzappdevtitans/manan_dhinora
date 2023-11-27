@@ -10,7 +10,7 @@
                 position="inside"
             >
                     <field name="task_length" invisible="1" />
-                    <field name="metal_used" />
+                    <field name="metal_used" widget="many2many_tags" />
                     <field name="maintenance_cycle" />
                 </xpath>
                 <xpath expr="//div[@name='button_box']" position="inside">

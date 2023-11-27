@@ -7,9 +7,12 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     maintenance_cycle = fields.Boolean(string="Opt for maintenance")
-
-    metal_used = fields.Many2one(
-        comodel_name="product.product", string="Metals Used", compute="_compute_metals"
+    metal_used = fields.Many2many(
+        comodel_name="product.product",
+        column1="metal_used",
+        column2="name",
+        string="Metal",
+        compute="_compute_metals",
     )
     # these fields are used to count total number of tasks generated for smart button
     task_length = fields.Integer(compute="_compute_task_amount")
@@ -18,25 +21,35 @@ class SaleOrder(models.Model):
     @api.depends("order_line")
     def _compute_metals(self):
         """this compute method will find the metal used based on BOM #T00469"""
-        if self.order_line:
-            products = []
-            # getting products_id for products in sale.order.line
-            for order in self:
-                line_product = order.order_line.mapped("product_id")
-                products.extend(line_product.ids)
-            # getting the product_id of metal used from bom
-            for item in products:
-                tmpl_id = self.env["product.product"].browse([item]).product_tmpl_id
-                metal = (
-                    self.env["mrp.bom"]
-                    .search([("product_tmpl_id", "=", tmpl_id.id)])
-                    .mapped("bom_line_ids")
-                    .mapped("product_id")
-                    .filtered(lambda item: item.metal is True)
-                )
-                order.metal_used = metal[0]
+        if not self.order_line:
             return self.metal_used
-        return self.metal_used
+        products = []
+        # getting products_id for products in sale.order.line
+        for order in self:
+            line_product = order.order_line.mapped("product_id")
+            products.extend(line_product.ids)
+        # getting the product_id of metal used from bom
+        metal_ids = [
+            (
+                self.env["mrp.bom"]
+                .search(
+                    [
+                        (
+                            "product_tmpl_id",
+                            "=",
+                            self.env["product.product"]
+                            .browse([item])
+                            .product_tmpl_id.id,
+                        )
+                    ]
+                )
+                .mapped("bom_line_ids")
+                .mapped("product_id")
+                .filtered(lambda item: item.metal is True)
+            ).id
+            for item in products
+        ]
+        return self.write({"metal_used": [(6, 0, metal_ids)]})
 
     def _prepare_invoice(self):
         """passing the value of the maintenance_cycle field to invoice #T00469"""
@@ -51,20 +64,20 @@ class SaleOrder(models.Model):
     def _prepare_po_vals(self, variant_ids, varaint_qty):
         """this method wil be called when we are needed to create a purchase order
         for a product.template record with multiple variants #T00469"""
-        values = []
-        for variant in range(len(variant_ids)):
-            if varaint_qty[variant] > 0:
-                values.append(
-                    (
-                        0,
-                        0,
-                        {
-                            "product_id": variant_ids[variant],
-                            "product_qty": varaint_qty[variant],
-                        },
-                    )
+        return [
+            (
+                (
+                    0,
+                    0,
+                    {
+                        "product_id": variant_ids[variant],
+                        "product_qty": varaint_qty[variant],
+                    },
                 )
-        return values
+            )
+            for variant in range(len(variant_ids))
+            if varaint_qty[variant] > 0
+        ]
 
     def _replenish_welding_materials_cron(self):
         """this code for cron job will check for number of welding products and type
@@ -76,10 +89,11 @@ class SaleOrder(models.Model):
 
         for welding in welding_types:
             sale_line = (
-                self.search([])
-                .filtered(
-                    lambda record: record.date_order
-                    > (datetime.now() - timedelta(days=7))
+                self.search(
+                    [
+                        lambda record: record.date_order
+                        > (datetime.now() - timedelta(days=7))
+                    ]
                 )
                 .mapped("order_line")
                 .filtered(lambda rec: rec.welding_type.id == welding.id)
@@ -96,24 +110,22 @@ class SaleOrder(models.Model):
             )
             # getting the bom for welding to get the list of required products in PO
             po_product = bom_line.mapped("product_id")
-            weld_req_qty = bom_line.mapped("product_qty")
-            so_product_qty = []
-            for item in weld_req_qty:
-                so_product_qty.append(item * sale_line_qty)
-            po_product_qty = []
-            for product in po_product.ids:
-                purchase_line_product = (
+            so_product_qty = [
+                (item * sale_line_qty) for item in bom_line.mapped("product_qty")
+            ]
+            po_product_qty = [
+                (
                     self.env["purchase.order.line"]
                     .search([("product_id", "=", product)])
                     .mapped("product_qty")
                 )
-                po_product_qty.append(sum(purchase_line_product))
-            net_procurement_qty = []
+                for product in po_product.ids
+            ]
+            net_procurement_qty = [
+                (so_product_qty[index] - po_product_qty[index])
+                for index in range(len(so_product_qty))
+            ]
             # calculating the total required quantity to make a purchase order
-            for index in range(len(so_product_qty)):
-                final_qty = so_product_qty[index] - po_product_qty[index]
-                net_procurement_qty.append(final_qty)
-
             vals.extend(self._prepare_po_vals(po_product.ids, net_procurement_qty))
             po_vendor = po_vendor + (po_product.mapped("seller_ids").mapped("name")).ids
         if vals:
@@ -130,14 +142,14 @@ class SaleOrder(models.Model):
         create a project.project record #T00469"""
         partner = self.partner_id
         # getting the end date for project, this date can be changed in system parameter
-        end_date = self.date_order + timedelta(
-            days=int(self.env["ir.config_parameter"].get_param("project_deadline"))
-        )
         return {
             "name": str(partner.mapped("name")[0]) + " - " + str(self.date_order),
             "partner_id": partner.id,
             "date_start": self.date_order,
-            "date": end_date,
+            "date": self.date_order
+            + timedelta(
+                days=int(self.env["ir.config_parameter"].get_param("project_deadline"))
+            ),
             "sale_order_ref": self.id,
         }
 
@@ -149,25 +161,27 @@ class SaleOrder(models.Model):
         project_id = self.env["project.project"].search(
             [("sale_order_ref", "=", self.id)]
         )
-        vals = []
         # as there can be multiple order_line so we create multiple tasks
-        for job in order_line:
-            product_id = self.order_line.browse([job]).mapped("product_id")
-            # getting the enddate which is controlled by the same
-            # system parameter as the project
-            end_date = self.date_order + timedelta(
-                days=int(self.env["ir.config_parameter"].get_param("project_deadline"))
-            )
-            values = {
+        return [
+            {
                 "project_id": project_id.id,
-                "name": product_id.name + " - " + self.partner_id.mapped("name")[0],
+                "name": self.order_line.browse([job]).mapped("product_id").name
+                + " - "
+                + self.partner_id.mapped("name")[0],
                 "partner_id": self.partner_id.id,
                 "kanban_state": "normal",
                 "sale_id": self.id,
-                "date_deadline": end_date,
+                # getting the enddate which is controlled by the same
+                # system parameter as the project
+                "date_deadline": self.date_order
+                + timedelta(
+                    days=int(
+                        self.env["ir.config_parameter"].get_param("project_deadline")
+                    )
+                ),
             }
-            vals.append(values)
-        return vals
+            for job in order_line
+        ]
 
     def _action_confirm(self):
         """inheriting this method to add the project and task creation
