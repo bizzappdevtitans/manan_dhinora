@@ -16,6 +16,14 @@ class SupplierInfo(models.Model):
     ]
 
     @api.model
+    def _get_sequence(self):
+        """this method will assign a sequence value to all the product.supplierinfo
+        records that dont already have one based on their id #T6979"""
+        supplier_sequence = self.search([("supplier_sequence", "=", False)])
+        for supplier in supplier_sequence:
+            supplier.supplier_sequence = supplier.id
+
+    @api.model
     def name_get(self):
         """using name_get to get the required name - price in the
         m2o in order_line #T00479"""
