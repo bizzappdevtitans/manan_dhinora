@@ -16,4 +16,6 @@ class AccountInvoiceReport(models.Model):
     def _select(self):
         """inheriting this method to modify the sql query which will set the value for
         seller_id according to the seller_id in product.product #T7003"""
+        # TODO add the sql query to return string
+        # for fetching the seller_id from product.product
         return super(AccountInvoiceReport, self)._select()

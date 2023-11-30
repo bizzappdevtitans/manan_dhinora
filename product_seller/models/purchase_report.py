@@ -12,8 +12,7 @@ class PurchaseReport(models.Model):
     def _select(self):
         """inheriting this method to modify the sql query which will set the value for
         seller_id according to the seller_id in product.product #T7003"""
-        rtn = super(PurchaseReport, self)._select() + ",p.seller_id as seller_id"
-        return rtn
+        return super(PurchaseReport, self)._select() + ",p.seller_id as seller_id"
 
     def _group_by(self):
         """inheriting this method to add the seller_id to group_by #T7003"""
