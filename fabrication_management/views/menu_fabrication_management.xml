@@ -1,0 +1,98 @@
+<odoo>
+    <!-- root menu item for fabrication_management #T00469-->
+    <menuitem id="fabrication_job_root_menu" name="Fabrication" />
+
+    <!-- main menuitem for sale/invoice #T00469-->
+    <menuitem
+        id="sale_root_menu"
+        name="Sales"
+        parent="fabrication_job_root_menu"
+        sequence="1"
+    />
+
+    <!-- sale menuitem #T00469-->
+    <menuitem
+        id="sale_main_menu"
+        name="Sale"
+        parent="sale_root_menu"
+        action="sale.action_quotations"
+        sequence="1"
+    />
+
+    <!-- invoice menuitem #T00469-->
+    <menuitem
+        id="invoice_main_menu"
+        name="Invoices"
+        parent="sale_root_menu"
+        action="account.action_move_out_invoice_type"
+        sequence="2"
+    />
+
+    <!-- root menu item for customers #T00469-->
+    <menuitem
+        id="res_partner_root_menu"
+        name="Customer"
+        action="contacts.action_contacts"
+        parent="fabrication_job_root_menu"
+        sequence="6"
+    />
+
+    <!-- root menuitem for product #T00469-->
+    <menuitem
+        id="product_root_menu"
+        name="Product"
+        parent="fabrication_job_root_menu"
+    />
+
+    <!-- main menuitem for product.product #T00469-->
+    <menuitem
+        id="product_variants_main_menu"
+        name="Product Variants"
+        action="product.product_normal_action_sell"
+        parent="product_root_menu"
+    />
+
+    <!-- main menuitem for product.template #T00469-->
+    <menuitem
+        id="product_main_menu"
+        name="Product"
+        action="product.product_template_action"
+        parent="product_root_menu"
+        sequence="5"
+    />
+    <!-- main menuitem for purchase #T00469-->
+    <menuitem
+        id="purchase_main_menu"
+        name="Purchase"
+        action="purchase.purchase_rfq"
+        parent="fabrication_job_root_menu"
+        sequence="3"
+    />
+
+    <!-- menuitem for MRP_production #T00469-->
+    <menuitem
+        id="manufacturing_root"
+        name="Manufacturing"
+        parent="fabrication_job_root_menu"
+        action="mrp.mrp_production_action"
+        sequence="2"
+    />
+    <!-- menutiem for mrp.bom #T00469-->
+    <menuitem
+        id="bom_main_menu"
+        name="Bill Of Materials"
+        parent="product_root_menu"
+        action="mrp.mrp_bom_form_action"
+        sequence="3"
+    />
+    <!-- menuitem for project #T00469-->
+    <menuitem
+        id="project_root_menu"
+        name="Projects"
+        action="project.open_view_project_all_group_stage"
+        parent="fabrication_job_root_menu"
+        sequence="4"
+    />
+
+
+</odoo>

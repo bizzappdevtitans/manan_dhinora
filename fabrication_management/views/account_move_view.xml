@@ -1,0 +1,14 @@
+<odoo>
+    <!-- inherited view of invoice to add the maintenance_cycle bool and company_id #T00469 -->
+    <record id="invoice_inherited_form_view" model="ir.ui.view">
+        <field name="name">invoice.inherited.form.view</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group/group" position="inside">
+                        <field name="maintenance_cycle" />
+                        <field name="company_id" invisible="1" />
+                </xpath>
+        </field>
+    </record>
+</odoo>

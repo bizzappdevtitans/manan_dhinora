@@ -1,0 +1,7 @@
+<odoo>
+    <!-- system parameter for deadline value #T00469 -->
+    <record id="project_deadline_param" model="ir.config_parameter">
+        <field name="key">project_deadline</field>
+        <field name="value">7</field>
+    </record>
+</odoo>

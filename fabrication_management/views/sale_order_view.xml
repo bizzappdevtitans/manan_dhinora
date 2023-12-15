@@ -1,0 +1,37 @@
+<odoo>
+    <!-- inherited view of sale order to add fields an smart buttons #T00469 -->
+    <record id="sale_order_inherited_form_view" model="ir.ui.view">
+        <field name="name">sale.order.inherited.form.view</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+                <xpath
+                expr="/form/sheet/group[@name='sale_header']/group[@name='partner_details']"
+                position="inside"
+            >
+                    <field name="task_length" invisible="1" />
+                    <field name="metal_used" widget="many2many_tags" />
+                    <field name="maintenance_cycle" />
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button
+                    type="object"
+                    name="action_project_view"
+                    string="Project"
+                    icon="fa-puzzle-piece"
+                    attrs="{'invisible': [('state', '!=', 'sale')]}"
+                />
+                    <button
+                    type="object"
+                    name="action_task_view"
+                    string="Tasks"
+                    icon="fa-tasks"
+                    class="oe_stat_button"
+                    attrs="{'invisible': [('state', '!=', 'sale')]} "
+                >
+                        <field name="task_length" widget="statinfo" />
+                    </button>
+                </xpath>
+        </field>
+    </record>
+</odoo>
