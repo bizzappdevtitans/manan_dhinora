@@ -1,14 +1,14 @@
 <odoo>
     <!-- inherited view of product.product with a new field seller added to it #T7003-->
-    <record id="product_product_inherited_from_view" model="ir.ui.view">
-        <field name="name">product.product.inherited.form.view</field>
+    <record id="product_seller_product_product_inherited_from_view" model="ir.ui.view">
+        <field name="name">product.seller.product.product.inherited.form.view</field>
         <field name="model">product.product</field>
         <field name="inherit_id" ref="product.product_normal_form_view" />
         <field name="arch" type="xml">
-              <xpath expr="//field[@name='barcode']" position="after">
-                        <field name="seller_id" />
-                </xpath>
+            <xpath expr="//field[@name='barcode']" position="after">
+                <!-- Added a new field #T7003 -->
+                <field name="seller_id" />
+            </xpath>
         </field>
     </record>
-
 </odoo>

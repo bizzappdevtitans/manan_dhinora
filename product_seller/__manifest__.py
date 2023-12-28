@@ -1,10 +1,9 @@
 {
     "name": "Product Seller",
-    "summary": """a grouped view of sale, purchase, invoice based on the seller""",
+    "summary": """A grouped view of sale, purchase, invoice based on the seller""",
     "author": "BizzAppDev",
     "website": "http://www.bizzappdev.com",
-    "category": "Uncategorized",
-    "version": "15.0.0.0.1",
+    "version": "15.0.1.0.0",
     "license": "LGPL-3",
     "installable": True,
     "depends": [
