@@ -1,0 +1,2 @@
+id,name,model_id:id,perm_read,perm_write,perm_create,perm_unlink
+import_customer.access_import_customer,access_import_customer,import_customer.model_import_customer,1,1,1,1

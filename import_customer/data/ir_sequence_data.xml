@@ -1,0 +1,10 @@
+<odoo noupdate="1">
+    <!-- sequence for import_customer records #T7156 -->
+    <record id="import_customer_customer_sequence" model="ir.sequence">
+        <field name="name">Import Customer</field>
+        <field name="code">import.customer</field>
+        <field name="prefix">C</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False" />
+    </record>
+</odoo>
