@@ -1,0 +1,14 @@
+<odoo>
+    <!-- inherited view of mrp_bom to add max_qty field #T7141 -->
+    <record model="ir.ui.view" id="mrp_bom_inherited_view">
+        <field name="name">mrp.bom.inherited.view</field>
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref="mrp.mrp_bom_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet/group/group" position="inside">
+                <!-- Addded new field #T7141 -->
+                <field name="max_qty" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
