@@ -27,13 +27,16 @@ class TestSchoolRefernce(TransactionCase):
             }
         )
 
-    def test_mo_split(self):
-        """New test case to test weather splitting of MO is working as intended #T7141"""
+    def test_01_mo_split(self):
+        """New test case to test weather splitting of MO is working as intended
+        #T7141"""
         self.bom_1.max_qty = 6.0
         with self.assertRaises(ValidationError):
             self.mo.split_mo_based_on_qty()
         self.bom_1.max_qty = 2.0
         self.mo.split_mo_based_on_qty()
+        # checking weather the number of splitted MO is equal to the expected
+        # amount #T7141
         self.assertEqual(
             self.mo.child_order_qty,
             self.env["mrp.production"].search_count([("parent_id", "=", self.mo.id)]),
