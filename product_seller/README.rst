@@ -25,7 +25,7 @@
 **Usage**
 *********
 * #T7003 - MAD:
-    - the Product Seller field is added at sale report level, invoice report level and purchase report level.
+    - The Product Seller field is added at sale report level, invoice report level and purchase report level.
 
 **Known issues/Roadmap**
 ************************
