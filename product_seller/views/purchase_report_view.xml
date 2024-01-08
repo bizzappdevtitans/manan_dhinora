@@ -8,12 +8,12 @@
         <field name="model">purchase.report</field>
         <field name="inherit_id" ref="purchase.view_purchase_order_search" />
         <field name="arch" type="xml">
-            <xpath expr='/search/field[@name="product_id"]' position="after">
+            <xpath expr="//search/field[@name='product_id']" position="after">
                 <!-- Added a new filter #T7003 -->
                 <filter name="seller_id" />
             </xpath>
             <xpath
-                expr='/search/group/filter[@name="group_partner_id"]'
+                expr="//search/group/filter[@name='group_partner_id']"
                 position="after"
             >
                 <!-- Added a new filter #T7003 -->

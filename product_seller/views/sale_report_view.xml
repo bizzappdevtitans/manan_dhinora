@@ -5,11 +5,11 @@
         <field name="model">sale.report</field>
         <field name="inherit_id" ref="sale.view_order_product_search" />
         <field name="arch" type="xml">
-            <xpath expr='/search/field[@name="team_id"]' position="after">
+            <xpath expr="//search/field[@name='team_id']" position="after">
                 <!-- Added a new filter #T7003 -->
                 <filter name="seller_id" />
             </xpath>
-            <xpath expr='/search/group/filter[@name="User"]' position="after">
+            <xpath expr="//search/group/filter[@name='User']" position="after">
                 <!-- Added a new filter #T7003 -->
                 <filter
                     string="Product Seller"
