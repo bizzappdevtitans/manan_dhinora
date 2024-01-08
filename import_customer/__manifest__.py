@@ -6,7 +6,6 @@
     "author": "BizzAppDev",
     "website": "http://www.bizzappdev.com",
     "version": "16.0.1.0.0",
-    "depends": ["base"],
     "data": [
         "security/ir.model.access.csv",
         "data/ir_sequence_data.xml",

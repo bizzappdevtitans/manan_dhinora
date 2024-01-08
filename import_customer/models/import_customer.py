@@ -1,9 +1,6 @@
 import base64
-
 from lxml import etree as ET
-
 from odoo.exceptions import ValidationError
-
 from odoo import _, api, fields, models
 
 
@@ -40,7 +37,7 @@ class ImportCustomer(models.Model):
         file_as_str = base64.b64decode(self.import_file)
         try:
             xml = ET.fromstring(file_as_str)
-        # if the XML is missing root tags raise error.
+        # if the XML is missing root tags raise error. #T7156
         except ET.XMLSyntaxError:
             raise ValidationError(_("The uploded file is missing an XML tag."))
         customer_ls = [
