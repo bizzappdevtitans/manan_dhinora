@@ -1,0 +1,27 @@
+<odoo>
+    <!-- inherited view of account.invoice.report with a new field seller added to it #T7003-->
+    <record
+        id="product_seller_account_invoice_report_inherited_search_view"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >product.seller.account.invoice.report.inherited.search.view</field>
+        <field name="model">account.invoice.report</field>
+        <field name="inherit_id" ref="account.view_account_invoice_report_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//search/field[@name='product_id']" position="after">
+                <!-- Added a new field #T7003 -->
+                <field name="seller_id" />
+            </xpath>
+            <xpath expr="//search/group/filter[@name='user']" position="after">
+                <!-- Added a new filter #T7003 -->
+                <filter
+                    string="Product Seller"
+                    name="product_seller"
+                    context="{'group_by':'seller_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
