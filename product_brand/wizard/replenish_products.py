@@ -15,6 +15,8 @@ class ReplienishProducts(models.TransientModel):
     )
 
     def _create_po(self, records, brand):
+        """New generic method to create purchse order based on selected records and
+        the product_brand_id #T7127"""
         self.env["purchase.order"].create(
             {
                 "partner_id": self.partner_id.id,
@@ -29,11 +31,13 @@ class ReplienishProducts(models.TransientModel):
                             },
                         )
                     )
+                    # using list comprihension to create all the PO lines based on the
+                    # "brand" id #T7127
                     for record in (
                         records.filtered(
                             lambda prod: (prod.product_brand_id).id == brand
                         )
-                    ).ids
+                    )
                 ],
             }
         )
@@ -49,7 +53,7 @@ class ReplienishProducts(models.TransientModel):
             selected_records = selected_records.product_variant_id
         brad_ids = (selected_records.mapped("product_brand_id")).ids
         # if there is a product with no brand this condition will add 'False'
-        # in the brand_ids list to create a PO for products without brand
+        # in the brand_ids list to create a PO for products without brand #T7127
         no_brand_records = selected_records.filtered(
             lambda prod: prod.product_brand_id is False
         )

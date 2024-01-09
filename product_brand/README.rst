@@ -9,7 +9,7 @@
 
 **Author**
 **********
-* BizzAppDev Systems PVT. LTD.
+* BizzAppDev
 
 **Used by**
 ***********

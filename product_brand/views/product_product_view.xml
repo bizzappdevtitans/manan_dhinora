@@ -1,7 +1,7 @@
 <odoo>
     <!-- inherited view of product.product with a new field product_brand_id #T7127-->
-    <record id="product_product_inherited_from_view" model="ir.ui.view">
-        <field name="name">product.product.inherited.form.view</field>
+    <record id="product_brand_product_product_inherited_from_view" model="ir.ui.view">
+        <field name="name">product.brand.product.product.inherited.form.view</field>
         <field name="model">product.product</field>
         <field name="inherit_id" ref="product.product_normal_form_view" />
         <field name="arch" type="xml">

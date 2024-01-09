@@ -1,5 +1,5 @@
 <odoo>
-    <!-- New product_brand form view #T7127-->
+    <!-- New product_brand tree view #T7127-->
     <record model="ir.ui.view" id="product_brand_tree_view">
       <field name="name">product.brand.tree.view</field>
       <field name="model">product.brand</field>
@@ -23,6 +23,7 @@
               </group>
               <notebook>
                 <page name="Products">
+                  <!-- One2many field with "many2many" widget to add and remove products from product_product and product_brand simultaneously, if the product is removed from the product_brand level or if the brand is removed from the product_product level #T7127 -->
                   <field name="product_ids" widget="many2many" />
                 </page>
               </notebook>
@@ -31,6 +32,7 @@
       </field>
     </record>
 
+    <!-- New action to open the product_brand views #T7127 -->
     <record model="ir.actions.act_window" id="action_product_brand">
       <field name="name">Product Brand</field>
       <field name="res_model">product.brand</field>

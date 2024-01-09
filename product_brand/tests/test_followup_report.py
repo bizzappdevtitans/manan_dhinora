@@ -13,20 +13,23 @@ class TestAccountFollowupReports(TestAccountReportsCommon):
         """Inherited setup method from TestAccountReportsCommon to write test for
         follow-up report #T7127"""
         super().setUpClass(chart_template_ref=chart_template_ref)
-
+        # adding more data for the fields that are going to be used in below testcase
+        # #T7127
         cls.partner_a.email = "partner_a@mypartners.xyz"
         cls.product_brand = cls.env["product.brand"].create({"name": "Brand_a"})
         cls.product_1 = cls.env["product.product"].create(
             {"name": "product_1", "product_brand_id": cls.product_brand.id}
         )
 
-    def test_followup_report(self):
-        """New method to test report lines when making the follow-up report #T7127"""
+    def test_01_followup_report(self):
+        """New method to test report line values from the dict that creates the
+        follow-up report #T7127"""
         report = self.env["account.followup.report"]
         options = {
             "partner_id": self.partner_a.id,
         }
-
+        # creating and confirming a new invoice to then create a follow-up report on
+        # that invoice #T7127
         invoice_1 = self.env["account.move"].create(
             {
                 "move_type": "out_invoice",
@@ -45,14 +48,15 @@ class TestAccountFollowupReports(TestAccountReportsCommon):
             }
         )
         invoice_1.action_post()
-
+        # using freeze_time() to stop the time on 2016-01-01 and comparing the follow-up
+        # report values with the expected values #T7127
         with freeze_time("2016-01-01"):
             account_move = self.env["account.move"].search(
                 [("name", "=", "INV/2016/00001")]
             )
             for line in account_move.invoice_line_ids:
                 # assertLinesValues() from TestAccountReportsCommon to
-                # verify report values
+                # verify report values #T7127
                 self.assertLinesValues(
                     report._get_followup_report_lines(options),
                     [0, 1, 2, 3, 4, 5, 6, 8],

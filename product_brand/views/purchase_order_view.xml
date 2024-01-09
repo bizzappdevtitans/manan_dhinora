@@ -1,7 +1,7 @@
 <odoo>
     <!-- inherited view of purchase with a new field product_brand_id #T7127-->
-    <record id="purchase_order_inherited_from_view" model="ir.ui.view">
-        <field name="name">purchase.order.inherited.form.view</field>
+    <record id="product_brand_purchase_order_inherited_from_view" model="ir.ui.view">
+        <field name="name">product.brand.purchase.order.inherited.form.view</field>
         <field name="model">purchase.order</field>
         <field name="inherit_id" ref="purchase.purchase_order_form" />
         <field name="arch" type="xml">

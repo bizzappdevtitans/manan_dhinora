@@ -2,7 +2,7 @@
     "name": "Product Brand",
     "author": "BizzAppDev",
     "website": "https://www.bizzappdev.com",
-    "version": "16.0.0.0.1",
+    "version": "16.0.0.1.0",
     "depends": ["product", "account_followup", "purchase"],
     "license": "LGPL-3",
     "data": [

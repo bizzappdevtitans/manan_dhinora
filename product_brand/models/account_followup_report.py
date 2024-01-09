@@ -8,7 +8,7 @@ class AccountFollowupReport(models.AbstractModel):
         """New method to get the brand values in dict of all invoices of  account_move
         and making them comma seprated, using dict and list comprehension #T7127"""
 
-        # using set() to avoid duplicats
+        # using set() to avoid duplicats #T7127
         brands = set()
         for invoice_line in account_move.line_ids:
             if invoice_line.product_brand_id:
@@ -21,14 +21,14 @@ class AccountFollowupReport(models.AbstractModel):
         return_values = super(AccountFollowupReport, self)._get_followup_report_lines(
             options
         )
-        # updated list of return values(with brands)
+        # updated list of return values(with brands) #T7127
         updated_return_values = []
         for row in return_values:
             account_move = row.get("account_move")
             final_brand_string = ""
             if account_move:
                 final_brand_string = self._get_brand_values(row.get("account_move"))
-            # inserting the brand column in its respective row
+            # inserting the brand column in its respective row #T7127
             row.get("columns").insert(
                 3,
                 {

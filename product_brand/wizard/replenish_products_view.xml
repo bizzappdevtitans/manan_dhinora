@@ -9,10 +9,12 @@
         <field name="arch" type="xml">
             <form string="Replenish">
                 <group>
+                    <!-- New required fieds used to create purchase order #T7127 -->
                     <field name="partner_id" required="1" />
                     <field name="product_qty" required="1" />
                 </group>
                 <footer>
+                    <!-- button to call the prepare_po_vals() method #T7127 -->
                     <button
                         string="Create PO"
                         name="prepare_po_vals"
