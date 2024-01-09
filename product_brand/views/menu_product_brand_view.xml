@@ -1,0 +1,15 @@
+<odoo>
+    <!-- menuitem for product_brand view  #T7127-->
+    <menuitem
+        id="product_brand_root_menu"
+        name="Product Brand"
+        action="action_product_brand"
+    />
+    <!-- menuitem for product_product view  #T7127-->
+    <menuitem
+        id="product_product_main_menu"
+        parent="product_brand_root_menu"
+        name="Product"
+        action="product.product_normal_action"
+    />
+</odoo>

@@ -1,0 +1,17 @@
+<odoo>
+    <!-- inherited view of account.move to add product_brand_id in account.move.line #T7127-->
+    <record model="ir.ui.view" id="product_brand_account_move_line_inherited_view">
+        <field name="name">product.brand.account.move.line.inherited.view</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='invoice_line_ids']/tree/field[@name='name']"
+                position="after"
+            >
+                <!-- Added new m2o field #T7127 -->
+                <field name="product_brand_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

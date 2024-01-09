@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- New form view for model replenish_products. #T7127 -->
+    <record id="view_replenish_products_form" model="ir.ui.view">
+        <field name="name">replenish.products.form</field>
+        <field name="model">replenish.products</field>
+        <field name="type">form</field>
+        <field name="priority" eval="8" />
+        <field name="arch" type="xml">
+            <form string="Replenish">
+                <group>
+                    <!-- New required fieds used to create purchase order #T7127 -->
+                    <field name="partner_id" required="1" />
+                    <field name="product_qty" required="1" />
+                </group>
+                <footer>
+                    <!-- button to call the prepare_po_vals() method #T7127 -->
+                    <button
+                        string="Create PO"
+                        name="prepare_po_vals"
+                        type="object"
+                        class="btn-primanry"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="act_open_replenish_products_view" model="ir.actions.act_window">
+        <field name="name">Replenish</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">replenish.products</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+</odoo>
