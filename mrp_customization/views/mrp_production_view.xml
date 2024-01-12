@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <!-- inherited view of mrp_production to add smart button and split MO button #T7141  -->
-    <record model="ir.ui.view" id="mrp_customization_mrp_production_inherited_view">
+    <record id="mrp_customization_mrp_production_inherited_view" model="ir.ui.view">
         <field name="name">mrp.customization.mrp.production.inherited.view</field>
         <field name="model">mrp.production</field>
         <field name="inherit_id" ref="mrp.mrp_production_form_view" />
@@ -14,19 +15,19 @@
                     attrs="{'invisible': [('state', '=', 'cancel')]}"
                 />
             </xpath>
-            <xpath expr="//field[@name='bom_id']" position="after">
+            <xpath expr="//field[@name='bom_id']/.." position="after">
                 <!-- Added new field #T7141 -->
-                <field name="parent_id" invisible="1" />
+                <field name="parent_id" />
             </xpath>
             <xpath expr="//div[@name='button_box']" position="inside">
                 <!-- Added new smart button #T7141 -->
                 <button
-                    name="child_orders"
+                    name="action_open_child_orders"
                     string="Child Orders"
                     type="object"
                     icon="fa-wrench"
                     class="oe_stat_button"
-                    attrs="{'invisible': [('parent_id', '!=', False)]}"
+                    attrs="{'invisible': [('child_order_qty', '=', 0)]}"
                 >
                     <field name="child_order_qty" class="statinfo" readonly="1" />
                 </button>

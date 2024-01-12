@@ -7,8 +7,9 @@ class TestSchoolRefernce(TransactionCase):
         """New setup method to create products, bom and mo #T7141"""
         super(TestSchoolRefernce, self).setUp()
         self.product_1 = self.env["product.template"].create({"name": "product_1"})
-        self.product_2 = self.env["product.product"].create({"name": "product_2"})
-        self.product_3 = self.env["product.product"].create({"name": "product_3"})
+        product = self.env["product.product"]
+        self.product_2 = product.create({"name": "product_2"})
+        self.product_3 = product.create({"name": "product_3"})
 
         self.bom_1 = self.env["mrp.bom"].create(
             {
@@ -42,4 +43,5 @@ class TestSchoolRefernce(TransactionCase):
             self.env["mrp.production"].search_count([("parent_id", "=", self.mo.id)]),
             "The number of MO splits doesn't match the expected quantity",
         )
-        self.mo.child_orders()
+        self.assertTrue(self.mo.state == "cancle")
+        self.mo.action_open_child_orders()

@@ -12,6 +12,13 @@ class MrpProduction(models.Model):
     def split_mo_based_on_qty(self):
         """New method to split MO based on max_qty at mrp_bom and
         product_qty #T7141"""
+        if self.parent_id:
+            raise ValidationError(
+                _(
+                    "This order is already split from another order "
+                    "can't split a splitted order."
+                )
+            )
         if (self.product_qty) % (self.bom_id.max_qty) != 0:
             raise ValidationError(
                 _(
@@ -37,11 +44,12 @@ class MrpProduction(models.Model):
     @api.depends("state")
     def _compute_child_qty(self):
         """New compute the number of child MO created #T7141"""
-        for record in self:
-            record.child_order_qty = self.search_count([("parent_id", "=", self.id)])
+        for mrp in self:
+            mrp.child_order_qty = mrp.search_count([("parent_id", "=", mrp.id)])
 
-    def child_orders(self):
+    def action_open_child_orders(self):
         """New Method called for smart button child orders #T7141"""
+        self.ensure_one()
         return {
             "name": "Child Orders",
             "res_model": "mrp.production",

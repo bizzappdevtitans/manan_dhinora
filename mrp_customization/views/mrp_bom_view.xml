@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <!-- inherited view of mrp_bom to add max_qty field #T7141 -->
-    <record model="ir.ui.view" id="mrp_customization_mrp_bom_inherited_view">
+    <record id="mrp_customization_mrp_bom_inherited_view" model="ir.ui.view">
         <field name="name">mrp.customization.mrp.bom.inherited.view</field>
         <field name="model">mrp.bom</field>
         <field name="inherit_id" ref="mrp.mrp_bom_form_view" />
