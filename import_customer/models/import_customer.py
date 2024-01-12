@@ -10,8 +10,9 @@ class ImportCustomer(models.Model):
     _rec_name = "name"
 
     # Added new fields #T7156
-    partner_ids = fields.Many2many(
+    partner_ids = fields.One2many(
         "res.partner",
+        "import_id",
         string="Partner",
     )
     created_partner = fields.Integer(
@@ -19,7 +20,7 @@ class ImportCustomer(models.Model):
     )
     name = fields.Char(default=lambda self: ("New"), string="Number")
     partner_name = fields.Char(string="Name")
-    import_file = fields.Binary()
+    import_file = fields.Binary(copy=False)
     import_file_name = fields.Char(string="File")
 
     @api.model_create_multi
@@ -32,6 +33,8 @@ class ImportCustomer(models.Model):
     def import_customer(self):
         """New method will parse the uploaded xml file and create a new res_partner
         record based on it #T7156"""
+        if ".xml" not in self.import_file_name:
+            raise ValidationError(_("Please upload an XML file."))
         if not self.import_file:
             raise ValidationError(_("Please upload a file to import customers."))
         file_as_str = base64.b64decode(self.import_file)
@@ -61,6 +64,7 @@ class ImportCustomer(models.Model):
                     "zip": customer.get("CustomerZip"),
                     "city": customer.get("CustomerCity"),
                     "country_code": customer.get("CustomerCountry"),
+                    "import_id": self.id,
                 }
             )
             .id
@@ -71,9 +75,10 @@ class ImportCustomer(models.Model):
     @api.depends("partner_ids")
     def _compute_created_partner(self):
         """New compute method to count the total number of customers imported #T7156"""
-        self.created_partner = len(self.partner_ids.ids)
+        for imported in self:
+            imported.created_partner = len(imported.partner_ids.ids)
 
-    def partner_ref(self):
+    def action_open_partners(self):
         """New method to call the record created by import_customer() using the
         smart button #T7156"""
         return {

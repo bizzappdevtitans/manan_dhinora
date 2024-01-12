@@ -1,2 +1,3 @@
-id,name,model_id:id,perm_read,perm_write,perm_create,perm_unlink
-import_customer.access_import_customer,access_import_customer,import_customer.model_import_customer,1,1,1,1
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+import_customer_base_admin,import_customer.admin,model_import_customer,base.group_erp_manager,1,1,1,1
+import_customer_base_user,import_customer.user,model_import_customer,base.group_user,1,0,0,0

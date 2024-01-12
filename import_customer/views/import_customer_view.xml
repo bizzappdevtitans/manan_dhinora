@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <!-- tree view of customer_import #T7156 -->
-    <record model="ir.ui.view" id="import_customer_tree_view">
+    <record id="import_customer_tree_view" model="ir.ui.view">
         <field name="name">import_customer_tree_view</field>
         <field name="model">import.customer</field>
         <field name="arch" type="xml">
@@ -32,7 +33,7 @@
                     <div class="oe_button_box" name="button_box">
                         <!-- Added new smart button 'Customer' #T7156 -->
                         <button
-                            name="partner_ref"
+                            name="action_open_partners"
                             string="Customer"
                             class="oe_stat_button"
                             type="object"

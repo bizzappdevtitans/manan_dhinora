@@ -21,7 +21,7 @@
 
 **Configuration**
 *****************
-* the XML file with the data to be imported should be uploaded within the "Import Customer"(import_customer) module.
+* The XML file with the data to be imported should be uploaded within the "Import Customer"(import_customer) module.
 
 **Usage**
 *********
