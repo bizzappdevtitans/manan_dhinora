@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- tree view of customer_import #T7156 -->
+    <record id="import_customer_tree_view" model="ir.ui.view">
+        <field name="name">import_customer_tree_view</field>
+        <field name="model">import.customer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Added new fields #7156 -->
+                <field name="name" />
+                <field name="partner_name" />
+                <field name="import_file_name" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- form view of customer_import #T7156 -->
+    <record model="ir.ui.view" id="import_customer_form_view">
+        <field name="name">import_customer_form_view</field>
+        <field name="model">import.customer</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!-- Added new button 'Import Customers' #T7156 -->
+                    <button
+                        name="import_customer"
+                        string="Import Customers"
+                        type="object"
+                        attrs="{'invisible': [('created_partner', '!=',0)]}"
+                    />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <!-- Added new smart button 'Customer' #T7156 -->
+                        <button
+                            name="action_open_partners"
+                            string="Customer"
+                            class="oe_stat_button"
+                            type="object"
+                            attrs="{'invisible': [('created_partner', '=', 0)]}"
+                            icon="fa-user"
+                        >
+                            <field name="created_partner" widget="statinfo" />
+                        </button>
+                    </div>
+                    <!-- Added new fields #7156 -->
+                    <h2>
+                        <field name="name" readonly="1" />
+                    </h2>
+                    <group>
+                        <field name="partner_name" required="1" />
+                        <field name="import_file_name" invisible="1" />
+                        <field
+                            name="import_file"
+                            filename="import_file_name"
+                            required="1"
+                        />
+                        <field name="partner_ids" invisible="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- actions opening views no customer_import #T7156  -->
+    <record model="ir.actions.act_window" id="action_import_customer">
+        <field name="name">Import Customer</field>
+        <field name="res_model">import.customer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- menuitem for root import_customer #T7156 -->
+    <menuitem
+        name="Import Customer"
+        id="import_customer_menu_root"
+        action="action_import_customer"
+    />
+</odoo>
